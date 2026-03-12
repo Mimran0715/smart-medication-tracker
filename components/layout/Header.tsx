@@ -13,7 +13,11 @@ export default function Header() {
             >
             ❤️
             </button>
-            <h1 className="font-bold text-lg text-[#FFFFFF]">Smart Medication Tracker</h1>
+            <Link href="/dashboard">
+            <h1 className="font-bold text-lg text-[#FFFFFF] cursor-pointer">
+                Smart Medication Tracker
+            </h1>
+            </Link>
         </div>
         {open && (
         <div className="absolute top-16 left-6 bg-white border rounded shadow-md p-2">  

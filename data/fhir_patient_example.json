@@ -1,0 +1,134 @@
+{
+  "resourceType": "Bundle",
+  "type": "collection",
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Patient",
+        "id": "patient-1",
+        "name": [
+          {
+            "family": "Smith",
+            "given": ["Jane"]
+          }
+        ],
+        "gender": "female",
+        "birthDate": "1975-06-15"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "id": "cond-1",
+        "clinicalStatus": { "coding": [{ "code": "active" }] },
+        "code": { "text": "Type 2 Diabetes Mellitus" },
+        "subject": { "reference": "Patient/patient-1" }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "id": "med-1",
+        "status": "active",
+        "medicationCodeableConcept": { "text": "Metformin 500mg" },
+        "subject": { "reference": "Patient/patient-1" }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "id": "med-2",
+        "status": "active",
+        "medicationCodeableConcept": { "text": "Insulin Glargine 10 units" },
+        "subject": { "reference": "Patient/patient-1" }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "id": "med-3",
+        "status": "active",
+        "medicationCodeableConcept": { "text": "Glipizide 5mg" },
+        "subject": { "reference": "Patient/patient-1" }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "id": "med-4",
+        "status": "active",
+        "medicationCodeableConcept": { "text": "Pioglitazone 15mg" },
+        "subject": { "reference": "Patient/patient-1" }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "id": "med-5",
+        "status": "active",
+        "medicationCodeableConcept": { "text": "Acarbose 50mg" },
+        "subject": { "reference": "Patient/patient-1" }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-1",
+        "status": "final",
+        "code": { "text": "Blood Glucose" },
+        "valueQuantity": { "value": 145, "unit": "mg/dL" },
+        "subject": { "reference": "Patient/patient-1" }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-2",
+        "status": "final",
+        "code": { "text": "Blood Pressure" },
+        "valueQuantity": { "value": 130, "unit": "mmHg" },
+        "subject": { "reference": "Patient/patient-1" }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-3",
+        "status": "final",
+        "code": { "text": "Weight" },
+        "valueQuantity": { "value": 82, "unit": "kg" },
+        "subject": { "reference": "Patient/patient-1" }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-4",
+        "status": "final",
+        "code": { "text": "HbA1c" },
+        "valueQuantity": { "value": 7.4, "unit": "%" },
+        "subject": { "reference": "Patient/patient-1" }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-5",
+        "status": "final",
+        "code": { "text": "Cholesterol Total" },
+        "valueQuantity": { "value": 210, "unit": "mg/dL" },
+        "subject": { "reference": "Patient/patient-1" }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-6",
+        "status": "final",
+        "code": { "text": "Triglycerides" },
+        "valueQuantity": { "value": 160, "unit": "mg/dL" },
+        "subject": { "reference": "Patient/patient-1" }
+      }
+    }
+  ]
+}

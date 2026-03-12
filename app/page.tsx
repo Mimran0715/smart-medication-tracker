@@ -1,9 +1,6 @@
 import Image from "next/image";
+import { redirect } from 'next/navigation';
 
 export default function Home() {
-  return (
-    <main className="p-6">
-      {/* <h1 className="text-2xl font-bold">Smart Medication Tracker</h1> */}
-    </main>
-  );
+  redirect('/dashboard');
 }
