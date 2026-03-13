@@ -70,7 +70,9 @@ export default function Header() {
             </Link>
         </div>
 
+        <Link href="/settings">
          <h1 className="font-bold text-lg text-[#FFFFFF]">{patientName}</h1>
+        </Link>
 
     </header>
   )
