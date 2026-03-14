@@ -1,0 +1,185 @@
+{
+  "resourceType": "Bundle",
+  "type": "collection",
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Medication",
+        "id": "med-1",
+        "code": { "text": "Metformin 500mg" }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationStatement",
+        "id": "medstat-1",
+        "status": "active",
+        "medicationReference": { "reference": "Medication/med-1" },
+        "subject": { "reference": "Patient/patient-1" },
+        "dosage": [
+          {
+            "text": "Take 1 tablet twice daily",
+            "route": { "text": "Oral" },
+            "doseAndRate": { "doseQuantity": { "value": 500, "unit": "mg" } }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationKnowledge",
+        "id": "medknow-1",
+        "code": { "text": "Metformin 500mg" },
+        "status": "active",
+        "doseForm": { "text": "Tablet" },
+        "administrationGuidelines": [
+          { "dosage": { "text": "Take with meals to reduce GI upset" } }
+        ]
+      }
+    },
+    
+    {
+      "resource": {
+        "resourceType": "Medication",
+        "id": "med-2",
+        "code": { "text": "Insulin Glargine 10 units" }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationStatement",
+        "id": "medstat-2",
+        "status": "active",
+        "medicationReference": { "reference": "Medication/med-2" },
+        "subject": { "reference": "Patient/patient-1" },
+        "dosage": [
+          {
+            "text": "Inject 10 units subcutaneously once daily",
+            "route": { "text": "Subcutaneous" },
+            "doseAndRate": { "doseQuantity": { "value": 10, "unit": "units" } }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationKnowledge",
+        "id": "medknow-2",
+        "code": { "text": "Insulin Glargine" },
+        "status": "active",
+        "doseForm": { "text": "Injection" },
+        "administrationGuidelines": [
+          { "dosage": { "text": "Inject once daily at bedtime" } }
+        ]
+      }
+    },
+    
+    {
+      "resource": {
+        "resourceType": "Medication",
+        "id": "med-3",
+        "code": { "text": "Glipizide 5mg" }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationStatement",
+        "id": "medstat-3",
+        "status": "active",
+        "medicationReference": { "reference": "Medication/med-3" },
+        "subject": { "reference": "Patient/patient-1" },
+        "dosage": [
+          {
+            "text": "Take 1 tablet once daily before breakfast",
+            "route": { "text": "Oral" },
+            "doseAndRate": { "doseQuantity": { "value": 5, "unit": "mg" } }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationKnowledge",
+        "id": "medknow-3",
+        "code": { "text": "Glipizide 5mg" },
+        "status": "active",
+        "doseForm": { "text": "Tablet" },
+        "administrationGuidelines": [
+          { "dosage": { "text": "Take before breakfast" } }
+        ]
+      }
+    },
+    
+    {
+      "resource": {
+        "resourceType": "Medication",
+        "id": "med-4",
+        "code": { "text": "Pioglitazone 15mg" }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationStatement",
+        "id": "medstat-4",
+        "status": "active",
+        "medicationReference": { "reference": "Medication/med-4" },
+        "subject": { "reference": "Patient/patient-1" },
+        "dosage": [
+          {
+            "text": "Take 1 tablet once daily",
+            "route": { "text": "Oral" },
+            "doseAndRate": { "doseQuantity": { "value": 15, "unit": "mg" } }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationKnowledge",
+        "id": "medknow-4",
+        "code": { "text": "Pioglitazone 15mg" },
+        "status": "active",
+        "doseForm": { "text": "Tablet" },
+        "administrationGuidelines": [
+          { "dosage": { "text": "Take once daily" } }
+        ]
+      }
+    },
+    
+    {
+      "resource": {
+        "resourceType": "Medication",
+        "id": "med-5",
+        "code": { "text": "Acarbose 50mg" }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationStatement",
+        "id": "medstat-5",
+        "status": "active",
+        "medicationReference": { "reference": "Medication/med-5" },
+        "subject": { "reference": "Patient/patient-1" },
+        "dosage": [
+          {
+            "text": "Take 1 tablet with first bite of each main meal",
+            "route": { "text": "Oral" },
+            "doseAndRate": { "doseQuantity": { "value": 50, "unit": "mg" } }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationKnowledge",
+        "id": "medknow-5",
+        "code": { "text": "Acarbose 50mg" },
+        "status": "active",
+        "doseForm": { "text": "Tablet" },
+        "administrationGuidelines": [
+          { "dosage": { "text": "Take with first bite of each main meal" } }
+        ]
+      }
+    }
+  ]
+}
