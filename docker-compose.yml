@@ -6,3 +6,23 @@ services:
     volumes:
       - .:/app
       - /app/node_modules
+    depends_on:
+      - postgres
+    environment:
+      DATABASE_URL: postgresql://fhir_user:fhir_password@postgres:5432/fhir_db
+
+  postgres:
+    image: postgres:15
+    container_name: fhir-postgres
+    environment:
+      POSTGRES_USER: fhir_user
+      POSTGRES_PASSWORD: fhir_password
+      POSTGRES_DB: fhir_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - fhir-postgres-data:/var/lib/postgresql/data
+    restart: unless-stopped
+
+volumes:
+  fhir-postgres-data:
