@@ -6,7 +6,7 @@ import Header from "./Header";
 export default function OptionalHeader() {
   const pathname = usePathname();
 
-  if (pathname === "/login") return null;
+  if (pathname === "/login" || pathname.startsWith("/reminder")) return null;
 
   return <Header />;
 }
