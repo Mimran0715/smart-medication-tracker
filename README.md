@@ -37,3 +37,22 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 
 To use the command-line interface to PostgreSQL, use the following command, where the user is fhir_user and the database is fhir_db:
 ```docker compose exec postgres psql -U fhir_user -d fhir_db ```
+
+## To use with Docker
+
+# First time / fresh start
+docker compose up -d
+
+# View logs (both services)
+docker compose logs -f
+
+# View logs for one service
+docker compose logs -f app
+docker compose logs -f db
+
+# Stop everything (preserve data)
+docker compose down
+
+# Reset everything including the database
+docker compose down -v
+docker compose up -d
