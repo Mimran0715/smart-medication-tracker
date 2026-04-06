@@ -8,7 +8,7 @@ export function Charts({ data, filters }) {
           <XAxis dataKey="date" />
           <YAxis />
           <Tooltip />
-          {filters.medications.map((med) => (
+          {filters.medications.map((med:any) => (
             <Line
               key={med}
               dataKey={med}
