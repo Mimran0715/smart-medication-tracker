@@ -95,32 +95,57 @@ export default function AnalyticsPage() {
     },
   ],
 };
+
+  const insights = data.summary.map((med) => {
+    return {
+      med: med.med,
+      text: `${med.med} shows avg glucose ${med.avgGlucose}, adherence ${(med.adherence * 100).toFixed(0)}%, and ${med.weightChange > 0 ? "weight gain" : "weight loss"} of ${Math.abs(med.weightChange)} lbs.`,
+    };
+  });
   return (
-      <div className="space-y-6 p-6">
-      {/* Filters */}
-      <div className="bg-white rounded-2xl shadow-sm border p-4">
-         <h2 className="text-lg font-semibold mb-3">Filters</h2>
-        <Filters filters={filters} setFilters={setFilters} />
+      <div className="p-6 grid grid-cols-1 lg:grid-cols-4 gap-6">
+        
+        {/* MAIN CONTENT */}
+        <div className="lg:col-span-3 space-y-6">
+          
+          {/* Filters */}
+          <div className="bg-white rounded-2xl shadow-sm border p-4">
+            <h2 className="text-lg font-semibold mb-3">Filters</h2>
+            <Filters filters={filters} setFilters={setFilters} />
+          </div>
+
+          {/* Charts */}
+          <div className="bg-white rounded-2xl shadow-sm border p-4">
+            <h2 className="text-lg font-semibold mb-4">Trends</h2>  
+            <Charts data={data} filters={filters} />
+          </div>
+
+          {/* Table */}
+          <div className="bg-white rounded-2xl shadow-sm border p-4">
+            <h2 className="text-lg font-semibold mb-3">Medication Summary</h2>
+            <Table 
+              data={data.summary} 
+              onSelectMed={(med: any) =>
+                setFilters(f => ({ ...f, medications: [med] }))
+              } 
+            />
+          </div>
+
+        </div>
+
+        {/* INSIGHTS SIDEBAR */}
+        <div className="bg-white rounded-2xl shadow-sm border p-4 h-fit sticky top-6">
+          <h2 className="text-lg font-semibold mb-4">Insights</h2>
+
+          <ul className="space-y-3 text-sm text-gray-700">
+            {insights.map((item, idx) => (
+              <li key={idx} className="p-3 bg-gray-50 rounded-lg">
+                <span className="font-medium capitalize">{item.med}</span>: {item.text}
+              </li>
+            ))}
+          </ul>
+        </div>
+
       </div>
-
-      {/* Charts */}
-      <div className="bg-white rounded-2xl shadow-sm border p-4">
-       <h2 className="text-lg font-semibold mb-4">Trends</h2>  
-        <Charts data={data} filters={filters} />
-      </div>
-
-      {/* Table */}
-      <div className="bg-white rounded-2xl shadow-sm border p-4">
-
-        <h2 className="text-lg font-semibold mb-3">Medication Summary</h2>
-        <Table 
-          data={data.summary} 
-          onSelectMed={(med: any) =>
-            setFilters(f => ({ ...f, medications: [med] }))
-          } 
-        />
-      </div>
-
-  </div>
-  );
+    );
 }
