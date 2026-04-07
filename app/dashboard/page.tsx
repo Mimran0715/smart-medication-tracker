@@ -14,6 +14,7 @@ import {
 } from "chart.js";
 import CommunicationModal from "./communicationModal";
 import MedicationModal from "./medicationModal";
+import ReminderPopup from "../../components/reminderPopup"
 
 ChartJS.register(
   CategoryScale,
@@ -166,6 +167,7 @@ export default function Dashboard() {
           <div className="text-4xl font-bold text-[#1AA1E3]">{adherence}%</div>
         </div>
 
+        <ReminderPopup />
         <div className="bg-white rounded shadow p-4 flex flex-col justify-center gap-4">
           <h2 className="font-bold mb-2">Quick Actions</h2>
           <button className="bg-[#1AA1E3] text-white py-2 px-4 rounded hover:bg-blue-600">
@@ -176,6 +178,7 @@ export default function Dashboard() {
           </button>
         </div>
       </div>
+
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         {/* Medication Schedule - dynamic from localStorage */}
