@@ -12,6 +12,7 @@ import {
   Tooltip,
   Legend,
 } from "chart.js";
+import CommunicationModal from "./communicationModal";
 import MedicationModal from "./medicationModal";
 
 ChartJS.register(
@@ -68,6 +69,9 @@ export default function Dashboard() {
   const glucoseData = [120, 130, 115, 140, 125, 135, 128];
   const adherence = 88;
   const sideEffectData = [150, 155, 152, 160, 159, 157];
+
+  //comm request
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   useEffect(() => {
     setSchedules(loadSchedules());
@@ -262,13 +266,19 @@ export default function Dashboard() {
       </div>
 
       {/* Send Reminders + Communication */}
+      
       <div className="flex gap-4 items-center">
         <button
           className="bg-green-500 text-white px-3 py-1 rounded hover:bg-green-600"
-          onClick={() => alert("Send CommunicationRequest")}
+          onClick={() => setIsModalOpen(true)}
         >
           Send Message to Provider
         </button>
+
+        {isModalOpen && <CommunicationModal 
+          onClose={() => setIsModalOpen(false)} 
+          />
+        }
 
         <button
           className="bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700 disabled:opacity-50"
