@@ -71,27 +71,27 @@ export default function Dashboard() {
   >("idle");
   const [reminderResult, setReminderResult] = useState("");
 
-  // const [dashboardData, setDashboardData] = useState<{
-  //   adherence: number[];
-  //   glucose: number[];
-  //   sideEffectData: number[];
-  // } | null>(null);
+  const [dashboardData, setDashboardData] = useState<{
+    adherence: number[];
+    glucose: number[];
+    sideEffectData: number[];
+  } | null>(null);
 
-  // useEffect(() => {
-  //   async function fetchData() {
-  //     const res = await fetch('/api/dashboard');
-  //     const data = await res.json();
-  //     setDashboardData(data);
-  //   }
-  //   fetchData();
-  // }, []);
+  useEffect(() => {
+    async function fetchData() {
+      const res = await fetch('/api/dashboard');
+      const data = await res.json();
+      setDashboardData(data);
+    }
+    fetchData();
+  }, []);
 
-  // if (!dashboardData) return <div>Loading...</div>;
+  if (!dashboardData) return <div>Loading...</div>;
 
-  // const { adherence, glucose, sideEffectData } = dashboardData;
-  const adherence = 88;
-  const glucose = [120, 130, 115, 140, 125, 135, 128];
-  const sideEffectData = [150, 155, 152, 160, 159, 157];
+  const { adherence, glucose, sideEffectData } = dashboardData;
+  // const adherence = 88;
+  // const glucose = [120, 130, 115, 140, 125, 135, 128];
+  // const sideEffectData = [150, 155, 152, 160, 159, 157];
 
 
   //comm request

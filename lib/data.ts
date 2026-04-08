@@ -1,5 +1,5 @@
 import fs from "fs";
-//import { Pool } from "pg";
+import { Pool } from "pg";
 import path from "path";
 // import dotenv from "dotenv"
 
@@ -13,7 +13,7 @@ const dbConfig = {
   port: 5432,                          
 };
 
-//const pool = new Pool(dbConfig);
+const pool = new Pool(dbConfig);
 
 export async function getGlucoseDashboard(){
     const glucose = [120, 130, 115, 140, 125, 135, 128];
@@ -27,14 +27,14 @@ export async function getAdherenceDashboard(){
 
 export async function getSideEffectDashboard(){
     const sideEffect = [150, 155, 152, 160, 159, 157];
-    // try{
-    //     const res = await 
-    //     pool.query("SELECT value FROM observations WHERE code=Weight") 
-    //     console.log("result: ", res)
+    try{
+        const res = await 
+        pool.query("SELECT value FROM observations WHERE code=Weight") 
+        console.log("result: ", res)
 
-    // } catch(err){
-    //     console.log("Connection Error: ", err)
-    // }
+    } catch(err){
+        console.log("Connection Error: ", err)
+    }
     
     return sideEffect;
 }
