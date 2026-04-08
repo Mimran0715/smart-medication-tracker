@@ -65,11 +65,23 @@ export default function MedicationsPage() {
   const [selectedIndex, setSelectedIndex] = useState(0);
   const selectedMed = medications[selectedIndex];
 
+  // Total number of the medications within that list, this computes the medication summary metrics for display
+  const totalMeds = medications.length;
+  // Number of active medications or with status "active" within that list
+  const activeMeds = medications.filter(m => m.status === "active").length;
+
   return (
     <div className="flex h-screen border overflow-hidden">
       {/* medication list */}
       <div className="w-1/3 border-r bg-gray-50 flex flex-col">
-        <div className="p-4 font-semibold text-lg">Medications</div>
+      {/*Updated header to include summary metrics for total medications and active medications */}
+      <div className="p-4 border-b">
+        <div className="font-semibold text-lg">Medications</div>
+        <div className="text-sm text-gray-600 mt-1">
+          Total: {totalMeds} | Active: {activeMeds} | Other: {totalMeds - activeMeds}
+        </div>
+      </div>
+
         <div className="flex-1 overflow-y-auto scroll-smooth">
           {medications.map((med, index) => {
             const display = getMedicationDisplayNew(med);
