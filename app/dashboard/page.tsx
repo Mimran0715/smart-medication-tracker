@@ -1,5 +1,4 @@
 "use client";
-
 import { Line } from "react-chartjs-2";
 import { useState, useEffect } from "react";
 import {
@@ -30,6 +29,12 @@ const STORAGE_KEY = "med-schedules";
 
 interface MedSchedule {
   [medName: string]: string[];
+}
+
+async function getDashboard(){
+    const res = await fetch('/api/dashboard');
+    const { adherence, glucose, sideEffects } = await res.json();
+    return {adherence, glucose, sideEffects};
 }
 
 const DEFAULT_SCHEDULES: MedSchedule = {
@@ -66,10 +71,28 @@ export default function Dashboard() {
   >("idle");
   const [reminderResult, setReminderResult] = useState("");
 
-  // Chart data
-  const glucoseData = [120, 130, 115, 140, 125, 135, 128];
+  // const [dashboardData, setDashboardData] = useState<{
+  //   adherence: number[];
+  //   glucose: number[];
+  //   sideEffectData: number[];
+  // } | null>(null);
+
+  // useEffect(() => {
+  //   async function fetchData() {
+  //     const res = await fetch('/api/dashboard');
+  //     const data = await res.json();
+  //     setDashboardData(data);
+  //   }
+  //   fetchData();
+  // }, []);
+
+  // if (!dashboardData) return <div>Loading...</div>;
+
+  // const { adherence, glucose, sideEffectData } = dashboardData;
   const adherence = 88;
+  const glucose = [120, 130, 115, 140, 125, 135, 128];
   const sideEffectData = [150, 155, 152, 160, 159, 157];
+
 
   //comm request
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -131,11 +154,11 @@ export default function Dashboard() {
   }
 
   const glucoseChartData = {
-    labels: glucoseData.map((_, i) => `Day ${i + 1}`),
+    labels: glucose.map((_, i) => `Day ${i + 1}`),
     datasets: [
       {
         label: "Glucose Level",
-        data: glucoseData,
+        data: glucose,
         borderColor: "#1AA1E3",
         backgroundColor: "rgba(26, 161, 227, 0.2)",
       },
@@ -153,6 +176,10 @@ export default function Dashboard() {
       },
     ],
   };
+
+  function logGlucose(glucose: int): void {
+    return; 
+  }
 
   return (
     <div className="p-6 space-y-6">
