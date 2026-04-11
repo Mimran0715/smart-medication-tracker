@@ -92,10 +92,10 @@ export default function Dashboard() {
 
   if (!dashboardData) return <div>Loading...</div>;
 
-  //const { adherence, glucose, sideEffectData } = dashboardData;
-  const adherence = 88;
-  const glucose = [120, 130, 115, 140, 125, 135, 128];
-  const sideEffectData = [150, 155, 152, 160, 159, 157];
+  const { adherence, glucose, sideEffectData } = dashboardData;
+  // const adherence = 88;
+  // const glucose = [120, 130, 115, 140, 125, 135, 128];
+  const sideEffectBackup = [150, 155, 152, 160, 159, 157];
 
   function handleSaveSchedule(medName: string, times: string[]) {
     const updated = { ...schedules, [medName]: times };
@@ -162,11 +162,11 @@ export default function Dashboard() {
   };
 
   const sideEffectChartData = {
-    labels: sideEffectData.map((_, i) => `Week ${i + 1}`),
+    labels: sideEffectBackup.map((_, i) => `Week ${i + 1}`),
     datasets: [
       {
         label: "Weight",
-        data: sideEffectData,
+        data: sideEffectBackup,
         borderColor: "#1AA1E3",
         backgroundColor: "rgba(26, 161, 227, 0.2)",
       },

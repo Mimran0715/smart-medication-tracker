@@ -25,17 +25,7 @@ export async function getAdherenceDashboard(){
     return adherence; 
 }
 
-export async function getSideEffectDashboard(){
-    const sideEffect = [150, 155, 152, 160, 159, 157];
-    try{
-        const res = await 
-        pool.query("SELECT value FROM observations WHERE code=Weight") 
-        console.log("result: ", res)
-
-    } catch(err){
-        console.log("Connection Error: ", err)
-    }
-    
-    return sideEffect;
+export async function getSideEffectDashboard() {
+    const sideEffectData = [150, 155, 152, 160, 159, 157];
+    return sideEffectData;
 }
-
