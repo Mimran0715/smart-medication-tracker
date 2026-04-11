@@ -95,12 +95,29 @@ export default function AnalyticsPage() {
     },
   ],
 };
-  return (
+
+// Placing a filter on the summary data to only include medications that are currently selected in the filters. 
+// This ensures that downstream components like tables and charts are reflecting the user selections
+// and dynamically update based on the active filter state. 
+const filteredSummary = data.summary.filter((med) => filters.medications.includes(med.med)
+);
+
+// Next, this will be basic analytics and associated summary metrics for display
+const totalMeds = filteredSummary.length
+
+return (
       <div className="space-y-6 p-6">
       {/* Filters */}
       <div className="bg-white rounded-2xl shadow-sm border p-4">
          <h2 className="text-lg font-semibold mb-3">Filters</h2>
         <Filters filters={filters} setFilters={setFilters} />
+      </div>
+
+      <div className="bg-white rounded-2xl shadow-sm border p-4">
+      <h2 className="text-lg font-semibold mb-2">Analytics Overview</h2>
+      <p className="text-sm text-gray-600">
+        Total Medications: {totalMeds}
+      </p>
       </div>
 
       {/* Charts */}
@@ -114,7 +131,7 @@ export default function AnalyticsPage() {
 
         <h2 className="text-lg font-semibold mb-3">Medication Summary</h2>
         <Table 
-          data={data.summary} 
+          data={filteredSummary} 
           onSelectMed={(med: any) =>
             setFilters(f => ({ ...f, medications: [med] }))
           } 
