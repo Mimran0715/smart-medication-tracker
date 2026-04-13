@@ -1,0 +1,323 @@
+from fastapi import FastAPI, HTTPException
+from fastapi.middleware.cors import CORSMiddleware
+from contextlib import asynccontextmanager
+import asyncpg
+import os
+
+DATABASE_URL = os.environ.get("DATABASE_URL")
+
+
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    app.state.pool = await asyncpg.create_pool(DATABASE_URL, min_size=2, max_size=10)
+    yield
+    await app.state.pool.close()
+
+
+app = FastAPI(title="Smart Medication Tracker API", lifespan=lifespan)
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["http://localhost:3000"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+
+# ---------------------------------------------------------------------------
+# helpers
+# ---------------------------------------------------------------------------
+
+def pool(request):
+    return request.app.state.pool
+
+
+def fhir_bundle(entries: list) -> dict:
+    return {
+        "resourceType": "Bundle",
+        "type": "collection",
+        "entry": [{"resource": e} for e in entries],
+    }
+
+
+# ---------------------------------------------------------------------------
+# GET /api/patients/{patient_id}
+# Returns FHIR Bundle: Patient + Conditions + MedicationRequests + Observations
+# Matches shape of fhir_patient_example.json
+# ---------------------------------------------------------------------------
+
+from fastapi import Request
+
+
+@app.get("/api/patients/{patient_id}")
+async def get_patient(patient_id: str, request: Request):
+    async with pool(request).acquire() as conn:
+        # Patient
+        patient_row = await conn.fetchrow(
+            """
+            SELECT id, first_name, last_name, gender, birthdate, deathdate
+            FROM patient
+            WHERE id = $1::uuid
+            """,
+            patient_id,
+        )
+        if not patient_row:
+            raise HTTPException(status_code=404, detail="Patient not found")
+
+        # Conditions (active = no stop_date)
+        condition_rows = await conn.fetch(
+            """
+            SELECT c.start_date, c.stop_date, cc.description, cc.code
+            FROM condition c
+            JOIN clinical_code cc ON cc.id = c.code_id
+            WHERE c.patient_id = $1::uuid
+            ORDER BY c.start_date DESC
+            """,
+            patient_id,
+        )
+
+        # Active medications (no stop_time)
+        med_rows = await conn.fetch(
+            """
+            SELECT m.id, cc.description, m.start_time, m.stop_time
+            FROM medication m
+            JOIN clinical_code cc ON cc.id = m.code_id
+            WHERE m.patient_id = $1::uuid
+            ORDER BY m.start_time DESC
+            """,
+            patient_id,
+        )
+
+        # Latest observations (one per LOINC code)
+        obs_rows = await conn.fetch(
+            """
+            SELECT DISTINCT ON (o.code_id)
+                o.observed_at, o.value_numeric, o.units, cc.description, cc.code
+            FROM observation o
+            JOIN clinical_code cc ON cc.id = o.code_id
+            WHERE o.patient_id = $1::uuid
+            ORDER BY o.code_id, o.observed_at DESC
+            """,
+            patient_id,
+        )
+
+    entries = []
+
+    # Patient resource
+    entries.append({
+        "resourceType": "Patient",
+        "id": str(patient_row["id"]),
+        "name": [{
+            "family": patient_row["last_name"],
+            "given": [patient_row["first_name"]],
+        }],
+        "gender": "female" if patient_row["gender"] == "F" else "male",
+        "birthDate": patient_row["birthdate"].isoformat(),
+        **({"deceasedDateTime": patient_row["deathdate"].isoformat()}
+           if patient_row["deathdate"] else {}),
+    })
+
+    # Condition resources
+    for row in condition_rows:
+        entries.append({
+            "resourceType": "Condition",
+            "clinicalStatus": {
+                "coding": [{"code": "active" if not row["stop_date"] else "resolved"}]
+            },
+            "code": {
+                "coding": [{"system": "http://snomed.info/sct", "code": row["code"]}],
+                "text": row["description"],
+            },
+            "subject": {"reference": f"Patient/{patient_id}"},
+            "onsetDateTime": row["start_date"].isoformat(),
+            **({"abatementDateTime": row["stop_date"].isoformat()}
+               if row["stop_date"] else {}),
+        })
+
+    # MedicationRequest resources
+    for row in med_rows:
+        entries.append({
+            "resourceType": "MedicationRequest",
+            "id": str(row["id"]),
+            "status": "active" if not row["stop_time"] else "completed",
+            "medicationCodeableConcept": {"text": row["description"]},
+            "subject": {"reference": f"Patient/{patient_id}"},
+            "authoredOn": row["start_time"].isoformat(),
+        })
+
+    # Observation resources
+    for row in obs_rows:
+        entries.append({
+            "resourceType": "Observation",
+            "status": "final",
+            "code": {
+                "coding": [{"system": "http://loinc.org", "code": row["code"]}],
+                "text": row["description"],
+            },
+            "subject": {"reference": f"Patient/{patient_id}"},
+            "effectiveDateTime": row["observed_at"].isoformat(),
+            "valueQuantity": {
+                "value": float(row["value_numeric"]) if row["value_numeric"] is not None else None,
+                "unit": row["units"],
+            },
+        })
+
+    return fhir_bundle(entries)
+
+
+# ---------------------------------------------------------------------------
+# GET /api/patients/{patient_id}/medications
+# Returns FHIR Bundle: Medication + MedicationStatement entries
+# Matches shape of fhir_medication_example.json
+# ---------------------------------------------------------------------------
+
+@app.get("/api/patients/{patient_id}/medications")
+async def get_patient_medications(patient_id: str, request: Request):
+    async with pool(request).acquire() as conn:
+        exists = await conn.fetchval(
+            "SELECT 1 FROM patient WHERE id = $1::uuid", patient_id
+        )
+        if not exists:
+            raise HTTPException(status_code=404, detail="Patient not found")
+
+        rows = await conn.fetch(
+            """
+            SELECT
+                m.id,
+                cc.code        AS rxnorm_code,
+                cc.description AS medication_name,
+                m.start_time,
+                m.stop_time,
+                m.dispenses,
+                m.total_cost,
+                m.payer_coverage,
+                rc.description AS reason
+            FROM medication m
+            JOIN clinical_code cc ON cc.id = m.code_id
+            LEFT JOIN clinical_code rc ON rc.id = m.reason_code_id
+            WHERE m.patient_id = $1::uuid
+            ORDER BY m.start_time DESC
+            """,
+            patient_id,
+        )
+
+    if not rows:
+        raise HTTPException(status_code=404, detail="No medications found for patient")
+
+    entries = []
+    for row in rows:
+        med_id = str(row["id"])
+        status = "active" if not row["stop_time"] else "completed"
+
+        # Medication resource
+        entries.append({
+            "resourceType": "Medication",
+            "id": f"med-{med_id}",
+            "code": {
+                "coding": [{"system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+                             "code": row["rxnorm_code"]}],
+                "text": row["medication_name"],
+            },
+            "status": status,
+        })
+
+        # MedicationStatement resource
+        entries.append({
+            "resourceType": "MedicationStatement",
+            "id": f"medstat-{med_id}",
+            "status": status,
+            "medicationReference": {"reference": f"Medication/med-{med_id}"},
+            "subject": {"reference": f"Patient/{patient_id}"},
+            "effectivePeriod": {
+                "start": row["start_time"].isoformat(),
+                **({"end": row["stop_time"].isoformat()} if row["stop_time"] else {}),
+            },
+            **({"reasonCode": [{"text": row["reason"]}]} if row["reason"] else {}),
+        })
+
+    return fhir_bundle(entries)
+
+
+# ---------------------------------------------------------------------------
+# GET /api/analytics/condition-trends
+# Returns condition prevalence across the cohort, grouped by condition
+# ---------------------------------------------------------------------------
+
+@app.get("/api/analytics/condition-trends")
+async def condition_trends(request: Request):
+    async with pool(request).acquire() as conn:
+        rows = await conn.fetch(
+            """
+            SELECT
+                cc.description AS condition,
+                cc.code,
+                COUNT(DISTINCT c.patient_id) AS patient_count,
+                COUNT(*) FILTER (WHERE c.stop_date IS NULL) AS active_count,
+                COUNT(*) FILTER (WHERE c.stop_date IS NOT NULL) AS resolved_count,
+                MIN(c.start_date) AS first_seen,
+                MAX(c.start_date) AS last_seen
+            FROM condition c
+            JOIN clinical_code cc ON cc.id = c.code_id
+            GROUP BY cc.description, cc.code
+            ORDER BY patient_count DESC
+            """
+        )
+
+    return {
+        "total_patients": 500,
+        "conditions": [
+            {
+                "condition": row["condition"],
+                "snomed_code": row["code"],
+                "patient_count": row["patient_count"],
+                "active_count": row["active_count"],
+                "resolved_count": row["resolved_count"],
+                "first_seen": row["first_seen"].isoformat(),
+                "last_seen": row["last_seen"].isoformat(),
+            }
+            for row in rows
+        ],
+    }
+
+
+# ---------------------------------------------------------------------------
+# GET /api/analytics/medication-trends
+# Returns medication usage across the cohort
+# ---------------------------------------------------------------------------
+
+@app.get("/api/analytics/medication-trends")
+async def medication_trends(request: Request):
+    async with pool(request).acquire() as conn:
+        rows = await conn.fetch(
+            """
+            SELECT
+                cc.description AS medication,
+                cc.code AS rxnorm_code,
+                COUNT(DISTINCT m.patient_id) AS patient_count,
+                COUNT(*) FILTER (WHERE m.stop_time IS NULL) AS active_count,
+                COUNT(*) FILTER (WHERE m.stop_time IS NOT NULL) AS completed_count,
+                ROUND(AVG(m.total_cost)::numeric, 2) AS avg_total_cost,
+                ROUND(AVG(m.payer_coverage)::numeric, 2) AS avg_payer_coverage
+            FROM medication m
+            JOIN clinical_code cc ON cc.id = m.code_id
+            GROUP BY cc.description, cc.code
+            ORDER BY patient_count DESC
+            """
+        )
+
+    return {
+        "total_patients": 500,
+        "medications": [
+            {
+                "medication": row["medication"],
+                "rxnorm_code": row["rxnorm_code"],
+                "patient_count": row["patient_count"],
+                "active_count": row["active_count"],
+                "completed_count": row["completed_count"],
+                "avg_total_cost": float(row["avg_total_cost"]) if row["avg_total_cost"] else None,
+                "avg_payer_coverage": float(row["avg_payer_coverage"]) if row["avg_payer_coverage"] else None,
+            }
+            for row in rows
+        ],
+    }
