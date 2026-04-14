@@ -173,7 +173,7 @@ export default function Dashboard() {
     ],
   };
 
-  function logGlucose(glucose: int): void {
+  function logGlucose(glucose: number): void {
     return; 
   }
 

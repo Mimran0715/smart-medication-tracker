@@ -2,7 +2,11 @@
 import {useState, useRef, useEffect} from "react";
 import Link from "next/link";
 
-export default function Header() {
+type Props = {
+  onNotificationsClick?: () => void;
+};
+
+export default function Header ({ onNotificationsClick }: Props) {
     const [open, setOpen] = useState(false);
     const popupRef = useRef<HTMLDivElement>(null);
     const patientName = "Jane Doe"
@@ -71,9 +75,20 @@ export default function Header() {
         </div>
 
         
-        <h1 className="font-bold text-lg text-[#FFFFFF]">{patientName}</h1>
-       
+        <div className="flex items-center gap-4">
+            {onNotificationsClick && (
+                <button
+                onClick={onNotificationsClick}
+                className="text-xl"
+                >
+                🔔
+                </button>
+            )}
 
+            <h1 className="font-bold text-lg text-[#FFFFFF]">
+                {patientName}
+            </h1>
+            </div>
     </header>
   )
 }
