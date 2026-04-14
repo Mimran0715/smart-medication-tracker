@@ -36,3 +36,7 @@ Thumbs.db
 
 # turbopack
 .turbo
+
+# pycache
+.pyc
+api/__pycache__
