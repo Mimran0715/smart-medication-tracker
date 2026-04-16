@@ -1,6 +1,8 @@
 "use client";
 import {useState, useRef, useEffect} from "react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
+import { useAuth } from "@/context/AuthContext";
 
 type Props = {
   onNotificationsClick?: () => void;
@@ -9,8 +11,8 @@ type Props = {
 export default function Header ({ onNotificationsClick }: Props) {
     const [open, setOpen] = useState(false);
     const popupRef = useRef<HTMLDivElement>(null);
-    const patientName = "Jane Doe"
-
+    const { user, patientName, logout } = useAuth();
+    const router = useRouter();
 
     useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
@@ -24,6 +26,12 @@ export default function Header ({ onNotificationsClick }: Props) {
     };
   }, []);
 
+  const handleLogout = async () => {
+    setOpen(false);
+    await logout();
+    router.push("/login");
+  };
+
   return (
     <header className="flex justify-between items-center p-4 bg-[#1AA1E3] border-b">
         <div className="flex items-center gap-2">
@@ -33,9 +41,9 @@ export default function Header ({ onNotificationsClick }: Props) {
                 className="text-xl"
                 >
                 ❤️
-                </button>        
+                </button>
                 {open && (
-                <div className="absolute mt-2 left-0 bg-white border rounded shadow-md p-2">  
+                <div className="absolute mt-2 left-0 bg-white border rounded shadow-md p-2">
                 <Link
                     href="/medications"
                     onClick={() => setOpen(false)}
@@ -49,7 +57,7 @@ export default function Header ({ onNotificationsClick }: Props) {
                     className="block px-4 py-2 hover:bg-gray-100"
                     >
                     View Analytics
-                </Link>    
+                </Link>
                 <Link
                     href="/settings"
                     onClick={() => setOpen(false)}
@@ -57,13 +65,12 @@ export default function Header ({ onNotificationsClick }: Props) {
                     >
                     Settings
                 </Link>
-                <Link
-                    href="/"
-                    onClick={() => setOpen(false)}
-                    className="block px-4 py-2 hover:bg-gray-100"
+                <button
+                    onClick={handleLogout}
+                    className="block w-full text-left px-4 py-2 hover:bg-gray-100"
                     >
                     Log Out
-                </Link>
+                </button>
                 </div>
             )}
             </div>
@@ -85,9 +92,9 @@ export default function Header ({ onNotificationsClick }: Props) {
                 </button>
             )}
 
-            <h1 className="font-bold text-lg text-[#FFFFFF]">
-                {patientName}
-            </h1>
+        <h1 className="font-bold text-lg text-[#FFFFFF]">{patientName || user?.email || ""}</h1>
+
+
             </div>
     </header>
   )
