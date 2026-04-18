@@ -106,7 +106,20 @@ export default function AnalyticsPage() {
   // Next, this will be basic analytics and associated summary metrics for display
   const totalMeds = filteredSummary.length;
 
-  const insights = data.summary.map((med) => {
+  // Identify the medication with the lowest average glucode using array reduction, this will be used to generate insights 
+  // and highlight the most effective medication in terms of glucose control based on the current filtered dataset.
+  const bestMed = 
+    filteredSummary.length > 0
+      ? filteredSummary.reduce((best, med) =>
+          med.avgGlucose < best.avgGlucose ? med : best
+        )
+      : null;
+
+  // Generating insights only for the medications that are currently filtered, this will keep the
+  // insights panel consistent with the filters that have been user-selected
+  // which in turn ensures that the summaries that are displayed will reflect the same subset of data in the
+  // table and charts, creating a cohesive and unified user experience across the analytics dashboard.
+  const insights = filteredSummary.map((med) => {
     return {
       med: med.med,
       text: `${med.med} shows avg glucose ${med.avgGlucose}, adherence ${(med.adherence * 100).toFixed(0)}%, and ${med.weightChange > 0 ? "weight gain" : "weight loss"} of ${Math.abs(med.weightChange)} lbs.`,
@@ -129,6 +142,10 @@ export default function AnalyticsPage() {
           <p className="text-sm text-gray-600">
             Total Medications: {totalMeds}
           </p>
+
+          <p className="text-sm text-gray-600 capitalize">
+            Best Glucose Control:{bestMed?.med}
+            </p>
         </div>
 
         {/* Charts */}
