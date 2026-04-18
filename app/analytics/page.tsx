@@ -131,13 +131,13 @@ export default function AnalyticsPage() {
       {/* MAIN CONTENT */}
       <div className="lg:col-span-3 space-y-6">
         {/* Filters */}
-        <div className="bg-white rounded-2xl shadow-sm border p-4">
+        <div className="bg-white rounded-2xl shadow-sm border p-6">
           <h2 className="text-lg font-semibold mb-3">Filters</h2>
           <Filters filters={filters} setFilters={setFilters} />
         </div>
 
         {/* Analytics Overview */}
-        <div className="bg-white rounded-2xl shadow-sm border p-4">
+        <div className="bg-white rounded-2xl shadow-sm border p-6">
           <h2 className="text-lg font-semibold mb-2">Analytics Overview</h2>
           <p className="text-sm text-gray-600">
             Total Medications: {totalMeds}
@@ -149,13 +149,13 @@ export default function AnalyticsPage() {
         </div>
 
         {/* Charts */}
-        <div className="bg-white rounded-2xl shadow-sm border p-4">
+        <div className="bg-white rounded-2xl shadow-sm border p-6">
           <h2 className="text-lg font-semibold mb-4">Trends</h2>
           <Charts data={data} filters={filters} />
         </div>
 
         {/* Table */}
-        <div className="bg-white rounded-2xl shadow-sm border p-4">
+        <div className="bg-white rounded-2xl shadow-sm border p-6">
           <h2 className="text-lg font-semibold mb-3">Medication Summary</h2>
           <Table
             data={filteredSummary}
@@ -167,7 +167,7 @@ export default function AnalyticsPage() {
       </div>
 
       {/* INSIGHTS SIDEBAR */}
-      <div className="bg-white rounded-2xl shadow-sm border p-4 h-fit sticky top-6">
+      <div className="bg-white rounded-2xl shadow-sm border p-6 h-fit sticky top-6">
         <h2 className="text-lg font-semibold mb-4">Insights</h2>
 
         <ul className="space-y-3 text-sm text-gray-700">
