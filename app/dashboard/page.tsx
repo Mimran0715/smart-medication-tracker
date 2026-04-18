@@ -15,6 +15,8 @@ import CommunicationModal from "./communicationModal";
 import MedicationModal from "./medicationModal";
 import ReminderPopup from "../../components/reminderPopup"
 import medicationData from "@/data/fhir_medication_example.json";
+import LogGlucoseModal from "./logGlucoseModal";
+import LogMedicationModal from "./logMedicationModal";
 
 ChartJS.register(
   CategoryScale,
@@ -135,6 +137,8 @@ export default function Dashboard() {
   const [isModalOpen, setIsModalOpen] = useState(false); // com request
   const [reminderResult, setReminderResult] = useState("");
   const schedulePickerRef = useRef<HTMLDivElement>(null);
+  const [isGlucoseModalOpen, setIsGlucoseModalOpen] = useState(false);
+  const [isLogMedicationModalOpen, setIsLogMedicationModalOpen] = useState(false);
 
   // Chart data
   // const glucoseData = [120, 130, 115, 140, 125, 135, 128];
@@ -330,10 +334,14 @@ export default function Dashboard() {
         <ReminderPopup />
         <div className="bg-white rounded shadow p-4 flex flex-col justify-center gap-4">
           <h2 className="font-bold mb-2">Quick Actions</h2>
-          <button className="bg-[#1AA1E3] text-white py-2 px-4 rounded hover:bg-blue-600">
+          <button 
+          onClick={() => setIsGlucoseModalOpen(true)}
+          className="bg-[#1AA1E3] text-white py-2 px-4 rounded hover:bg-blue-600">
             Log Glucose
           </button>
-          <button className="bg-[#1AA1E3] text-white py-2 px-4 rounded hover:bg-blue-600">
+          <button 
+          onClick={() => setIsLogMedicationModalOpen(true)}
+          className="bg-[#1AA1E3] text-white py-2 px-4 rounded hover:bg-blue-600">
             Log Medication
           </button>
         </div>
@@ -518,7 +526,18 @@ export default function Dashboard() {
             </div>
           </div>
         </div>
+
       )}
+
+      <LogGlucoseModal
+        isOpen={isGlucoseModalOpen}
+        onClose={() => setIsGlucoseModalOpen(false)}
+      />
+      <LogMedicationModal
+        isOpen={isLogMedicationModalOpen}
+        onClose={() => setIsLogMedicationModalOpen(false)}
+      />
     </div>
+    
   );
 }
