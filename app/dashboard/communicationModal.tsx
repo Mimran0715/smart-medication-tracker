@@ -9,6 +9,7 @@ type CommunicationModalProps = {
 export default function CommunicationModal({ onClose }: CommunicationModalProps) {
   const [selectedProvider, setSelectedProvider] = useState("");
   const [message, setMessage] = useState("");
+  const [includeStats, setIncludeStats] = useState(false); // com request
 
   //sample data change later
   const providers = [
@@ -16,15 +17,41 @@ export default function CommunicationModal({ onClose }: CommunicationModalProps)
     { id: "2", name: "Dr. Jane Smith", email: "fake-doctor2@example.com" },
   ];
 
-  const handleSend = () => {
-    if (!selectedProvider || !message) {
-      alert("Please select a provider and type a message.");
-      return;
-    }
-    //change later
-    console.log(`Sending message to ${selectedProvider}: ${message}`);
-    onClose();
-  };
+  // const handleSend = () => {
+  //   if (!selectedProvider || !message) {
+  //     alert("Please select a provider and type a message.");
+  //     return;
+  //   }
+  //   //change later
+  //   console.log(`Sending message to ${selectedProvider}: ${message}`);
+  //   onClose();
+  // };
+
+  const handleSend = async () => {
+      if (!selectedProvider || !message) {
+        alert("Please select a provider and type a message.");
+        return;
+      }
+
+      const res = await fetch("/api/communication/send", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          providerEmail: selectedProvider,
+          message,
+          includeStats,
+        }),
+      });
+
+      if (!res.ok) {
+        alert("Failed to send message");
+        return;
+      }
+
+      onClose();
+    };
 
   return (
     <div className="fixed inset-0 z-100 flex items-center justify-center bg-white bg-opacity-20">
@@ -63,10 +90,12 @@ export default function CommunicationModal({ onClose }: CommunicationModalProps)
         {/* meds button */}
         <button
           type="button"
-          className="mb-4 text-green-600 hover:text-green-800 font-medium"
-          onClick={() => alert("Include Medication Stats (not implemented)")}
+          className={`mb-4 font-medium ${
+            includeStats ? "text-green-800" : "text-green-600"
+          }`}
+          onClick={() => setIncludeStats((prev) => !prev)}
         >
-          + Include Medication Stats
+          {includeStats ? "✓ Medication Stats Included" : "+ Include Medication Stats"}
         </button>
 
         {/* action buttons */}
