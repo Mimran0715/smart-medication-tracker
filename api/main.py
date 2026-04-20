@@ -2,6 +2,9 @@ from fastapi import FastAPI, HTTPException, Security, Request, Depends
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials
 from contextlib import asynccontextmanager
+from typing import Literal, Optional
+from datetime import date
+from pydantic import BaseModel, model_validator
 import asyncpg
 import os
 import firebase_admin
@@ -362,3 +365,93 @@ async def medication_trends(
             for row in rows
         ],
     }
+
+
+# ---------------------------------------------------------------------------
+# Pydantic models — side effects
+# ---------------------------------------------------------------------------
+
+VALID_SIDE_EFFECT_CATEGORIES = Literal["fatigue", "dizziness", "nausea", "headache", "other"]
+
+
+class SideEffectIn(BaseModel):
+    side_effect_category: VALID_SIDE_EFFECT_CATEGORIES
+    side_effect_notes: Optional[str] = None
+    side_effect_severity: int
+    date: date
+
+    @model_validator(mode="after")
+    def notes_required_for_other(self) -> "SideEffectIn":
+        if self.side_effect_category == "other" and not self.side_effect_notes:
+            raise ValueError("side_effect_notes is required when category is 'other'")
+        return self
+
+
+class SideEffectOut(SideEffectIn):
+    patient_id: str
+    created_at: str
+
+
+# ---------------------------------------------------------------------------
+# POST /api/patients/me/side-effects
+# ---------------------------------------------------------------------------
+
+@app.post("/api/patients/me/side-effects", response_model=SideEffectOut, status_code=201)
+async def create_side_effect(
+    body: SideEffectIn,
+    request: Request,
+    firebase_uid: str = Depends(require_firebase_user),
+):
+    async with pool(request).acquire() as conn:
+        patient_id = await get_patient_id_for_user(conn, firebase_uid)
+
+        try:
+            row = await conn.fetchrow(
+                """
+                INSERT INTO side_effects
+                    (patient_id, side_effect_category, side_effect_notes,
+                     side_effect_severity, date)
+                VALUES ($1::uuid, $2, $3, $4, $5)
+                RETURNING patient_id::text, side_effect_category, side_effect_notes,
+                          side_effect_severity, date, created_at::text
+                """,
+                patient_id,
+                body.side_effect_category,
+                body.side_effect_notes,
+                body.side_effect_severity,
+                body.date,
+            )
+        except asyncpg.CheckViolationError as e:
+            # Safety net — Pydantic should catch invalid categories first
+            raise HTTPException(status_code=422, detail=str(e))
+
+    return dict(row)
+
+
+# ---------------------------------------------------------------------------
+# GET /api/patients/me/side-effects
+# ---------------------------------------------------------------------------
+
+@app.get("/api/patients/me/side-effects", response_model=list[SideEffectOut])
+async def list_side_effects(
+    request: Request,
+    firebase_uid: str = Depends(require_firebase_user),
+):
+    async with pool(request).acquire() as conn:
+        patient_id = await get_patient_id_for_user(conn, firebase_uid)
+
+        rows = await conn.fetch(
+            """
+            SELECT patient_id::text, side_effect_category, side_effect_notes,
+                   side_effect_severity, date, created_at::text
+            FROM   side_effects
+            WHERE  patient_id = $1::uuid
+            ORDER  BY date DESC, created_at DESC
+            """,
+            patient_id,
+        )
+
+    if not rows:
+        raise HTTPException(status_code=404, detail="No side effects recorded for this patient")
+
+    return [dict(r) for r in rows]
