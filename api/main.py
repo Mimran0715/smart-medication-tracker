@@ -455,3 +455,7 @@ async def list_side_effects(
         raise HTTPException(status_code=404, detail="No side effects recorded for this patient")
 
     return [dict(r) for r in rows]
+
+@app.get("/health")
+def health():
+    return {"status": "ok"}
