@@ -425,6 +425,17 @@ CREATE TABLE adherence (
     date            DATE NOT NULL
 );
 
+CREATE TABLE glucose (
+    id          SERIAL PRIMARY KEY,
+    patient_id  UUID    NOT NULL REFERENCES patient(id),
+    reading     NUMERIC NOT NULL,  -- mg/dL
+    meal_context TEXT CHECK (meal_context IN ('fasting', 'pre_meal', 'post_meal', 'bedtime', 'other')),
+    notes       TEXT,
+    created_at  TIMESTAMPTZ DEFAULT NOW(),
+    date        DATE    NOT NULL,
+    time_taken  TIME    NOT NULL
+);
+
 -- =============================================================================
 -- 8. AUTH MAPPING TABLE
 -- =============================================================================
