@@ -403,6 +403,28 @@ CREATE TABLE side_effects (
     )
 );
 
+-- =============================================================================
+-- FIXING ISSUE WITH SIDE_EFFECTS CONSTRAINTS
+-- =============================================================================
+
+
+ALTER TABLE side_effects
+DROP CONSTRAINT IF EXISTS side_effects_side_effect_category_check;
+
+ALTER TABLE side_effects
+ADD CONSTRAINT side_effects_side_effect_category_check
+CHECK (
+    side_effect_category IN (
+        'fatigue',
+        'dizziness',
+        'nausea',
+        'headache',
+        'blurred_vision',
+        'other'
+    )
+);
+
+
 CREATE TABLE exercise (
     patient_id UUID    NOT NULL REFERENCES patient(id),
     exercised  BOOLEAN NOT NULL,
@@ -851,6 +873,115 @@ SELECT
     NULLIF(owner_name,'')
 FROM _pt_raw;
 DROP TABLE _pt_raw;
+
+-- ---------------------------------------------------------------------------
+-- Side Effects
+-- ---------------------------------------------------------------------------
+
+CREATE TEMP TABLE _side_effects_raw (
+    patient_id TEXT,
+    side_effect_category TEXT,
+    side_effect_notes TEXT,
+    created_at TEXT,
+    side_effect_severity TEXT,
+    date TEXT
+);
+
+COPY _side_effects_raw
+FROM '/docker-entrypoint-initdb.d/side_effects_timeseries.csv'
+WITH (FORMAT csv, HEADER true);
+
+INSERT INTO side_effects (
+    patient_id,
+    side_effect_category,
+    side_effect_notes,
+    side_effect_severity,
+    date
+)
+SELECT
+    patient_id::uuid,
+    side_effect_category,
+    side_effect_notes,
+    side_effect_severity::int,
+    date::date
+FROM _side_effects_raw;
+
+DROP TABLE _side_effects_raw;
+
+-- ---------------------------------------------------------------------------
+-- Glucose
+-- ---------------------------------------------------------------------------
+
+CREATE TEMP TABLE _glucose_raw (
+    id TEXT,
+    patient_id TEXT,
+    reading TEXT,
+    meal_context TEXT,
+    notes TEXT,
+    created_at TEXT,
+    date TEXT,
+    time_taken TEXT
+);
+
+COPY _glucose_raw
+FROM '/docker-entrypoint-initdb.d/glucose_timeseries.csv'
+WITH (FORMAT csv, HEADER true);
+
+INSERT INTO glucose (
+    patient_id,
+    reading,
+    meal_context,
+    notes,
+    date,
+    time_taken
+)
+SELECT
+    patient_id::uuid,
+    reading::numeric,
+    meal_context,
+    notes,
+    date::date,
+    time_taken::time
+FROM _glucose_raw;
+
+DROP TABLE _glucose_raw;
+
+-- ---------------------------------------------------------------------------
+-- Adherence
+-- ---------------------------------------------------------------------------
+
+CREATE TEMP TABLE _adherence_raw (
+    patient_id TEXT,
+    medication_id TEXT,
+    medication_name TEXT,
+    created_at TEXT,
+    date TEXT
+);
+
+COPY _adherence_raw
+FROM '/docker-entrypoint-initdb.d/adherence_timeseries.csv'
+WITH (FORMAT csv, HEADER true);
+
+INSERT INTO adherence (
+    patient_id,
+    medication_id,
+    medication_name,
+    date
+)
+SELECT
+    patient_id::uuid,
+
+    REPLACE(medication_id, 'med-', '')::int,
+
+    medication_name,
+    date::date
+FROM _adherence_raw;
+
+DROP TABLE _adherence_raw;
+
+
+
+
 
 -- =============================================================================
 -- 10. SEED DATA — CLINICAL CODES & CLINICAL TABLES  (Batch2)

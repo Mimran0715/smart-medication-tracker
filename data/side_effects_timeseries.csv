@@ -1,0 +1,1282 @@
+patient_id,side_effect_category,side_effect_notes,created_at,side_effect_severity,date
+e9596bef-27a9-25bf-cf91-8b800762b547,blurred_vision,slight blurry vision episode,2026-04-19 23:13:38.391233,2,2026-04-19
+e9596bef-27a9-25bf-cf91-8b800762b547,blurred_vision,difficulty focusing eyes,2026-04-17 13:38:38.391233,4,2026-04-17
+e9596bef-27a9-25bf-cf91-8b800762b547,nausea,felt slightly nauseous after eating,2026-04-21 01:57:38.391233,2,2026-04-21
+e9596bef-27a9-25bf-cf91-8b800762b547,blurred_vision,slight blurry vision episode,2026-04-22 10:33:38.391233,4,2026-04-22
+e9596bef-27a9-25bf-cf91-8b800762b547,blurred_vision,slight blurry vision episode,2026-04-22 03:31:38.391233,5,2026-04-22
+d37d29a2-4c2e-883b-824e-98a73a338d8f,dizziness,lightheaded when standing,2026-04-17 12:34:38.391233,2,2026-04-17
+d37d29a2-4c2e-883b-824e-98a73a338d8f,blurred_vision,difficulty focusing eyes,2026-04-21 00:53:38.391233,3,2026-04-21
+a8909c49-a4eb-05c7-6a6a-3bd5a3b84b8f,nausea,felt slightly nauseous after eating,2026-04-19 16:27:38.391233,1,2026-04-19
+a8909c49-a4eb-05c7-6a6a-3bd5a3b84b8f,fatigue,feeling unusually tired,2026-04-17 12:12:38.391233,3,2026-04-17
+20160e83-2fc6-4109-9a2a-31731b78d8ee,dizziness,brief dizziness episode,2026-04-18 20:11:38.391233,3,2026-04-18
+20160e83-2fc6-4109-9a2a-31731b78d8ee,dizziness,brief dizziness episode,2026-04-19 07:40:38.391233,3,2026-04-19
+20160e83-2fc6-4109-9a2a-31731b78d8ee,fatigue,low energy throughout the day,2026-04-17 04:02:38.391233,1,2026-04-17
+20160e83-2fc6-4109-9a2a-31731b78d8ee,nausea,felt slightly nauseous after eating,2026-04-17 13:51:38.391233,1,2026-04-17
+77acd254-5e58-06ec-849e-fa5c6f457722,nausea,mild stomach discomfort,2026-04-23 14:57:38.391233,1,2026-04-23
+77acd254-5e58-06ec-849e-fa5c6f457722,other,feeling jittery and unsettled,2026-04-18 21:20:38.391233,1,2026-04-18
+77acd254-5e58-06ec-849e-fa5c6f457722,nausea,felt slightly nauseous after eating,2026-04-20 05:15:38.391233,2,2026-04-20
+ba738fd6-7a11-d6cb-475b-f1f2a78eca2f,dizziness,lightheaded when standing,2026-04-18 06:31:38.391233,2,2026-04-18
+ba738fd6-7a11-d6cb-475b-f1f2a78eca2f,dizziness,brief dizziness episode,2026-04-23 04:30:38.391233,3,2026-04-23
+ba738fd6-7a11-d6cb-475b-f1f2a78eca2f,headache,mild headache in the afternoon,2026-04-23 07:23:38.391233,4,2026-04-23
+138900a2-1264-08bc-f200-a456edaae7da,other,feeling jittery and unsettled,2026-04-23 03:53:38.391233,1,2026-04-23
+785ff06c-c742-a84e-d0f1-aa690557d364,blurred_vision,temporary vision blurriness,2026-04-19 14:28:38.391233,3,2026-04-19
+785ff06c-c742-a84e-d0f1-aa690557d364,other,unusual tingling sensation,2026-04-17 18:15:38.391233,4,2026-04-17
+785ff06c-c742-a84e-d0f1-aa690557d364,nausea,mild stomach discomfort,2026-04-20 08:38:38.391233,1,2026-04-20
+785ff06c-c742-a84e-d0f1-aa690557d364,headache,pressure behind eyes,2026-04-23 21:03:38.391233,3,2026-04-23
+91673368-24c8-f773-0013-e7b900040742,nausea,waves of nausea in the morning,2026-04-17 09:39:38.391233,2,2026-04-17
+91673368-24c8-f773-0013-e7b900040742,blurred_vision,temporary vision blurriness,2026-04-23 16:52:38.391233,2,2026-04-23
+91673368-24c8-f773-0013-e7b900040742,other,general feeling of being off,2026-04-19 12:32:38.391233,1,2026-04-19
+b7992079-4aef-2f62-b0b2-b37d75de3540,other,general feeling of being off,2026-04-23 08:04:38.391233,2,2026-04-23
+b7992079-4aef-2f62-b0b2-b37d75de3540,blurred_vision,difficulty focusing eyes,2026-04-17 04:08:38.391233,3,2026-04-17
+5094e1ff-3c29-6a47-1bb2-4f22438d4cc4,other,increased sweating without clear cause,2026-04-19 01:04:38.391233,3,2026-04-19
+5094e1ff-3c29-6a47-1bb2-4f22438d4cc4,fatigue,low energy throughout the day,2026-04-23 03:52:38.391233,3,2026-04-23
+5094e1ff-3c29-6a47-1bb2-4f22438d4cc4,fatigue,exhausted after minimal activity,2026-04-21 22:54:38.391233,2,2026-04-21
+5094e1ff-3c29-6a47-1bb2-4f22438d4cc4,other,unusual tingling sensation,2026-04-17 06:57:38.391233,2,2026-04-17
+5094e1ff-3c29-6a47-1bb2-4f22438d4cc4,headache,persistent headache today,2026-04-17 06:03:38.391233,2,2026-04-17
+4f5af85d-3c6b-6acb-ada8-840bb5741c6b,dizziness,lightheaded when standing,2026-04-19 20:35:38.391233,5,2026-04-19
+4f5af85d-3c6b-6acb-ada8-840bb5741c6b,dizziness,felt faint after walking,2026-04-18 09:04:38.391233,3,2026-04-18
+4f5af85d-3c6b-6acb-ada8-840bb5741c6b,fatigue,exhausted after minimal activity,2026-04-23 10:41:38.391233,2,2026-04-23
+4f5af85d-3c6b-6acb-ada8-840bb5741c6b,nausea,waves of nausea in the morning,2026-04-20 03:19:38.391233,3,2026-04-20
+04bc5bfe-68ce-5443-70a3-77577492a15c,other,increased sweating without clear cause,2026-04-20 18:40:38.391233,2,2026-04-20
+04bc5bfe-68ce-5443-70a3-77577492a15c,nausea,mild stomach discomfort,2026-04-21 23:35:38.391233,3,2026-04-21
+04bc5bfe-68ce-5443-70a3-77577492a15c,dizziness,felt faint after walking,2026-04-23 06:07:38.391233,4,2026-04-23
+04bc5bfe-68ce-5443-70a3-77577492a15c,nausea,waves of nausea in the morning,2026-04-20 03:11:38.391233,1,2026-04-20
+04bc5bfe-68ce-5443-70a3-77577492a15c,headache,mild headache in the afternoon,2026-04-19 03:11:38.391233,1,2026-04-19
+429976e1-61a3-34e2-27ff-371507b25a86,fatigue,feeling unusually tired,2026-04-21 06:21:38.391233,4,2026-04-21
+429976e1-61a3-34e2-27ff-371507b25a86,nausea,felt slightly nauseous after eating,2026-04-17 23:10:38.391233,2,2026-04-17
+429976e1-61a3-34e2-27ff-371507b25a86,dizziness,felt faint after walking,2026-04-21 06:32:38.391233,4,2026-04-21
+429976e1-61a3-34e2-27ff-371507b25a86,dizziness,felt faint after walking,2026-04-17 06:16:38.391233,4,2026-04-17
+2464b949-a039-5406-a15b-c3cd1d7be128,dizziness,brief dizziness episode,2026-04-20 14:05:38.391233,4,2026-04-20
+2464b949-a039-5406-a15b-c3cd1d7be128,other,unusual tingling sensation,2026-04-17 15:30:38.391233,1,2026-04-17
+106b8505-bda2-cd31-4680-318ed537ab33,headache,pressure behind eyes,2026-04-17 00:26:38.391233,2,2026-04-17
+106b8505-bda2-cd31-4680-318ed537ab33,nausea,waves of nausea in the morning,2026-04-23 02:00:38.391233,2,2026-04-23
+106b8505-bda2-cd31-4680-318ed537ab33,other,mild tremor in hands,2026-04-19 03:46:38.391233,4,2026-04-19
+106b8505-bda2-cd31-4680-318ed537ab33,blurred_vision,slight blurry vision episode,2026-04-19 10:36:38.391233,2,2026-04-19
+455d2393-5e85-d79c-7ba3-f0b7febf3b51,nausea,waves of nausea in the morning,2026-04-23 16:54:38.391233,3,2026-04-23
+455d2393-5e85-d79c-7ba3-f0b7febf3b51,other,general feeling of being off,2026-04-17 08:43:38.391233,3,2026-04-17
+455d2393-5e85-d79c-7ba3-f0b7febf3b51,fatigue,feeling unusually tired,2026-04-18 22:42:38.391233,2,2026-04-18
+f024b94f-387b-664c-eca7-311109c80435,other,stomach discomfort not clearly nausea,2026-04-17 10:16:38.391233,2,2026-04-17
+871ee2eb-403a-8286-1082-ba173cb79e53,blurred_vision,difficulty focusing eyes,2026-04-21 14:25:38.391233,5,2026-04-21
+871ee2eb-403a-8286-1082-ba173cb79e53,nausea,felt slightly nauseous after eating,2026-04-21 16:48:38.391233,4,2026-04-21
+871ee2eb-403a-8286-1082-ba173cb79e53,other,increased sweating without clear cause,2026-04-20 12:00:38.391233,1,2026-04-20
+36eef6d0-59bf-d826-c860-58aaaa2c1bd6,other,mild tremor in hands,2026-04-18 08:18:38.391233,2,2026-04-18
+36eef6d0-59bf-d826-c860-58aaaa2c1bd6,headache,mild headache in the afternoon,2026-04-20 07:43:38.391233,3,2026-04-20
+36eef6d0-59bf-d826-c860-58aaaa2c1bd6,blurred_vision,difficulty focusing eyes,2026-04-21 19:15:38.391233,3,2026-04-21
+36eef6d0-59bf-d826-c860-58aaaa2c1bd6,blurred_vision,difficulty focusing eyes,2026-04-17 21:37:38.391233,4,2026-04-17
+c1d5cb9e-fdcc-6536-6118-eabd945851bd,dizziness,felt faint after walking,2026-04-21 03:43:38.391233,3,2026-04-21
+c1d5cb9e-fdcc-6536-6118-eabd945851bd,headache,pressure behind eyes,2026-04-21 22:56:38.391233,1,2026-04-21
+c1d5cb9e-fdcc-6536-6118-eabd945851bd,dizziness,felt faint after walking,2026-04-16 23:09:38.391233,2,2026-04-16
+a5c38464-0f17-7c3d-106a-005677b069ec,fatigue,low energy throughout the day,2026-04-22 22:17:38.391233,2,2026-04-22
+8382652e-b6b3-6cba-4bac-ed94cc358c03,nausea,felt slightly nauseous after eating,2026-04-17 05:52:38.391233,3,2026-04-17
+8382652e-b6b3-6cba-4bac-ed94cc358c03,nausea,waves of nausea in the morning,2026-04-18 18:37:38.391233,1,2026-04-18
+8382652e-b6b3-6cba-4bac-ed94cc358c03,headache,pressure behind eyes,2026-04-20 11:08:38.391233,2,2026-04-20
+8382652e-b6b3-6cba-4bac-ed94cc358c03,blurred_vision,temporary vision blurriness,2026-04-19 14:42:38.391233,4,2026-04-19
+4d092d5a-b2e0-c4c1-f043-f76a42ea4a01,dizziness,brief dizziness episode,2026-04-18 04:17:38.391233,4,2026-04-18
+4d092d5a-b2e0-c4c1-f043-f76a42ea4a01,fatigue,low energy throughout the day,2026-04-20 06:38:38.391233,1,2026-04-20
+4d092d5a-b2e0-c4c1-f043-f76a42ea4a01,dizziness,brief dizziness episode,2026-04-21 03:29:38.391233,3,2026-04-21
+4d092d5a-b2e0-c4c1-f043-f76a42ea4a01,headache,mild headache in the afternoon,2026-04-21 08:54:38.391233,1,2026-04-21
+4d092d5a-b2e0-c4c1-f043-f76a42ea4a01,fatigue,exhausted after minimal activity,2026-04-21 04:02:38.391233,3,2026-04-21
+4436c6b8-7de5-54a4-4aaa-16ea504ab3f9,dizziness,felt faint after walking,2026-04-17 22:59:38.391233,3,2026-04-17
+91a7a078-9a74-0b4c-8b76-d9d782f5030b,headache,pressure behind eyes,2026-04-20 01:37:38.391233,3,2026-04-20
+91a7a078-9a74-0b4c-8b76-d9d782f5030b,headache,pressure behind eyes,2026-04-20 22:43:38.391233,1,2026-04-20
+91a7a078-9a74-0b4c-8b76-d9d782f5030b,headache,pressure behind eyes,2026-04-18 02:34:38.391233,2,2026-04-18
+91a7a078-9a74-0b4c-8b76-d9d782f5030b,dizziness,lightheaded when standing,2026-04-17 10:28:38.391233,4,2026-04-17
+8c3edf43-e5fc-fba3-5b73-f6695ad1853f,dizziness,felt faint after walking,2026-04-20 11:10:38.391233,5,2026-04-20
+d20dca46-a7bd-2306-3b6b-8db08b92ca58,headache,persistent headache today,2026-04-23 12:24:38.391233,1,2026-04-23
+d20dca46-a7bd-2306-3b6b-8db08b92ca58,dizziness,brief dizziness episode,2026-04-22 13:37:38.391233,2,2026-04-22
+d20dca46-a7bd-2306-3b6b-8db08b92ca58,dizziness,felt faint after walking,2026-04-23 07:42:38.391233,3,2026-04-23
+d20dca46-a7bd-2306-3b6b-8db08b92ca58,blurred_vision,difficulty focusing eyes,2026-04-18 14:59:38.391233,5,2026-04-18
+4ab5d156-4c69-9f48-162f-ec8e7c199ff5,blurred_vision,temporary vision blurriness,2026-04-21 23:06:38.391233,3,2026-04-21
+1c8bb939-3d87-6bf0-3d30-bb06a96bc6e0,fatigue,low energy throughout the day,2026-04-21 12:56:38.391233,2,2026-04-21
+1c8bb939-3d87-6bf0-3d30-bb06a96bc6e0,fatigue,exhausted after minimal activity,2026-04-19 21:53:38.391233,5,2026-04-19
+1c8bb939-3d87-6bf0-3d30-bb06a96bc6e0,blurred_vision,slight blurry vision episode,2026-04-22 11:12:38.391233,4,2026-04-22
+1c8bb939-3d87-6bf0-3d30-bb06a96bc6e0,dizziness,lightheaded when standing,2026-04-21 12:00:38.391233,2,2026-04-21
+b0e356d1-ee18-1d9b-381b-63f9b7d0e34e,blurred_vision,difficulty focusing eyes,2026-04-23 12:43:38.391233,3,2026-04-23
+b0e356d1-ee18-1d9b-381b-63f9b7d0e34e,nausea,mild stomach discomfort,2026-04-17 22:53:38.391233,1,2026-04-17
+b0e356d1-ee18-1d9b-381b-63f9b7d0e34e,dizziness,brief dizziness episode,2026-04-23 06:05:38.391233,3,2026-04-23
+b0e356d1-ee18-1d9b-381b-63f9b7d0e34e,blurred_vision,difficulty focusing eyes,2026-04-18 06:10:38.391233,4,2026-04-18
+9125fb3f-6bf3-ccf2-35e5-ee898e3da243,dizziness,brief dizziness episode,2026-04-18 11:00:38.391233,2,2026-04-18
+9125fb3f-6bf3-ccf2-35e5-ee898e3da243,headache,mild headache in the afternoon,2026-04-20 01:23:38.391233,1,2026-04-20
+9125fb3f-6bf3-ccf2-35e5-ee898e3da243,blurred_vision,slight blurry vision episode,2026-04-21 21:36:38.391233,2,2026-04-21
+8530601b-fda2-33ca-0419-886630039e19,headache,mild headache in the afternoon,2026-04-18 15:45:38.391233,2,2026-04-18
+28db2fba-838b-7b6f-ad17-63386c8f62b9,dizziness,lightheaded when standing,2026-04-19 02:41:38.391233,3,2026-04-19
+c513e533-80b0-f95b-c3c2-527bf6c516b0,nausea,waves of nausea in the morning,2026-04-21 07:08:38.391233,2,2026-04-21
+c513e533-80b0-f95b-c3c2-527bf6c516b0,dizziness,brief dizziness episode,2026-04-19 21:17:38.391233,2,2026-04-19
+c513e533-80b0-f95b-c3c2-527bf6c516b0,headache,pressure behind eyes,2026-04-21 18:10:38.391233,1,2026-04-21
+c513e533-80b0-f95b-c3c2-527bf6c516b0,other,increased sweating without clear cause,2026-04-22 09:54:38.391233,2,2026-04-22
+ecb2e25a-0626-2e6f-dae2-f667e4a0fba4,nausea,mild stomach discomfort,2026-04-17 07:32:38.391233,2,2026-04-17
+ecb2e25a-0626-2e6f-dae2-f667e4a0fba4,nausea,mild stomach discomfort,2026-04-22 02:16:38.391233,2,2026-04-22
+8a620c6b-929f-3b82-a480-c1d97a9324aa,headache,pressure behind eyes,2026-04-22 01:24:38.391233,1,2026-04-22
+8a620c6b-929f-3b82-a480-c1d97a9324aa,nausea,mild stomach discomfort,2026-04-19 05:22:38.391233,4,2026-04-19
+8a620c6b-929f-3b82-a480-c1d97a9324aa,other,mild tremor in hands,2026-04-19 04:48:38.391233,2,2026-04-19
+8a620c6b-929f-3b82-a480-c1d97a9324aa,dizziness,brief dizziness episode,2026-04-17 06:19:38.391233,4,2026-04-17
+afb8f3b9-35f9-4aeb-f1e7-50e45d1d3285,nausea,waves of nausea in the morning,2026-04-17 16:33:38.391233,4,2026-04-17
+afb8f3b9-35f9-4aeb-f1e7-50e45d1d3285,fatigue,low energy throughout the day,2026-04-19 06:16:38.391233,2,2026-04-19
+afb8f3b9-35f9-4aeb-f1e7-50e45d1d3285,fatigue,exhausted after minimal activity,2026-04-23 03:47:38.391233,3,2026-04-23
+a370e807-7436-4edc-b516-643cb1bb8584,nausea,waves of nausea in the morning,2026-04-23 04:03:38.391233,3,2026-04-23
+a370e807-7436-4edc-b516-643cb1bb8584,fatigue,feeling unusually tired,2026-04-23 05:37:38.391233,3,2026-04-23
+a370e807-7436-4edc-b516-643cb1bb8584,nausea,felt slightly nauseous after eating,2026-04-18 13:11:38.391233,2,2026-04-18
+a370e807-7436-4edc-b516-643cb1bb8584,blurred_vision,temporary vision blurriness,2026-04-18 09:12:38.391233,4,2026-04-18
+60b6f6c1-a5dc-99da-8fb3-eb5bf5927df7,blurred_vision,difficulty focusing eyes,2026-04-18 19:35:38.391233,2,2026-04-18
+60b6f6c1-a5dc-99da-8fb3-eb5bf5927df7,dizziness,felt faint after walking,2026-04-22 10:07:38.391233,4,2026-04-22
+60b6f6c1-a5dc-99da-8fb3-eb5bf5927df7,nausea,felt slightly nauseous after eating,2026-04-19 17:40:38.391233,2,2026-04-19
+1d81b7a5-4ba2-3ca1-b169-7bf99d48ac60,headache,persistent headache today,2026-04-21 17:38:38.391233,5,2026-04-21
+1d81b7a5-4ba2-3ca1-b169-7bf99d48ac60,other,general feeling of being off,2026-04-23 17:21:38.391233,1,2026-04-23
+1d81b7a5-4ba2-3ca1-b169-7bf99d48ac60,fatigue,feeling unusually tired,2026-04-20 23:04:38.391233,3,2026-04-20
+1d81b7a5-4ba2-3ca1-b169-7bf99d48ac60,headache,mild headache in the afternoon,2026-04-20 15:21:38.391233,5,2026-04-20
+1d81b7a5-4ba2-3ca1-b169-7bf99d48ac60,blurred_vision,slight blurry vision episode,2026-04-17 06:29:38.391233,3,2026-04-17
+6a16234c-698e-476b-f799-e78be1604fe8,nausea,waves of nausea in the morning,2026-04-19 10:24:38.391233,2,2026-04-19
+4bd501f6-9621-8601-84b6-5b56075c0f2a,other,increased sweating without clear cause,2026-04-23 00:18:38.391233,1,2026-04-23
+4bd501f6-9621-8601-84b6-5b56075c0f2a,dizziness,brief dizziness episode,2026-04-20 09:13:38.391233,3,2026-04-20
+4bd501f6-9621-8601-84b6-5b56075c0f2a,headache,mild headache in the afternoon,2026-04-23 10:54:38.391233,1,2026-04-23
+4bd501f6-9621-8601-84b6-5b56075c0f2a,nausea,mild stomach discomfort,2026-04-20 17:39:38.391233,1,2026-04-20
+3798ef74-a967-673b-29f5-bc1bbbdfdf7c,fatigue,feeling unusually tired,2026-04-18 14:13:38.391233,2,2026-04-18
+3798ef74-a967-673b-29f5-bc1bbbdfdf7c,blurred_vision,temporary vision blurriness,2026-04-21 01:32:38.391233,5,2026-04-21
+3798ef74-a967-673b-29f5-bc1bbbdfdf7c,dizziness,brief dizziness episode,2026-04-19 08:59:38.391233,3,2026-04-19
+b86a4fb6-54b1-1ad1-5ffe-82c02901cc58,headache,pressure behind eyes,2026-04-18 23:25:38.391233,1,2026-04-18
+03293760-7dab-a09d-d137-78f9fd49b8aa,headache,pressure behind eyes,2026-04-21 13:28:38.391233,3,2026-04-21
+03293760-7dab-a09d-d137-78f9fd49b8aa,dizziness,lightheaded when standing,2026-04-23 09:46:38.391233,5,2026-04-23
+03293760-7dab-a09d-d137-78f9fd49b8aa,other,feeling jittery and unsettled,2026-04-19 19:42:38.391233,2,2026-04-19
+928ad5e6-cab3-3fa7-729b-4a672388255f,blurred_vision,slight blurry vision episode,2026-04-20 12:16:38.391233,4,2026-04-20
+928ad5e6-cab3-3fa7-729b-4a672388255f,dizziness,lightheaded when standing,2026-04-17 00:45:38.391233,3,2026-04-17
+928ad5e6-cab3-3fa7-729b-4a672388255f,dizziness,brief dizziness episode,2026-04-20 00:05:38.391233,4,2026-04-20
+928ad5e6-cab3-3fa7-729b-4a672388255f,blurred_vision,temporary vision blurriness,2026-04-16 23:11:38.391233,4,2026-04-16
+47c1e245-c646-564d-6529-40d7667c78a8,blurred_vision,temporary vision blurriness,2026-04-17 04:37:38.391233,4,2026-04-17
+47c1e245-c646-564d-6529-40d7667c78a8,fatigue,feeling unusually tired,2026-04-18 11:24:38.391233,3,2026-04-18
+47c1e245-c646-564d-6529-40d7667c78a8,fatigue,low energy throughout the day,2026-04-19 01:05:38.391233,1,2026-04-19
+47c1e245-c646-564d-6529-40d7667c78a8,dizziness,lightheaded when standing,2026-04-20 21:12:38.391233,5,2026-04-20
+2422a7f3-231e-4875-2c42-626bbb36a809,fatigue,feeling unusually tired,2026-04-20 05:15:38.391233,4,2026-04-20
+2422a7f3-231e-4875-2c42-626bbb36a809,fatigue,low energy throughout the day,2026-04-20 17:40:38.391233,1,2026-04-20
+2422a7f3-231e-4875-2c42-626bbb36a809,dizziness,felt faint after walking,2026-04-22 18:47:38.391233,3,2026-04-22
+2422a7f3-231e-4875-2c42-626bbb36a809,blurred_vision,difficulty focusing eyes,2026-04-19 01:46:38.391233,3,2026-04-19
+2422a7f3-231e-4875-2c42-626bbb36a809,blurred_vision,temporary vision blurriness,2026-04-20 01:10:38.391233,3,2026-04-20
+b1c0934d-b77b-3237-2a3d-e9495bf9402b,fatigue,feeling unusually tired,2026-04-20 09:02:38.391233,5,2026-04-20
+b1c0934d-b77b-3237-2a3d-e9495bf9402b,other,stomach discomfort not clearly nausea,2026-04-20 22:36:38.391233,3,2026-04-20
+b1c0934d-b77b-3237-2a3d-e9495bf9402b,other,general feeling of being off,2026-04-21 09:33:38.391233,1,2026-04-21
+b1c0934d-b77b-3237-2a3d-e9495bf9402b,nausea,mild stomach discomfort,2026-04-23 15:34:38.391233,2,2026-04-23
+b1c0934d-b77b-3237-2a3d-e9495bf9402b,blurred_vision,temporary vision blurriness,2026-04-17 17:27:38.391233,2,2026-04-17
+936a849d-c370-1563-d983-221b1804f578,fatigue,low energy throughout the day,2026-04-22 13:50:38.391233,2,2026-04-22
+936a849d-c370-1563-d983-221b1804f578,other,feeling jittery and unsettled,2026-04-19 21:48:38.391233,3,2026-04-19
+936a849d-c370-1563-d983-221b1804f578,other,general feeling of being off,2026-04-19 01:14:38.391233,3,2026-04-19
+e8c5935d-b314-77c8-575c-eab82dde80e4,other,unusual tingling sensation,2026-04-19 16:55:38.391233,3,2026-04-19
+e8c5935d-b314-77c8-575c-eab82dde80e4,nausea,mild stomach discomfort,2026-04-19 15:53:38.391233,1,2026-04-19
+e8c5935d-b314-77c8-575c-eab82dde80e4,fatigue,feeling unusually tired,2026-04-19 14:05:38.391233,3,2026-04-19
+8fd5ce68-5d23-510a-ba6e-c3cb6a313030,dizziness,brief dizziness episode,2026-04-23 11:57:38.391233,3,2026-04-23
+8fd5ce68-5d23-510a-ba6e-c3cb6a313030,headache,persistent headache today,2026-04-23 08:03:38.391233,2,2026-04-23
+3846112a-5c59-f479-c7b5-116be4db019b,headache,pressure behind eyes,2026-04-18 12:03:38.391233,1,2026-04-18
+3846112a-5c59-f479-c7b5-116be4db019b,other,unusual tingling sensation,2026-04-18 03:59:38.391233,2,2026-04-18
+c205e115-b847-e9a9-eba9-2acfdcac8050,fatigue,exhausted after minimal activity,2026-04-21 08:58:38.391233,1,2026-04-21
+c205e115-b847-e9a9-eba9-2acfdcac8050,fatigue,feeling unusually tired,2026-04-17 19:09:38.391233,3,2026-04-17
+c205e115-b847-e9a9-eba9-2acfdcac8050,headache,persistent headache today,2026-04-18 17:22:38.391233,2,2026-04-18
+c205e115-b847-e9a9-eba9-2acfdcac8050,dizziness,felt faint after walking,2026-04-19 22:43:38.391233,3,2026-04-19
+81c085fe-58b4-0b7c-ab6e-b30bcdc8153e,dizziness,felt faint after walking,2026-04-22 16:19:38.391233,5,2026-04-22
+ac2c8caf-33f8-45c5-d1b2-7c2024d83c8e,other,general feeling of being off,2026-04-20 02:03:38.391233,1,2026-04-20
+ac2c8caf-33f8-45c5-d1b2-7c2024d83c8e,other,general feeling of being off,2026-04-20 09:02:38.391233,2,2026-04-20
+ac2c8caf-33f8-45c5-d1b2-7c2024d83c8e,fatigue,exhausted after minimal activity,2026-04-21 04:58:38.391233,1,2026-04-21
+ac2c8caf-33f8-45c5-d1b2-7c2024d83c8e,headache,mild headache in the afternoon,2026-04-21 23:02:38.391233,2,2026-04-21
+b0416d6d-cd93-2dee-5006-60f05ce0475b,dizziness,felt faint after walking,2026-04-20 08:44:38.391233,3,2026-04-20
+b0416d6d-cd93-2dee-5006-60f05ce0475b,dizziness,felt faint after walking,2026-04-22 15:07:38.391233,3,2026-04-22
+b0416d6d-cd93-2dee-5006-60f05ce0475b,fatigue,low energy throughout the day,2026-04-22 11:19:38.391233,4,2026-04-22
+b0416d6d-cd93-2dee-5006-60f05ce0475b,other,stomach discomfort not clearly nausea,2026-04-17 03:17:38.391233,1,2026-04-17
+9efd0978-d778-4da2-6a86-05f8c4c60837,blurred_vision,slight blurry vision episode,2026-04-19 14:38:38.391233,4,2026-04-19
+f8979ca7-4de2-2df1-2255-f6759e405f46,nausea,felt slightly nauseous after eating,2026-04-20 01:25:38.391233,1,2026-04-20
+f8979ca7-4de2-2df1-2255-f6759e405f46,blurred_vision,difficulty focusing eyes,2026-04-22 08:15:38.391233,3,2026-04-22
+f8979ca7-4de2-2df1-2255-f6759e405f46,other,unusual tingling sensation,2026-04-22 15:55:38.391233,1,2026-04-22
+f8979ca7-4de2-2df1-2255-f6759e405f46,fatigue,feeling unusually tired,2026-04-22 20:14:38.391233,2,2026-04-22
+3777e0bf-3338-c3ee-d13c-cc8dcf444aa0,blurred_vision,temporary vision blurriness,2026-04-23 19:21:38.391233,5,2026-04-23
+3777e0bf-3338-c3ee-d13c-cc8dcf444aa0,other,unusual tingling sensation,2026-04-18 22:12:38.391233,2,2026-04-18
+3777e0bf-3338-c3ee-d13c-cc8dcf444aa0,nausea,felt slightly nauseous after eating,2026-04-18 23:11:38.391233,1,2026-04-18
+e965a8de-97eb-5132-d1c3-519d00cfae22,blurred_vision,difficulty focusing eyes,2026-04-17 17:04:38.391233,4,2026-04-17
+e965a8de-97eb-5132-d1c3-519d00cfae22,fatigue,exhausted after minimal activity,2026-04-23 04:14:38.391233,1,2026-04-23
+84a73049-cb1a-262e-78fc-5dbb6114f0fc,blurred_vision,temporary vision blurriness,2026-04-23 16:01:38.391233,4,2026-04-23
+84a73049-cb1a-262e-78fc-5dbb6114f0fc,dizziness,lightheaded when standing,2026-04-19 09:30:38.391233,4,2026-04-19
+84a73049-cb1a-262e-78fc-5dbb6114f0fc,blurred_vision,difficulty focusing eyes,2026-04-17 09:35:38.391233,3,2026-04-17
+84a73049-cb1a-262e-78fc-5dbb6114f0fc,blurred_vision,difficulty focusing eyes,2026-04-18 19:54:38.391233,2,2026-04-18
+5d664c7e-3afa-dcf7-6930-9655a35ec371,dizziness,felt faint after walking,2026-04-18 03:33:38.391233,4,2026-04-18
+5d664c7e-3afa-dcf7-6930-9655a35ec371,nausea,waves of nausea in the morning,2026-04-18 10:06:38.391233,2,2026-04-18
+5d664c7e-3afa-dcf7-6930-9655a35ec371,other,stomach discomfort not clearly nausea,2026-04-18 16:29:38.391233,1,2026-04-18
+4674897f-90d5-5e96-0289-a4967dd2c823,fatigue,low energy throughout the day,2026-04-19 10:16:38.391233,1,2026-04-19
+4674897f-90d5-5e96-0289-a4967dd2c823,other,feeling jittery and unsettled,2026-04-19 15:20:38.391233,2,2026-04-19
+15b7c263-afb2-1e23-d4fd-8796c727c7df,fatigue,low energy throughout the day,2026-04-19 00:12:38.391233,2,2026-04-19
+15b7c263-afb2-1e23-d4fd-8796c727c7df,headache,persistent headache today,2026-04-21 18:27:38.391233,2,2026-04-21
+15b7c263-afb2-1e23-d4fd-8796c727c7df,fatigue,exhausted after minimal activity,2026-04-19 23:29:38.391233,5,2026-04-19
+6f4f6e30-91cb-8e07-8e00-09f92761bc73,blurred_vision,difficulty focusing eyes,2026-04-21 02:59:38.391233,4,2026-04-21
+6f4f6e30-91cb-8e07-8e00-09f92761bc73,other,stomach discomfort not clearly nausea,2026-04-22 07:29:38.391233,2,2026-04-22
+051e215b-d9a6-a1e0-900d-1c4ad48dc815,dizziness,lightheaded when standing,2026-04-22 14:43:38.391233,4,2026-04-22
+051e215b-d9a6-a1e0-900d-1c4ad48dc815,headache,mild headache in the afternoon,2026-04-21 04:47:38.391233,5,2026-04-21
+051e215b-d9a6-a1e0-900d-1c4ad48dc815,fatigue,feeling unusually tired,2026-04-19 04:08:38.391233,3,2026-04-19
+051e215b-d9a6-a1e0-900d-1c4ad48dc815,fatigue,feeling unusually tired,2026-04-19 21:44:38.391233,1,2026-04-19
+051e215b-d9a6-a1e0-900d-1c4ad48dc815,headache,pressure behind eyes,2026-04-20 01:43:38.391233,1,2026-04-20
+f7208dce-6b12-576a-c608-8d7592609100,fatigue,feeling unusually tired,2026-04-17 00:13:38.391233,1,2026-04-17
+f7208dce-6b12-576a-c608-8d7592609100,other,feeling jittery and unsettled,2026-04-22 07:16:38.391233,2,2026-04-22
+f7208dce-6b12-576a-c608-8d7592609100,fatigue,feeling unusually tired,2026-04-22 13:23:38.391233,3,2026-04-22
+f7208dce-6b12-576a-c608-8d7592609100,nausea,waves of nausea in the morning,2026-04-19 10:41:38.391233,2,2026-04-19
+f7208dce-6b12-576a-c608-8d7592609100,dizziness,lightheaded when standing,2026-04-17 16:22:38.391233,3,2026-04-17
+9564625f-b230-aff6-277d-df6c1e4f5dc2,blurred_vision,difficulty focusing eyes,2026-04-23 13:40:38.391233,5,2026-04-23
+9564625f-b230-aff6-277d-df6c1e4f5dc2,other,feeling jittery and unsettled,2026-04-23 12:24:38.391233,4,2026-04-23
+9564625f-b230-aff6-277d-df6c1e4f5dc2,blurred_vision,slight blurry vision episode,2026-04-21 18:33:38.391233,4,2026-04-21
+9564625f-b230-aff6-277d-df6c1e4f5dc2,blurred_vision,difficulty focusing eyes,2026-04-22 08:31:38.391233,3,2026-04-22
+9564625f-b230-aff6-277d-df6c1e4f5dc2,nausea,waves of nausea in the morning,2026-04-21 00:33:38.391233,2,2026-04-21
+6e1a4929-3be3-886d-981c-a224d3f3fb36,headache,mild headache in the afternoon,2026-04-23 21:08:38.391233,2,2026-04-23
+6e1a4929-3be3-886d-981c-a224d3f3fb36,blurred_vision,temporary vision blurriness,2026-04-20 04:06:38.391233,3,2026-04-20
+c2f9681c-b0bf-8229-b0d1-230e88ee3830,other,unusual tingling sensation,2026-04-18 09:10:38.391233,1,2026-04-18
+c2f9681c-b0bf-8229-b0d1-230e88ee3830,other,general feeling of being off,2026-04-21 06:31:38.391233,3,2026-04-21
+c2f9681c-b0bf-8229-b0d1-230e88ee3830,fatigue,exhausted after minimal activity,2026-04-19 17:26:38.391233,2,2026-04-19
+c2f9681c-b0bf-8229-b0d1-230e88ee3830,fatigue,exhausted after minimal activity,2026-04-23 14:53:38.391233,3,2026-04-23
+bc5406a7-07b6-333e-259b-39c0eeb1c3c1,other,stomach discomfort not clearly nausea,2026-04-20 23:51:38.391233,1,2026-04-20
+ca3d6ec0-c276-a89a-55d1-0fc97052b19c,dizziness,brief dizziness episode,2026-04-22 09:43:38.391233,4,2026-04-22
+7e2b6982-ec9e-abe6-3fcd-e5c6be586f2c,dizziness,brief dizziness episode,2026-04-19 23:56:38.391233,4,2026-04-19
+7e2b6982-ec9e-abe6-3fcd-e5c6be586f2c,dizziness,felt faint after walking,2026-04-18 22:40:38.391233,2,2026-04-18
+7e2b6982-ec9e-abe6-3fcd-e5c6be586f2c,dizziness,felt faint after walking,2026-04-19 12:25:38.391233,4,2026-04-19
+b4273983-68a8-fb9a-14c8-334572a85b4d,fatigue,low energy throughout the day,2026-04-21 04:10:38.391233,3,2026-04-21
+b4273983-68a8-fb9a-14c8-334572a85b4d,blurred_vision,slight blurry vision episode,2026-04-17 18:22:38.391233,3,2026-04-17
+b4273983-68a8-fb9a-14c8-334572a85b4d,nausea,waves of nausea in the morning,2026-04-17 10:29:38.391233,1,2026-04-17
+b4273983-68a8-fb9a-14c8-334572a85b4d,blurred_vision,difficulty focusing eyes,2026-04-23 11:18:38.391233,3,2026-04-23
+b4273983-68a8-fb9a-14c8-334572a85b4d,dizziness,felt faint after walking,2026-04-21 11:46:38.391233,3,2026-04-21
+c9d7d960-f283-7f7b-dc28-883736960470,other,increased sweating without clear cause,2026-04-21 18:02:38.391233,1,2026-04-21
+c9d7d960-f283-7f7b-dc28-883736960470,fatigue,feeling unusually tired,2026-04-18 04:47:38.391233,3,2026-04-18
+c9d7d960-f283-7f7b-dc28-883736960470,blurred_vision,temporary vision blurriness,2026-04-23 00:08:38.391233,3,2026-04-23
+c9d7d960-f283-7f7b-dc28-883736960470,dizziness,felt faint after walking,2026-04-21 22:52:38.391233,4,2026-04-21
+dda655ae-706b-8eff-3896-29b87ff0c6b4,fatigue,low energy throughout the day,2026-04-20 15:45:38.391233,2,2026-04-20
+57727a9d-34e6-f496-d52d-3660048b9424,blurred_vision,difficulty focusing eyes,2026-04-23 08:52:38.391233,5,2026-04-23
+376974ab-bcbe-03d2-f7cc-d27225dbc033,nausea,mild stomach discomfort,2026-04-18 09:25:38.391233,2,2026-04-18
+376974ab-bcbe-03d2-f7cc-d27225dbc033,headache,persistent headache today,2026-04-23 13:16:38.391233,2,2026-04-23
+376974ab-bcbe-03d2-f7cc-d27225dbc033,headache,pressure behind eyes,2026-04-19 16:16:38.391233,2,2026-04-19
+376974ab-bcbe-03d2-f7cc-d27225dbc033,other,general feeling of being off,2026-04-21 16:26:38.391233,3,2026-04-21
+a688d50e-88a0-ca83-a947-340cfb9ed708,headache,pressure behind eyes,2026-04-20 22:48:38.391233,2,2026-04-20
+a688d50e-88a0-ca83-a947-340cfb9ed708,nausea,mild stomach discomfort,2026-04-18 03:33:38.391233,1,2026-04-18
+a688d50e-88a0-ca83-a947-340cfb9ed708,blurred_vision,difficulty focusing eyes,2026-04-19 00:56:38.391233,3,2026-04-19
+a688d50e-88a0-ca83-a947-340cfb9ed708,dizziness,lightheaded when standing,2026-04-21 10:26:38.391233,5,2026-04-21
+a688d50e-88a0-ca83-a947-340cfb9ed708,dizziness,felt faint after walking,2026-04-23 04:00:38.391233,5,2026-04-23
+5e2f80cf-6ff3-dbe4-de93-6760a04c40d4,other,stomach discomfort not clearly nausea,2026-04-20 17:12:38.391233,3,2026-04-20
+5e2f80cf-6ff3-dbe4-de93-6760a04c40d4,other,unusual tingling sensation,2026-04-19 05:19:38.391233,3,2026-04-19
+5e2f80cf-6ff3-dbe4-de93-6760a04c40d4,fatigue,exhausted after minimal activity,2026-04-22 11:45:38.391233,2,2026-04-22
+9391632e-3ef2-8f00-62a3-a5ed07710d35,blurred_vision,slight blurry vision episode,2026-04-17 23:45:38.391233,3,2026-04-17
+9391632e-3ef2-8f00-62a3-a5ed07710d35,other,general feeling of being off,2026-04-19 05:45:38.391233,3,2026-04-19
+9391632e-3ef2-8f00-62a3-a5ed07710d35,headache,persistent headache today,2026-04-22 12:55:38.391233,1,2026-04-22
+c1c9899b-eeca-0c48-f1e1-588e0a7dafab,fatigue,feeling unusually tired,2026-04-21 17:52:38.391233,2,2026-04-21
+79c85116-7adc-9ec0-cdfb-6db84265970e,other,mild tremor in hands,2026-04-23 14:39:38.391233,1,2026-04-23
+1b303f2a-caf5-fbad-d4c4-504af2274cdd,blurred_vision,temporary vision blurriness,2026-04-20 02:50:38.391233,5,2026-04-20
+1b303f2a-caf5-fbad-d4c4-504af2274cdd,dizziness,lightheaded when standing,2026-04-22 17:57:38.391233,3,2026-04-22
+1b303f2a-caf5-fbad-d4c4-504af2274cdd,blurred_vision,difficulty focusing eyes,2026-04-22 07:39:38.391233,3,2026-04-22
+1b303f2a-caf5-fbad-d4c4-504af2274cdd,dizziness,lightheaded when standing,2026-04-21 20:30:38.391233,3,2026-04-21
+1b303f2a-caf5-fbad-d4c4-504af2274cdd,other,stomach discomfort not clearly nausea,2026-04-18 14:52:38.391233,3,2026-04-18
+b145649e-4065-490f-c22b-32bec59c8e2d,nausea,mild stomach discomfort,2026-04-17 20:45:38.391233,2,2026-04-17
+b145649e-4065-490f-c22b-32bec59c8e2d,nausea,waves of nausea in the morning,2026-04-23 16:52:38.391233,2,2026-04-23
+b145649e-4065-490f-c22b-32bec59c8e2d,headache,persistent headache today,2026-04-18 22:44:38.391233,3,2026-04-18
+3b5e300e-f05e-20b1-1505-ce3c19905bcd,blurred_vision,difficulty focusing eyes,2026-04-21 04:27:38.391233,3,2026-04-21
+3b5e300e-f05e-20b1-1505-ce3c19905bcd,fatigue,exhausted after minimal activity,2026-04-20 16:39:38.391233,2,2026-04-20
+3b5e300e-f05e-20b1-1505-ce3c19905bcd,nausea,waves of nausea in the morning,2026-04-23 22:15:38.391233,3,2026-04-23
+7302846a-d584-1481-e755-184cef3ec1f9,blurred_vision,temporary vision blurriness,2026-04-17 09:25:38.391233,2,2026-04-17
+7302846a-d584-1481-e755-184cef3ec1f9,blurred_vision,slight blurry vision episode,2026-04-21 10:45:38.391233,3,2026-04-21
+4bb69432-2cea-36fd-ac4e-0e043f078625,nausea,felt slightly nauseous after eating,2026-04-19 23:57:38.391233,2,2026-04-19
+4bb69432-2cea-36fd-ac4e-0e043f078625,headache,persistent headache today,2026-04-17 19:20:38.391233,2,2026-04-17
+4bb69432-2cea-36fd-ac4e-0e043f078625,other,stomach discomfort not clearly nausea,2026-04-20 03:07:38.391233,3,2026-04-20
+4f40f7fe-f0a4-0e20-7574-c929882e4b6d,dizziness,brief dizziness episode,2026-04-23 19:24:38.391233,2,2026-04-23
+4f40f7fe-f0a4-0e20-7574-c929882e4b6d,blurred_vision,slight blurry vision episode,2026-04-20 19:28:38.391233,3,2026-04-20
+4f40f7fe-f0a4-0e20-7574-c929882e4b6d,dizziness,lightheaded when standing,2026-04-23 16:20:38.391233,3,2026-04-23
+4f40f7fe-f0a4-0e20-7574-c929882e4b6d,fatigue,exhausted after minimal activity,2026-04-22 12:49:38.391233,1,2026-04-22
+4f40f7fe-f0a4-0e20-7574-c929882e4b6d,headache,mild headache in the afternoon,2026-04-17 15:51:38.391233,1,2026-04-17
+d0b31ea2-7063-f9a1-34c1-2baebb4fd1bd,other,mild tremor in hands,2026-04-22 01:14:38.391233,1,2026-04-22
+c9dbabf4-8d28-f3b2-7b0b-ff4024a174f8,other,mild tremor in hands,2026-04-22 15:41:38.391233,4,2026-04-22
+c9dbabf4-8d28-f3b2-7b0b-ff4024a174f8,fatigue,feeling unusually tired,2026-04-21 21:36:38.391233,5,2026-04-21
+c9dbabf4-8d28-f3b2-7b0b-ff4024a174f8,other,stomach discomfort not clearly nausea,2026-04-17 21:09:38.391233,2,2026-04-17
+c9dbabf4-8d28-f3b2-7b0b-ff4024a174f8,nausea,felt slightly nauseous after eating,2026-04-20 20:50:38.391233,2,2026-04-20
+c9dbabf4-8d28-f3b2-7b0b-ff4024a174f8,dizziness,felt faint after walking,2026-04-22 16:19:38.391233,3,2026-04-22
+7408e08d-2649-173a-9e6b-743c5a29c8c4,fatigue,feeling unusually tired,2026-04-22 10:09:38.391233,2,2026-04-22
+7408e08d-2649-173a-9e6b-743c5a29c8c4,fatigue,feeling unusually tired,2026-04-19 19:30:38.391233,1,2026-04-19
+ea532d92-70ee-8622-3d44-b400c8f41fdf,nausea,waves of nausea in the morning,2026-04-22 07:27:38.391233,2,2026-04-22
+49830b39-77dd-cc68-549e-7f5d20e22787,headache,persistent headache today,2026-04-18 17:26:38.391233,1,2026-04-18
+49830b39-77dd-cc68-549e-7f5d20e22787,dizziness,felt faint after walking,2026-04-20 20:40:38.391233,2,2026-04-20
+49830b39-77dd-cc68-549e-7f5d20e22787,blurred_vision,temporary vision blurriness,2026-04-23 04:50:38.391233,3,2026-04-23
+46bd3525-a1e2-326d-65b5-9cd5a0e247f9,headache,pressure behind eyes,2026-04-17 22:53:38.391233,3,2026-04-17
+4be8f044-a998-4aba-6a88-b7e4fbbf0aae,other,stomach discomfort not clearly nausea,2026-04-21 17:18:38.391233,3,2026-04-21
+4be8f044-a998-4aba-6a88-b7e4fbbf0aae,nausea,waves of nausea in the morning,2026-04-21 23:12:38.391233,3,2026-04-21
+d6abab36-8476-55a9-1329-6238abdbc66e,fatigue,low energy throughout the day,2026-04-17 12:53:38.391233,4,2026-04-17
+d6abab36-8476-55a9-1329-6238abdbc66e,blurred_vision,temporary vision blurriness,2026-04-21 05:07:38.391233,4,2026-04-21
+744e3576-1fdd-5778-0f7a-6380345738de,headache,pressure behind eyes,2026-04-18 21:39:38.391233,2,2026-04-18
+744e3576-1fdd-5778-0f7a-6380345738de,nausea,mild stomach discomfort,2026-04-21 04:18:38.391233,2,2026-04-21
+744e3576-1fdd-5778-0f7a-6380345738de,headache,mild headache in the afternoon,2026-04-22 12:10:38.391233,2,2026-04-22
+481b99bd-ba2f-9cb6-ee0a-254721106f07,blurred_vision,difficulty focusing eyes,2026-04-19 22:18:38.391233,4,2026-04-19
+481b99bd-ba2f-9cb6-ee0a-254721106f07,fatigue,exhausted after minimal activity,2026-04-23 12:23:38.391233,2,2026-04-23
+f0853206-a91a-aaf6-809b-d5612908482d,blurred_vision,difficulty focusing eyes,2026-04-23 19:50:38.391233,3,2026-04-23
+f0853206-a91a-aaf6-809b-d5612908482d,nausea,mild stomach discomfort,2026-04-17 13:31:38.391233,4,2026-04-17
+f0853206-a91a-aaf6-809b-d5612908482d,headache,persistent headache today,2026-04-20 21:49:38.391233,2,2026-04-20
+c2e7b4f6-79a9-81cf-3f55-77942ded0dcf,nausea,felt slightly nauseous after eating,2026-04-21 22:26:38.391233,1,2026-04-21
+e4896935-b4cd-d90d-8d6f-b5ffc8f1babd,headache,persistent headache today,2026-04-19 16:06:38.391233,2,2026-04-19
+e4896935-b4cd-d90d-8d6f-b5ffc8f1babd,blurred_vision,temporary vision blurriness,2026-04-18 22:27:38.391233,3,2026-04-18
+20115410-77fa-e344-6341-75b77a44e443,blurred_vision,difficulty focusing eyes,2026-04-23 09:35:38.391233,5,2026-04-23
+20115410-77fa-e344-6341-75b77a44e443,dizziness,lightheaded when standing,2026-04-22 21:46:38.391233,3,2026-04-22
+20115410-77fa-e344-6341-75b77a44e443,other,increased sweating without clear cause,2026-04-23 19:05:38.391233,3,2026-04-23
+20115410-77fa-e344-6341-75b77a44e443,blurred_vision,difficulty focusing eyes,2026-04-23 05:15:38.391233,3,2026-04-23
+20115410-77fa-e344-6341-75b77a44e443,fatigue,feeling unusually tired,2026-04-20 20:10:38.391233,3,2026-04-20
+e47ac2d7-06e9-3ebf-d9d9-2984995d011b,headache,pressure behind eyes,2026-04-17 17:32:38.391233,3,2026-04-17
+e47ac2d7-06e9-3ebf-d9d9-2984995d011b,nausea,waves of nausea in the morning,2026-04-22 08:19:38.391233,1,2026-04-22
+6f0051f4-8b0d-b4dd-ee0f-9d364068a3b2,dizziness,brief dizziness episode,2026-04-17 05:23:38.391233,4,2026-04-17
+6f0051f4-8b0d-b4dd-ee0f-9d364068a3b2,dizziness,lightheaded when standing,2026-04-19 04:09:38.391233,4,2026-04-19
+6f0051f4-8b0d-b4dd-ee0f-9d364068a3b2,other,increased sweating without clear cause,2026-04-20 01:53:38.391233,3,2026-04-20
+6f0051f4-8b0d-b4dd-ee0f-9d364068a3b2,fatigue,exhausted after minimal activity,2026-04-19 06:39:38.391233,3,2026-04-19
+8483ac57-58a3-0635-2c72-9c3b05e878b4,blurred_vision,difficulty focusing eyes,2026-04-20 17:53:38.391233,4,2026-04-20
+8483ac57-58a3-0635-2c72-9c3b05e878b4,fatigue,low energy throughout the day,2026-04-22 11:38:38.391233,1,2026-04-22
+8483ac57-58a3-0635-2c72-9c3b05e878b4,headache,pressure behind eyes,2026-04-17 16:06:38.391233,2,2026-04-17
+8483ac57-58a3-0635-2c72-9c3b05e878b4,other,stomach discomfort not clearly nausea,2026-04-21 23:27:38.391233,1,2026-04-21
+05491691-ab02-75b9-e4c1-cfde8cc2ab09,nausea,mild stomach discomfort,2026-04-23 20:36:38.391233,1,2026-04-23
+05491691-ab02-75b9-e4c1-cfde8cc2ab09,nausea,felt slightly nauseous after eating,2026-04-18 05:30:38.391233,2,2026-04-18
+05491691-ab02-75b9-e4c1-cfde8cc2ab09,blurred_vision,slight blurry vision episode,2026-04-18 04:19:38.391233,2,2026-04-18
+05491691-ab02-75b9-e4c1-cfde8cc2ab09,headache,pressure behind eyes,2026-04-17 10:53:38.391233,3,2026-04-17
+05491691-ab02-75b9-e4c1-cfde8cc2ab09,other,mild tremor in hands,2026-04-18 23:10:38.391233,3,2026-04-18
+f15c4748-48da-79d4-72e1-7095b9551495,fatigue,exhausted after minimal activity,2026-04-23 00:00:38.391233,2,2026-04-23
+f15c4748-48da-79d4-72e1-7095b9551495,fatigue,low energy throughout the day,2026-04-21 23:47:38.391233,3,2026-04-21
+8b6cef0f-18e9-4d64-e671-c494ffe76de7,dizziness,brief dizziness episode,2026-04-18 14:47:38.391233,4,2026-04-18
+8b6cef0f-18e9-4d64-e671-c494ffe76de7,blurred_vision,slight blurry vision episode,2026-04-19 08:08:38.391233,2,2026-04-19
+8b6cef0f-18e9-4d64-e671-c494ffe76de7,dizziness,brief dizziness episode,2026-04-18 07:35:38.391233,5,2026-04-18
+8b6cef0f-18e9-4d64-e671-c494ffe76de7,other,unusual tingling sensation,2026-04-17 13:12:38.391233,3,2026-04-17
+68d48d3c-8e0a-7665-03da-82a61d549cca,nausea,mild stomach discomfort,2026-04-19 01:48:38.391233,3,2026-04-19
+68d48d3c-8e0a-7665-03da-82a61d549cca,other,general feeling of being off,2026-04-18 04:36:38.391233,3,2026-04-18
+68d48d3c-8e0a-7665-03da-82a61d549cca,fatigue,exhausted after minimal activity,2026-04-20 16:54:38.391233,4,2026-04-20
+68d48d3c-8e0a-7665-03da-82a61d549cca,nausea,waves of nausea in the morning,2026-04-18 08:30:38.391233,1,2026-04-18
+5a064614-4e36-6e65-e140-b076ae4d53fd,headache,pressure behind eyes,2026-04-21 17:00:38.391233,2,2026-04-21
+5a064614-4e36-6e65-e140-b076ae4d53fd,blurred_vision,slight blurry vision episode,2026-04-19 08:32:38.391233,3,2026-04-19
+5a064614-4e36-6e65-e140-b076ae4d53fd,headache,persistent headache today,2026-04-21 07:02:38.391233,3,2026-04-21
+4848ef7c-9375-d5ce-5966-08e81936d1d2,nausea,waves of nausea in the morning,2026-04-22 09:53:38.391233,2,2026-04-22
+4848ef7c-9375-d5ce-5966-08e81936d1d2,dizziness,felt faint after walking,2026-04-20 04:02:38.391233,3,2026-04-20
+4848ef7c-9375-d5ce-5966-08e81936d1d2,nausea,mild stomach discomfort,2026-04-23 16:42:38.391233,1,2026-04-23
+4848ef7c-9375-d5ce-5966-08e81936d1d2,other,stomach discomfort not clearly nausea,2026-04-22 05:26:38.391233,1,2026-04-22
+ae04a46e-c473-f9e4-f547-c7a28d21c9ef,headache,pressure behind eyes,2026-04-23 08:28:38.391233,3,2026-04-23
+ae04a46e-c473-f9e4-f547-c7a28d21c9ef,nausea,felt slightly nauseous after eating,2026-04-23 09:45:38.391233,2,2026-04-23
+ae04a46e-c473-f9e4-f547-c7a28d21c9ef,other,stomach discomfort not clearly nausea,2026-04-22 12:54:38.391233,2,2026-04-22
+ae04a46e-c473-f9e4-f547-c7a28d21c9ef,nausea,mild stomach discomfort,2026-04-20 21:26:38.391233,1,2026-04-20
+ca770249-e51f-af33-ee78-35086ea94ba0,nausea,waves of nausea in the morning,2026-04-21 23:29:38.391233,4,2026-04-21
+21c2cc02-4f1c-79ac-beeb-1f1dcb0724f6,other,increased sweating without clear cause,2026-04-21 05:18:38.391233,2,2026-04-21
+21c2cc02-4f1c-79ac-beeb-1f1dcb0724f6,blurred_vision,slight blurry vision episode,2026-04-19 09:16:38.391233,3,2026-04-19
+785c2fb5-0668-9d6f-fe8f-278224aff79f,fatigue,feeling unusually tired,2026-04-23 17:08:38.391233,2,2026-04-23
+8e42e767-9fbe-3da8-0960-140686f08866,nausea,waves of nausea in the morning,2026-04-17 01:28:38.391233,3,2026-04-17
+8e42e767-9fbe-3da8-0960-140686f08866,dizziness,brief dizziness episode,2026-04-19 16:09:38.391233,2,2026-04-19
+8e42e767-9fbe-3da8-0960-140686f08866,other,stomach discomfort not clearly nausea,2026-04-17 04:48:38.391233,3,2026-04-17
+8e42e767-9fbe-3da8-0960-140686f08866,blurred_vision,temporary vision blurriness,2026-04-19 20:57:38.391233,4,2026-04-19
+9d73c431-7a30-51f1-2b90-c45ca058b770,headache,persistent headache today,2026-04-22 07:51:38.391233,3,2026-04-22
+9d73c431-7a30-51f1-2b90-c45ca058b770,fatigue,low energy throughout the day,2026-04-18 16:07:38.391233,1,2026-04-18
+9d73c431-7a30-51f1-2b90-c45ca058b770,fatigue,exhausted after minimal activity,2026-04-23 20:43:38.391233,3,2026-04-23
+9d73c431-7a30-51f1-2b90-c45ca058b770,nausea,felt slightly nauseous after eating,2026-04-23 16:23:38.391233,2,2026-04-23
+9d73c431-7a30-51f1-2b90-c45ca058b770,dizziness,lightheaded when standing,2026-04-17 00:48:38.391233,3,2026-04-17
+7ca61cba-ff4c-d987-2ddb-c6c5d65858ad,headache,mild headache in the afternoon,2026-04-22 21:52:38.391233,3,2026-04-22
+7ca61cba-ff4c-d987-2ddb-c6c5d65858ad,headache,mild headache in the afternoon,2026-04-21 20:56:38.391233,4,2026-04-21
+7ca61cba-ff4c-d987-2ddb-c6c5d65858ad,other,mild tremor in hands,2026-04-22 01:35:38.391233,1,2026-04-22
+625b7cf9-92fc-c7ff-1566-2f33a0be7c2f,blurred_vision,temporary vision blurriness,2026-04-18 15:25:38.391233,2,2026-04-18
+625b7cf9-92fc-c7ff-1566-2f33a0be7c2f,dizziness,lightheaded when standing,2026-04-17 20:28:38.391233,3,2026-04-17
+625b7cf9-92fc-c7ff-1566-2f33a0be7c2f,fatigue,low energy throughout the day,2026-04-18 08:48:38.391233,3,2026-04-18
+625b7cf9-92fc-c7ff-1566-2f33a0be7c2f,headache,persistent headache today,2026-04-23 06:34:38.391233,2,2026-04-23
+eee9f5e3-9cc4-30dd-18a4-410d66c8d8a2,nausea,felt slightly nauseous after eating,2026-04-19 14:25:38.391233,4,2026-04-19
+eee9f5e3-9cc4-30dd-18a4-410d66c8d8a2,fatigue,feeling unusually tired,2026-04-22 01:18:38.391233,3,2026-04-22
+eee9f5e3-9cc4-30dd-18a4-410d66c8d8a2,nausea,felt slightly nauseous after eating,2026-04-22 05:29:38.391233,1,2026-04-22
+eee9f5e3-9cc4-30dd-18a4-410d66c8d8a2,dizziness,brief dizziness episode,2026-04-21 12:21:38.391233,3,2026-04-21
+eee9f5e3-9cc4-30dd-18a4-410d66c8d8a2,dizziness,lightheaded when standing,2026-04-22 01:07:38.391233,3,2026-04-22
+97260462-72ec-ae35-6b41-503e45eac3f8,headache,mild headache in the afternoon,2026-04-17 10:49:38.391233,1,2026-04-17
+97260462-72ec-ae35-6b41-503e45eac3f8,other,general feeling of being off,2026-04-20 02:22:38.391233,3,2026-04-20
+97260462-72ec-ae35-6b41-503e45eac3f8,fatigue,low energy throughout the day,2026-04-17 02:08:38.391233,5,2026-04-17
+a26b201b-3c70-7e6b-8d5a-9ed52002b6b0,fatigue,low energy throughout the day,2026-04-22 07:42:38.391233,4,2026-04-22
+a26b201b-3c70-7e6b-8d5a-9ed52002b6b0,other,stomach discomfort not clearly nausea,2026-04-17 17:36:38.391233,1,2026-04-17
+a26b201b-3c70-7e6b-8d5a-9ed52002b6b0,other,increased sweating without clear cause,2026-04-17 10:36:38.391233,2,2026-04-17
+a26b201b-3c70-7e6b-8d5a-9ed52002b6b0,headache,persistent headache today,2026-04-20 01:15:38.391233,2,2026-04-20
+1b9eb80b-e62c-8910-2e05-2fe9454c7ca5,fatigue,exhausted after minimal activity,2026-04-21 01:08:38.391233,2,2026-04-21
+1b9eb80b-e62c-8910-2e05-2fe9454c7ca5,blurred_vision,difficulty focusing eyes,2026-04-19 06:44:38.391233,5,2026-04-19
+6a323e9e-a5da-3088-611c-fff4683bc814,headache,pressure behind eyes,2026-04-19 20:00:38.391233,3,2026-04-19
+6a323e9e-a5da-3088-611c-fff4683bc814,other,general feeling of being off,2026-04-20 02:49:38.391233,1,2026-04-20
+6a323e9e-a5da-3088-611c-fff4683bc814,nausea,waves of nausea in the morning,2026-04-23 12:07:38.391233,2,2026-04-23
+6a323e9e-a5da-3088-611c-fff4683bc814,dizziness,lightheaded when standing,2026-04-21 00:23:38.391233,3,2026-04-21
+eca3a535-af9d-72fe-582c-873a5d2e317f,other,feeling jittery and unsettled,2026-04-23 21:36:38.391233,3,2026-04-23
+eca3a535-af9d-72fe-582c-873a5d2e317f,fatigue,exhausted after minimal activity,2026-04-23 11:42:38.391233,2,2026-04-23
+eca3a535-af9d-72fe-582c-873a5d2e317f,other,increased sweating without clear cause,2026-04-20 08:30:38.391233,2,2026-04-20
+984f595d-f97c-3168-bd5c-ccef6998ec68,headache,pressure behind eyes,2026-04-22 09:42:38.391233,2,2026-04-22
+984f595d-f97c-3168-bd5c-ccef6998ec68,blurred_vision,slight blurry vision episode,2026-04-20 06:35:38.391233,4,2026-04-20
+984f595d-f97c-3168-bd5c-ccef6998ec68,dizziness,brief dizziness episode,2026-04-18 17:53:38.391233,3,2026-04-18
+cf512143-8785-fc87-6de1-0dd92965200f,fatigue,exhausted after minimal activity,2026-04-22 03:05:38.391233,2,2026-04-22
+cf512143-8785-fc87-6de1-0dd92965200f,headache,pressure behind eyes,2026-04-23 00:16:38.391233,1,2026-04-23
+cf512143-8785-fc87-6de1-0dd92965200f,headache,persistent headache today,2026-04-18 16:04:38.391233,1,2026-04-18
+5dc11dbd-e79a-e548-ae22-95271dcf341f,fatigue,low energy throughout the day,2026-04-21 15:56:38.391233,1,2026-04-21
+5dc11dbd-e79a-e548-ae22-95271dcf341f,blurred_vision,temporary vision blurriness,2026-04-17 16:57:38.391233,4,2026-04-17
+9a200838-d17b-155b-a15b-d1512683ff64,nausea,felt slightly nauseous after eating,2026-04-17 03:03:38.391233,1,2026-04-17
+9a200838-d17b-155b-a15b-d1512683ff64,fatigue,exhausted after minimal activity,2026-04-20 16:49:38.391233,3,2026-04-20
+9a200838-d17b-155b-a15b-d1512683ff64,nausea,felt slightly nauseous after eating,2026-04-23 19:42:38.391233,2,2026-04-23
+59b6802c-bb27-465f-90cc-21654f7f72f5,headache,pressure behind eyes,2026-04-17 04:54:38.391233,3,2026-04-17
+59b6802c-bb27-465f-90cc-21654f7f72f5,blurred_vision,slight blurry vision episode,2026-04-21 14:04:38.391233,4,2026-04-21
+59b6802c-bb27-465f-90cc-21654f7f72f5,blurred_vision,difficulty focusing eyes,2026-04-18 15:10:38.391233,3,2026-04-18
+59b6802c-bb27-465f-90cc-21654f7f72f5,nausea,mild stomach discomfort,2026-04-21 15:56:38.391233,1,2026-04-21
+59b6802c-bb27-465f-90cc-21654f7f72f5,headache,mild headache in the afternoon,2026-04-23 21:21:38.391233,2,2026-04-23
+8b847aaa-794e-0640-8111-f2c155b9d80c,headache,pressure behind eyes,2026-04-17 14:08:38.391233,3,2026-04-17
+8b847aaa-794e-0640-8111-f2c155b9d80c,other,unusual tingling sensation,2026-04-23 13:02:38.391233,2,2026-04-23
+64a6f917-0509-e342-44d4-dcc6c6f51f36,dizziness,felt faint after walking,2026-04-20 13:37:38.391233,3,2026-04-20
+a71617b6-1565-0c23-42a5-9f048a8ddeb8,other,general feeling of being off,2026-04-17 00:49:38.391233,1,2026-04-17
+a71617b6-1565-0c23-42a5-9f048a8ddeb8,other,stomach discomfort not clearly nausea,2026-04-22 20:01:38.391233,2,2026-04-22
+a71617b6-1565-0c23-42a5-9f048a8ddeb8,headache,mild headache in the afternoon,2026-04-22 08:07:38.391233,2,2026-04-22
+a71617b6-1565-0c23-42a5-9f048a8ddeb8,headache,pressure behind eyes,2026-04-19 20:03:38.391233,2,2026-04-19
+a71617b6-1565-0c23-42a5-9f048a8ddeb8,dizziness,felt faint after walking,2026-04-18 22:35:38.391233,3,2026-04-18
+d740666e-c539-d116-1a6c-990e02a825ae,blurred_vision,difficulty focusing eyes,2026-04-17 19:22:38.391233,4,2026-04-17
+d740666e-c539-d116-1a6c-990e02a825ae,nausea,felt slightly nauseous after eating,2026-04-23 20:17:38.391233,1,2026-04-23
+d740666e-c539-d116-1a6c-990e02a825ae,other,increased sweating without clear cause,2026-04-20 12:04:38.391233,2,2026-04-20
+d740666e-c539-d116-1a6c-990e02a825ae,headache,persistent headache today,2026-04-21 06:37:38.391233,1,2026-04-21
+d740666e-c539-d116-1a6c-990e02a825ae,headache,mild headache in the afternoon,2026-04-20 06:40:38.391233,2,2026-04-20
+fa4c6a56-06fa-7d71-156f-908ac65e525d,dizziness,brief dizziness episode,2026-04-17 08:15:38.391233,4,2026-04-17
+fa4c6a56-06fa-7d71-156f-908ac65e525d,nausea,felt slightly nauseous after eating,2026-04-20 09:44:38.391233,3,2026-04-20
+13aabd68-9ea5-b541-57c1-1f3df0003d1f,dizziness,lightheaded when standing,2026-04-17 01:28:38.391233,4,2026-04-17
+13aabd68-9ea5-b541-57c1-1f3df0003d1f,fatigue,low energy throughout the day,2026-04-23 20:55:38.391233,2,2026-04-23
+52ad8ade-0d6e-076d-b75e-c16c069694bf,headache,pressure behind eyes,2026-04-18 18:00:38.391233,1,2026-04-18
+52ad8ade-0d6e-076d-b75e-c16c069694bf,blurred_vision,slight blurry vision episode,2026-04-19 08:45:38.391233,3,2026-04-19
+4b3ee25b-cc59-c9f8-57fb-93ffdddb55d1,blurred_vision,slight blurry vision episode,2026-04-18 11:23:38.391233,3,2026-04-18
+3cd4a129-0f0c-ac61-eabc-ca505d7cc49a,blurred_vision,difficulty focusing eyes,2026-04-20 02:17:38.391233,3,2026-04-20
+3cd4a129-0f0c-ac61-eabc-ca505d7cc49a,fatigue,exhausted after minimal activity,2026-04-20 01:12:38.391233,3,2026-04-20
+3cd4a129-0f0c-ac61-eabc-ca505d7cc49a,nausea,waves of nausea in the morning,2026-04-22 04:40:38.391233,3,2026-04-22
+3cd4a129-0f0c-ac61-eabc-ca505d7cc49a,blurred_vision,difficulty focusing eyes,2026-04-19 19:25:38.391233,2,2026-04-19
+aad03e77-5fc7-c9f2-dc64-9266116e8ca0,blurred_vision,difficulty focusing eyes,2026-04-18 22:17:38.391233,4,2026-04-18
+aad03e77-5fc7-c9f2-dc64-9266116e8ca0,blurred_vision,slight blurry vision episode,2026-04-18 19:00:38.391233,2,2026-04-18
+aad03e77-5fc7-c9f2-dc64-9266116e8ca0,nausea,waves of nausea in the morning,2026-04-21 13:54:38.391233,4,2026-04-21
+aad03e77-5fc7-c9f2-dc64-9266116e8ca0,blurred_vision,temporary vision blurriness,2026-04-21 18:52:38.391233,4,2026-04-21
+c63af41c-e3af-c556-6ad4-68e460c36d44,fatigue,exhausted after minimal activity,2026-04-23 22:05:38.391233,2,2026-04-23
+17768779-0d7f-6bea-aeae-7e6e2c1c69a6,nausea,felt slightly nauseous after eating,2026-04-22 11:56:38.391233,4,2026-04-22
+17768779-0d7f-6bea-aeae-7e6e2c1c69a6,headache,persistent headache today,2026-04-18 02:09:38.391233,5,2026-04-18
+2a195574-86b4-7a68-ebcd-19a08cd8aab4,other,stomach discomfort not clearly nausea,2026-04-21 03:27:38.391233,1,2026-04-21
+2a195574-86b4-7a68-ebcd-19a08cd8aab4,other,increased sweating without clear cause,2026-04-20 22:35:38.391233,1,2026-04-20
+2a195574-86b4-7a68-ebcd-19a08cd8aab4,nausea,felt slightly nauseous after eating,2026-04-21 04:32:38.391233,2,2026-04-21
+2a195574-86b4-7a68-ebcd-19a08cd8aab4,blurred_vision,temporary vision blurriness,2026-04-21 17:48:38.391233,3,2026-04-21
+2a195574-86b4-7a68-ebcd-19a08cd8aab4,nausea,felt slightly nauseous after eating,2026-04-22 06:43:38.391233,1,2026-04-22
+305b0423-0131-5b0c-313e-0ec2902f326a,other,unusual tingling sensation,2026-04-20 10:46:38.391233,2,2026-04-20
+305b0423-0131-5b0c-313e-0ec2902f326a,fatigue,feeling unusually tired,2026-04-18 23:15:38.391233,2,2026-04-18
+305b0423-0131-5b0c-313e-0ec2902f326a,headache,persistent headache today,2026-04-19 05:38:38.391233,3,2026-04-19
+d20b5591-aee7-f19b-59e3-8ff960d50d4a,blurred_vision,temporary vision blurriness,2026-04-17 04:08:38.391233,3,2026-04-17
+d20b5591-aee7-f19b-59e3-8ff960d50d4a,nausea,mild stomach discomfort,2026-04-22 09:44:38.391233,2,2026-04-22
+d20b5591-aee7-f19b-59e3-8ff960d50d4a,nausea,mild stomach discomfort,2026-04-21 22:57:38.391233,3,2026-04-21
+d20b5591-aee7-f19b-59e3-8ff960d50d4a,nausea,felt slightly nauseous after eating,2026-04-17 04:05:38.391233,1,2026-04-17
+d20b5591-aee7-f19b-59e3-8ff960d50d4a,blurred_vision,slight blurry vision episode,2026-04-22 04:17:38.391233,4,2026-04-22
+70791bf1-7f26-df3f-2a57-e65b82d54a1a,blurred_vision,difficulty focusing eyes,2026-04-17 02:38:38.391233,4,2026-04-17
+22e6c504-0216-3b86-725c-89c973569d9e,dizziness,brief dizziness episode,2026-04-23 03:04:38.391233,4,2026-04-23
+22e6c504-0216-3b86-725c-89c973569d9e,headache,pressure behind eyes,2026-04-21 11:25:38.391233,2,2026-04-21
+7008054d-1c68-f2c2-2e69-199418d6e440,dizziness,brief dizziness episode,2026-04-21 20:42:38.391233,3,2026-04-21
+7008054d-1c68-f2c2-2e69-199418d6e440,dizziness,felt faint after walking,2026-04-22 19:44:38.391233,4,2026-04-22
+4a7d88fa-23a4-7c17-45c1-f337619e7cfb,headache,persistent headache today,2026-04-23 13:09:38.391233,2,2026-04-23
+4a7d88fa-23a4-7c17-45c1-f337619e7cfb,other,general feeling of being off,2026-04-20 03:17:38.391233,1,2026-04-20
+f1f35e86-6fef-a24e-07dc-6fe24bc9a287,dizziness,brief dizziness episode,2026-04-18 00:20:38.391233,4,2026-04-18
+f1f35e86-6fef-a24e-07dc-6fe24bc9a287,nausea,mild stomach discomfort,2026-04-17 14:41:38.391233,2,2026-04-17
+f1f35e86-6fef-a24e-07dc-6fe24bc9a287,headache,pressure behind eyes,2026-04-20 17:42:38.391233,3,2026-04-20
+f1f35e86-6fef-a24e-07dc-6fe24bc9a287,blurred_vision,difficulty focusing eyes,2026-04-19 16:15:38.391233,3,2026-04-19
+f1f35e86-6fef-a24e-07dc-6fe24bc9a287,blurred_vision,slight blurry vision episode,2026-04-18 14:49:38.391233,2,2026-04-18
+cc02db24-96de-4c21-0b7a-b81ae37d6693,nausea,waves of nausea in the morning,2026-04-19 18:09:38.391233,1,2026-04-19
+cc02db24-96de-4c21-0b7a-b81ae37d6693,blurred_vision,difficulty focusing eyes,2026-04-18 20:57:38.391233,2,2026-04-18
+cc02db24-96de-4c21-0b7a-b81ae37d6693,other,increased sweating without clear cause,2026-04-20 13:33:38.391233,2,2026-04-20
+cc02db24-96de-4c21-0b7a-b81ae37d6693,blurred_vision,slight blurry vision episode,2026-04-17 12:09:38.391233,3,2026-04-17
+eb8b0b5f-b1ad-6d47-df4c-23870fe3b7b0,blurred_vision,difficulty focusing eyes,2026-04-18 17:50:38.391233,4,2026-04-18
+eb8b0b5f-b1ad-6d47-df4c-23870fe3b7b0,dizziness,lightheaded when standing,2026-04-18 04:10:38.391233,2,2026-04-18
+d45608b8-f928-df28-81a3-f9fc73d33411,fatigue,low energy throughout the day,2026-04-19 15:39:38.391233,4,2026-04-19
+d45608b8-f928-df28-81a3-f9fc73d33411,other,mild tremor in hands,2026-04-20 23:59:38.391233,3,2026-04-20
+d45608b8-f928-df28-81a3-f9fc73d33411,headache,pressure behind eyes,2026-04-20 03:48:38.391233,2,2026-04-20
+b1c04db6-5c3f-f568-f406-74556cd854d5,other,general feeling of being off,2026-04-18 23:41:38.391233,4,2026-04-18
+b1c04db6-5c3f-f568-f406-74556cd854d5,other,stomach discomfort not clearly nausea,2026-04-20 18:01:38.391233,3,2026-04-20
+b1c04db6-5c3f-f568-f406-74556cd854d5,fatigue,low energy throughout the day,2026-04-22 23:08:38.391233,1,2026-04-22
+b1c04db6-5c3f-f568-f406-74556cd854d5,blurred_vision,slight blurry vision episode,2026-04-22 13:48:38.391233,5,2026-04-22
+f827233b-f7db-7f0a-db3c-7814ccaeb0b2,headache,mild headache in the afternoon,2026-04-18 15:28:38.391233,4,2026-04-18
+f827233b-f7db-7f0a-db3c-7814ccaeb0b2,other,stomach discomfort not clearly nausea,2026-04-19 02:12:38.391233,3,2026-04-19
+f827233b-f7db-7f0a-db3c-7814ccaeb0b2,fatigue,feeling unusually tired,2026-04-18 02:39:38.391233,1,2026-04-18
+f827233b-f7db-7f0a-db3c-7814ccaeb0b2,nausea,felt slightly nauseous after eating,2026-04-23 01:53:38.391233,4,2026-04-23
+f827233b-f7db-7f0a-db3c-7814ccaeb0b2,headache,pressure behind eyes,2026-04-19 23:08:38.391233,3,2026-04-19
+e3bcf4e8-5691-09db-0f9a-d2f8f6113c91,dizziness,brief dizziness episode,2026-04-19 11:05:38.391233,4,2026-04-19
+5a5f0ca1-9c99-c18e-d888-c2da59edd45f,headache,pressure behind eyes,2026-04-20 05:00:38.391233,1,2026-04-20
+5a5f0ca1-9c99-c18e-d888-c2da59edd45f,dizziness,felt faint after walking,2026-04-18 01:34:38.391233,3,2026-04-18
+a6c63709-432c-4aed-b108-7755e44803eb,other,feeling jittery and unsettled,2026-04-17 09:26:38.391233,1,2026-04-17
+a6c63709-432c-4aed-b108-7755e44803eb,headache,persistent headache today,2026-04-20 12:36:38.391233,2,2026-04-20
+a6c63709-432c-4aed-b108-7755e44803eb,other,general feeling of being off,2026-04-20 05:22:38.391233,2,2026-04-20
+a6c63709-432c-4aed-b108-7755e44803eb,dizziness,lightheaded when standing,2026-04-18 16:21:38.391233,2,2026-04-18
+d2d107fc-5125-32b0-5834-d77006caf4d0,fatigue,feeling unusually tired,2026-04-23 00:32:38.391233,3,2026-04-23
+d2d107fc-5125-32b0-5834-d77006caf4d0,other,feeling jittery and unsettled,2026-04-23 10:45:38.391233,1,2026-04-23
+d2d107fc-5125-32b0-5834-d77006caf4d0,fatigue,feeling unusually tired,2026-04-18 23:09:38.391233,1,2026-04-18
+d2d107fc-5125-32b0-5834-d77006caf4d0,nausea,mild stomach discomfort,2026-04-22 13:21:38.391233,1,2026-04-22
+ff5ec720-153b-4311-6b48-e2aa5f9a17be,blurred_vision,temporary vision blurriness,2026-04-22 12:25:38.391233,2,2026-04-22
+ca15e18c-9725-b595-12f1-edfc1d92dbe5,nausea,mild stomach discomfort,2026-04-21 03:21:38.391233,2,2026-04-21
+82957d3f-6250-0313-bb8d-fdb948b4e811,fatigue,feeling unusually tired,2026-04-19 22:09:38.391233,2,2026-04-19
+82957d3f-6250-0313-bb8d-fdb948b4e811,fatigue,low energy throughout the day,2026-04-19 00:18:38.391233,1,2026-04-19
+82957d3f-6250-0313-bb8d-fdb948b4e811,blurred_vision,difficulty focusing eyes,2026-04-17 12:33:38.391233,3,2026-04-17
+82957d3f-6250-0313-bb8d-fdb948b4e811,fatigue,exhausted after minimal activity,2026-04-19 08:37:38.391233,1,2026-04-19
+82957d3f-6250-0313-bb8d-fdb948b4e811,nausea,mild stomach discomfort,2026-04-22 01:44:38.391233,3,2026-04-22
+6aa1eec2-61db-6352-d250-a1b827172d8e,blurred_vision,slight blurry vision episode,2026-04-21 19:47:38.391233,4,2026-04-21
+0b418d07-5057-dd4c-b019-0f90554522fb,other,feeling jittery and unsettled,2026-04-18 02:31:38.391233,4,2026-04-18
+0b418d07-5057-dd4c-b019-0f90554522fb,fatigue,low energy throughout the day,2026-04-23 17:45:38.391233,2,2026-04-23
+d24e2622-f79d-f150-ddcc-8e4fdff8c8c1,fatigue,exhausted after minimal activity,2026-04-17 14:30:38.391233,2,2026-04-17
+d24e2622-f79d-f150-ddcc-8e4fdff8c8c1,blurred_vision,difficulty focusing eyes,2026-04-21 21:38:38.391233,3,2026-04-21
+d24e2622-f79d-f150-ddcc-8e4fdff8c8c1,headache,pressure behind eyes,2026-04-19 19:14:38.391233,1,2026-04-19
+78dc4fe3-165a-51fd-e346-6b166ef01180,blurred_vision,difficulty focusing eyes,2026-04-21 17:53:38.391233,5,2026-04-21
+78dc4fe3-165a-51fd-e346-6b166ef01180,headache,pressure behind eyes,2026-04-20 19:06:38.391233,3,2026-04-20
+78dc4fe3-165a-51fd-e346-6b166ef01180,dizziness,lightheaded when standing,2026-04-17 09:51:38.391233,3,2026-04-17
+78dc4fe3-165a-51fd-e346-6b166ef01180,other,unusual tingling sensation,2026-04-20 09:54:38.391233,3,2026-04-20
+53202b93-8b30-183b-c483-6bd8d4bbfaa5,headache,pressure behind eyes,2026-04-22 01:39:38.391233,2,2026-04-22
+48f973f1-f648-b74c-55bd-40f7e65dca79,headache,pressure behind eyes,2026-04-21 09:51:38.391233,3,2026-04-21
+48f973f1-f648-b74c-55bd-40f7e65dca79,headache,persistent headache today,2026-04-23 10:33:38.391233,2,2026-04-23
+4d6a8896-a16a-4ab6-c9e6-f0c2e4621703,other,increased sweating without clear cause,2026-04-23 13:00:38.391233,1,2026-04-23
+d134b74b-8f01-39c6-e670-d3d28188d38d,headache,pressure behind eyes,2026-04-23 15:41:38.391233,2,2026-04-23
+d134b74b-8f01-39c6-e670-d3d28188d38d,blurred_vision,slight blurry vision episode,2026-04-19 11:49:38.391233,4,2026-04-19
+d134b74b-8f01-39c6-e670-d3d28188d38d,nausea,waves of nausea in the morning,2026-04-19 08:06:38.391233,1,2026-04-19
+d134b74b-8f01-39c6-e670-d3d28188d38d,headache,persistent headache today,2026-04-21 21:02:38.391233,2,2026-04-21
+d134b74b-8f01-39c6-e670-d3d28188d38d,headache,persistent headache today,2026-04-22 05:02:38.391233,3,2026-04-22
+2787fd10-b4f9-01b7-c9e7-1a3a3e750c25,nausea,felt slightly nauseous after eating,2026-04-22 22:17:38.391233,5,2026-04-22
+2787fd10-b4f9-01b7-c9e7-1a3a3e750c25,dizziness,felt faint after walking,2026-04-22 15:10:38.391233,5,2026-04-22
+9b352ca6-e2c3-4f6c-01ee-cd33adf5f88a,blurred_vision,difficulty focusing eyes,2026-04-23 19:21:38.391233,4,2026-04-23
+9b352ca6-e2c3-4f6c-01ee-cd33adf5f88a,fatigue,feeling unusually tired,2026-04-18 11:46:38.391233,2,2026-04-18
+9b352ca6-e2c3-4f6c-01ee-cd33adf5f88a,headache,mild headache in the afternoon,2026-04-20 13:24:38.391233,2,2026-04-20
+9b352ca6-e2c3-4f6c-01ee-cd33adf5f88a,nausea,mild stomach discomfort,2026-04-23 20:52:38.391233,3,2026-04-23
+9b352ca6-e2c3-4f6c-01ee-cd33adf5f88a,fatigue,exhausted after minimal activity,2026-04-20 15:57:38.391233,4,2026-04-20
+781734e3-f47e-72c0-f49a-0df2d6772695,fatigue,low energy throughout the day,2026-04-19 07:38:38.391233,5,2026-04-19
+781734e3-f47e-72c0-f49a-0df2d6772695,nausea,felt slightly nauseous after eating,2026-04-20 03:22:38.391233,3,2026-04-20
+781734e3-f47e-72c0-f49a-0df2d6772695,nausea,waves of nausea in the morning,2026-04-17 23:58:38.391233,2,2026-04-17
+b93f9b23-f5b6-280f-b45c-fa2839123363,other,unusual tingling sensation,2026-04-20 06:53:38.391233,2,2026-04-20
+b93f9b23-f5b6-280f-b45c-fa2839123363,other,general feeling of being off,2026-04-21 19:26:38.391233,1,2026-04-21
+963b2ff7-83d4-ef33-8706-6d5c778785c8,other,feeling jittery and unsettled,2026-04-18 22:10:38.391233,1,2026-04-18
+963b2ff7-83d4-ef33-8706-6d5c778785c8,other,feeling jittery and unsettled,2026-04-17 09:34:38.391233,2,2026-04-17
+963b2ff7-83d4-ef33-8706-6d5c778785c8,headache,mild headache in the afternoon,2026-04-21 21:32:38.391233,1,2026-04-21
+963b2ff7-83d4-ef33-8706-6d5c778785c8,dizziness,brief dizziness episode,2026-04-22 06:41:38.391233,3,2026-04-22
+1eec4fd8-a062-0b8e-4b35-f68c29aa962e,headache,persistent headache today,2026-04-23 10:05:38.391233,2,2026-04-23
+1eec4fd8-a062-0b8e-4b35-f68c29aa962e,other,general feeling of being off,2026-04-21 20:10:38.391233,1,2026-04-21
+1eec4fd8-a062-0b8e-4b35-f68c29aa962e,blurred_vision,temporary vision blurriness,2026-04-20 20:21:38.391233,2,2026-04-20
+1eec4fd8-a062-0b8e-4b35-f68c29aa962e,fatigue,exhausted after minimal activity,2026-04-21 17:23:38.391233,2,2026-04-21
+1eec4fd8-a062-0b8e-4b35-f68c29aa962e,other,mild tremor in hands,2026-04-19 10:27:38.391233,1,2026-04-19
+a8b6c16a-5b2a-ea88-4a58-15454689f95d,other,feeling jittery and unsettled,2026-04-21 14:31:38.391233,2,2026-04-21
+a8b6c16a-5b2a-ea88-4a58-15454689f95d,nausea,felt slightly nauseous after eating,2026-04-21 01:15:38.391233,2,2026-04-21
+a8b6c16a-5b2a-ea88-4a58-15454689f95d,blurred_vision,difficulty focusing eyes,2026-04-21 12:22:38.391233,3,2026-04-21
+1b04336d-5206-45f1-e73d-3584b47f11da,other,general feeling of being off,2026-04-23 21:12:38.391233,1,2026-04-23
+1b04336d-5206-45f1-e73d-3584b47f11da,nausea,waves of nausea in the morning,2026-04-18 17:25:38.391233,2,2026-04-18
+1b04336d-5206-45f1-e73d-3584b47f11da,dizziness,brief dizziness episode,2026-04-20 04:42:38.391233,5,2026-04-20
+1b04336d-5206-45f1-e73d-3584b47f11da,headache,persistent headache today,2026-04-21 20:13:38.391233,1,2026-04-21
+1b04336d-5206-45f1-e73d-3584b47f11da,headache,mild headache in the afternoon,2026-04-19 06:59:38.391233,3,2026-04-19
+39d9f6b8-1fd4-b95e-1d03-c7f2d35b4e2e,blurred_vision,temporary vision blurriness,2026-04-17 22:59:38.391233,5,2026-04-17
+39d9f6b8-1fd4-b95e-1d03-c7f2d35b4e2e,dizziness,lightheaded when standing,2026-04-21 07:30:38.391233,2,2026-04-21
+39d9f6b8-1fd4-b95e-1d03-c7f2d35b4e2e,nausea,waves of nausea in the morning,2026-04-20 10:24:38.391233,2,2026-04-20
+39d9f6b8-1fd4-b95e-1d03-c7f2d35b4e2e,nausea,felt slightly nauseous after eating,2026-04-18 03:57:38.391233,4,2026-04-18
+39d9f6b8-1fd4-b95e-1d03-c7f2d35b4e2e,blurred_vision,difficulty focusing eyes,2026-04-20 10:03:38.391233,2,2026-04-20
+301ec4ac-1db6-48cd-2f67-781e0390cf20,other,unusual tingling sensation,2026-04-21 00:27:38.391233,2,2026-04-21
+301ec4ac-1db6-48cd-2f67-781e0390cf20,other,stomach discomfort not clearly nausea,2026-04-17 03:11:38.391233,2,2026-04-17
+ce93896a-6374-29a6-ddd9-404e46d4d95f,blurred_vision,difficulty focusing eyes,2026-04-23 00:33:38.391233,2,2026-04-23
+ce93896a-6374-29a6-ddd9-404e46d4d95f,fatigue,low energy throughout the day,2026-04-19 17:40:38.391233,1,2026-04-19
+ce93896a-6374-29a6-ddd9-404e46d4d95f,fatigue,exhausted after minimal activity,2026-04-23 06:42:38.391233,1,2026-04-23
+0430d050-1e90-8bb5-0e37-9676bc7dc233,headache,pressure behind eyes,2026-04-19 10:18:38.391233,3,2026-04-19
+0430d050-1e90-8bb5-0e37-9676bc7dc233,other,unusual tingling sensation,2026-04-21 16:21:38.391233,1,2026-04-21
+0430d050-1e90-8bb5-0e37-9676bc7dc233,headache,mild headache in the afternoon,2026-04-18 20:19:38.391233,2,2026-04-18
+0430d050-1e90-8bb5-0e37-9676bc7dc233,headache,pressure behind eyes,2026-04-17 16:10:38.391233,2,2026-04-17
+3ff595a6-616e-a352-0a90-8b0a41c9f7dd,blurred_vision,temporary vision blurriness,2026-04-17 06:56:38.391233,4,2026-04-17
+3ff595a6-616e-a352-0a90-8b0a41c9f7dd,headache,pressure behind eyes,2026-04-22 03:47:38.391233,4,2026-04-22
+15c93120-2fbe-4f1b-a4eb-eb44ba34c635,nausea,waves of nausea in the morning,2026-04-21 08:31:38.391233,3,2026-04-21
+15c93120-2fbe-4f1b-a4eb-eb44ba34c635,headache,persistent headache today,2026-04-21 15:03:38.391233,2,2026-04-21
+15c93120-2fbe-4f1b-a4eb-eb44ba34c635,nausea,felt slightly nauseous after eating,2026-04-22 16:48:38.391233,4,2026-04-22
+025aef31-6028-3261-c960-64eca5a8fc79,dizziness,brief dizziness episode,2026-04-23 11:17:38.391233,4,2026-04-23
+025aef31-6028-3261-c960-64eca5a8fc79,other,increased sweating without clear cause,2026-04-21 11:28:38.391233,3,2026-04-21
+7ec1c580-9693-96e0-5fb9-58a705a56c91,fatigue,exhausted after minimal activity,2026-04-21 04:04:38.391233,1,2026-04-21
+7ec1c580-9693-96e0-5fb9-58a705a56c91,other,general feeling of being off,2026-04-20 08:07:38.391233,2,2026-04-20
+7ec1c580-9693-96e0-5fb9-58a705a56c91,fatigue,low energy throughout the day,2026-04-19 16:57:38.391233,1,2026-04-19
+c3667add-fd47-e902-816f-fb766c990272,fatigue,feeling unusually tired,2026-04-22 15:03:38.391233,2,2026-04-22
+c3667add-fd47-e902-816f-fb766c990272,nausea,waves of nausea in the morning,2026-04-17 02:14:38.391233,1,2026-04-17
+c3667add-fd47-e902-816f-fb766c990272,fatigue,low energy throughout the day,2026-04-17 12:38:38.391233,2,2026-04-17
+c0fdcb8e-2020-63b5-1aa5-799eab460307,fatigue,feeling unusually tired,2026-04-19 16:51:38.391233,2,2026-04-19
+c0fdcb8e-2020-63b5-1aa5-799eab460307,headache,pressure behind eyes,2026-04-23 12:33:38.391233,5,2026-04-23
+c0fdcb8e-2020-63b5-1aa5-799eab460307,other,stomach discomfort not clearly nausea,2026-04-22 13:43:38.391233,1,2026-04-22
+c0fdcb8e-2020-63b5-1aa5-799eab460307,nausea,mild stomach discomfort,2026-04-16 22:43:38.391233,4,2026-04-16
+5055340a-7079-958a-ff92-e33d9b794531,dizziness,lightheaded when standing,2026-04-19 15:22:38.391233,2,2026-04-19
+5055340a-7079-958a-ff92-e33d9b794531,fatigue,low energy throughout the day,2026-04-17 06:45:38.391233,2,2026-04-17
+5055340a-7079-958a-ff92-e33d9b794531,other,unusual tingling sensation,2026-04-19 19:27:38.391233,3,2026-04-19
+5055340a-7079-958a-ff92-e33d9b794531,nausea,mild stomach discomfort,2026-04-18 06:47:38.391233,3,2026-04-18
+5055340a-7079-958a-ff92-e33d9b794531,fatigue,exhausted after minimal activity,2026-04-18 12:53:38.391233,4,2026-04-18
+62ab6b51-78af-6ee8-28cb-278d79c930d4,other,mild tremor in hands,2026-04-20 11:56:38.391233,3,2026-04-20
+62ab6b51-78af-6ee8-28cb-278d79c930d4,nausea,felt slightly nauseous after eating,2026-04-22 11:35:38.391233,2,2026-04-22
+c27c891c-0262-58f8-5adb-a5d63ead04a6,fatigue,feeling unusually tired,2026-04-21 16:46:38.391233,4,2026-04-21
+c27c891c-0262-58f8-5adb-a5d63ead04a6,fatigue,feeling unusually tired,2026-04-20 06:23:38.391233,3,2026-04-20
+c27c891c-0262-58f8-5adb-a5d63ead04a6,blurred_vision,difficulty focusing eyes,2026-04-18 07:16:38.391233,3,2026-04-18
+c27c891c-0262-58f8-5adb-a5d63ead04a6,fatigue,feeling unusually tired,2026-04-21 00:02:38.391233,1,2026-04-21
+28d518b3-4bd5-6e11-424d-9dbc6b01d3ea,other,unusual tingling sensation,2026-04-20 21:48:38.391233,2,2026-04-20
+28d518b3-4bd5-6e11-424d-9dbc6b01d3ea,blurred_vision,temporary vision blurriness,2026-04-23 01:34:38.391233,4,2026-04-23
+28d518b3-4bd5-6e11-424d-9dbc6b01d3ea,fatigue,low energy throughout the day,2026-04-16 22:55:38.391233,3,2026-04-16
+f578ad11-987a-ae32-ac1a-fe1920a3c43b,dizziness,brief dizziness episode,2026-04-19 10:43:38.391233,3,2026-04-19
+f578ad11-987a-ae32-ac1a-fe1920a3c43b,blurred_vision,difficulty focusing eyes,2026-04-20 08:25:38.391233,2,2026-04-20
+f578ad11-987a-ae32-ac1a-fe1920a3c43b,other,general feeling of being off,2026-04-17 06:27:38.391233,3,2026-04-17
+f578ad11-987a-ae32-ac1a-fe1920a3c43b,blurred_vision,slight blurry vision episode,2026-04-19 18:55:38.391233,3,2026-04-19
+f578ad11-987a-ae32-ac1a-fe1920a3c43b,dizziness,brief dizziness episode,2026-04-22 00:37:38.391233,2,2026-04-22
+7ad107fa-ae37-fdcc-c571-a7c8157b6d7d,other,unusual tingling sensation,2026-04-17 22:58:38.391233,1,2026-04-17
+7ad107fa-ae37-fdcc-c571-a7c8157b6d7d,fatigue,low energy throughout the day,2026-04-18 15:24:38.391233,1,2026-04-18
+7ad107fa-ae37-fdcc-c571-a7c8157b6d7d,dizziness,felt faint after walking,2026-04-23 19:38:38.391233,4,2026-04-23
+a5820df5-d7b8-a4ef-3da6-f4cc3988c57d,headache,mild headache in the afternoon,2026-04-17 02:02:38.391233,4,2026-04-17
+a5820df5-d7b8-a4ef-3da6-f4cc3988c57d,fatigue,feeling unusually tired,2026-04-22 06:38:38.391233,2,2026-04-22
+a5820df5-d7b8-a4ef-3da6-f4cc3988c57d,other,increased sweating without clear cause,2026-04-20 08:09:38.391233,2,2026-04-20
+e7929f00-565b-1528-96ac-5cc4e47479d8,nausea,waves of nausea in the morning,2026-04-17 13:09:38.391233,4,2026-04-17
+e7929f00-565b-1528-96ac-5cc4e47479d8,fatigue,exhausted after minimal activity,2026-04-21 03:55:38.391233,3,2026-04-21
+e7929f00-565b-1528-96ac-5cc4e47479d8,fatigue,exhausted after minimal activity,2026-04-21 16:48:38.391233,2,2026-04-21
+e7929f00-565b-1528-96ac-5cc4e47479d8,nausea,felt slightly nauseous after eating,2026-04-19 05:09:38.391233,2,2026-04-19
+e7929f00-565b-1528-96ac-5cc4e47479d8,nausea,mild stomach discomfort,2026-04-20 19:48:38.391233,3,2026-04-20
+994a5610-cbe2-1fe8-2191-82805bdc6994,nausea,mild stomach discomfort,2026-04-17 17:18:38.391233,2,2026-04-17
+994a5610-cbe2-1fe8-2191-82805bdc6994,other,stomach discomfort not clearly nausea,2026-04-19 07:05:38.391233,2,2026-04-19
+994a5610-cbe2-1fe8-2191-82805bdc6994,dizziness,felt faint after walking,2026-04-22 02:17:38.391233,3,2026-04-22
+994a5610-cbe2-1fe8-2191-82805bdc6994,blurred_vision,slight blurry vision episode,2026-04-20 00:11:38.391233,4,2026-04-20
+22ae9638-8ddc-545a-fd99-967c3c4b0b09,dizziness,lightheaded when standing,2026-04-17 09:01:38.391233,4,2026-04-17
+9bdee840-16e7-4799-a645-9370cf5d1513,fatigue,exhausted after minimal activity,2026-04-18 15:18:38.391233,3,2026-04-18
+9bdee840-16e7-4799-a645-9370cf5d1513,blurred_vision,temporary vision blurriness,2026-04-20 08:12:38.391233,2,2026-04-20
+9bdee840-16e7-4799-a645-9370cf5d1513,blurred_vision,difficulty focusing eyes,2026-04-18 12:01:38.391233,3,2026-04-18
+c5e7a7b7-c2d0-2b7d-9c28-cf3ba4c0b3a3,dizziness,felt faint after walking,2026-04-20 05:27:38.391233,3,2026-04-20
+c5e7a7b7-c2d0-2b7d-9c28-cf3ba4c0b3a3,nausea,mild stomach discomfort,2026-04-18 20:40:38.391233,2,2026-04-18
+ddec5bcd-154f-430f-44b0-10a13d651805,fatigue,exhausted after minimal activity,2026-04-19 02:45:38.391233,2,2026-04-19
+ddec5bcd-154f-430f-44b0-10a13d651805,dizziness,felt faint after walking,2026-04-20 17:41:38.391233,4,2026-04-20
+df712005-89ec-a4d0-2d4d-2e7e72645881,other,unusual tingling sensation,2026-04-18 03:44:38.391233,4,2026-04-18
+df712005-89ec-a4d0-2d4d-2e7e72645881,headache,persistent headache today,2026-04-17 11:24:38.391233,3,2026-04-17
+df712005-89ec-a4d0-2d4d-2e7e72645881,headache,mild headache in the afternoon,2026-04-21 22:23:38.391233,3,2026-04-21
+df712005-89ec-a4d0-2d4d-2e7e72645881,headache,pressure behind eyes,2026-04-18 10:12:38.391233,1,2026-04-18
+df712005-89ec-a4d0-2d4d-2e7e72645881,dizziness,lightheaded when standing,2026-04-17 13:30:38.391233,3,2026-04-17
+fa286201-ccb3-ae99-cbc1-fc620c01cec6,blurred_vision,temporary vision blurriness,2026-04-21 20:12:38.391233,4,2026-04-21
+fa286201-ccb3-ae99-cbc1-fc620c01cec6,headache,mild headache in the afternoon,2026-04-17 19:23:38.391233,2,2026-04-17
+fa286201-ccb3-ae99-cbc1-fc620c01cec6,dizziness,lightheaded when standing,2026-04-20 15:45:38.391233,4,2026-04-20
+fa286201-ccb3-ae99-cbc1-fc620c01cec6,headache,pressure behind eyes,2026-04-21 02:22:38.391233,3,2026-04-21
+fa286201-ccb3-ae99-cbc1-fc620c01cec6,headache,mild headache in the afternoon,2026-04-20 23:59:38.391233,1,2026-04-20
+910283bc-2d5d-d255-5986-9d6b7db6d57b,nausea,mild stomach discomfort,2026-04-23 13:11:38.391233,2,2026-04-23
+910283bc-2d5d-d255-5986-9d6b7db6d57b,headache,pressure behind eyes,2026-04-19 21:31:38.391233,2,2026-04-19
+e41e812c-fc9c-7b01-ed4a-b7b79e8cb0f8,nausea,mild stomach discomfort,2026-04-17 17:12:38.391233,2,2026-04-17
+e41e812c-fc9c-7b01-ed4a-b7b79e8cb0f8,headache,mild headache in the afternoon,2026-04-19 21:25:38.391233,3,2026-04-19
+e41e812c-fc9c-7b01-ed4a-b7b79e8cb0f8,other,mild tremor in hands,2026-04-21 14:30:38.391233,1,2026-04-21
+ea8dae0f-d8c1-ec90-f3e2-a93de52d10c7,headache,persistent headache today,2026-04-19 01:27:38.391233,1,2026-04-19
+ea8dae0f-d8c1-ec90-f3e2-a93de52d10c7,headache,persistent headache today,2026-04-19 08:34:38.391233,3,2026-04-19
+ea8dae0f-d8c1-ec90-f3e2-a93de52d10c7,fatigue,exhausted after minimal activity,2026-04-23 01:31:38.391233,1,2026-04-23
+ea8dae0f-d8c1-ec90-f3e2-a93de52d10c7,other,mild tremor in hands,2026-04-23 09:43:38.391233,1,2026-04-23
+b4336f13-b549-04cc-255b-cb06f889b7fe,dizziness,felt faint after walking,2026-04-19 12:01:38.391233,3,2026-04-19
+b4336f13-b549-04cc-255b-cb06f889b7fe,other,stomach discomfort not clearly nausea,2026-04-21 03:26:38.391233,1,2026-04-21
+fbcae76d-5e6b-4872-a034-51f2f5e7401c,dizziness,lightheaded when standing,2026-04-17 19:11:38.391233,2,2026-04-17
+fbcae76d-5e6b-4872-a034-51f2f5e7401c,fatigue,low energy throughout the day,2026-04-21 09:49:38.391233,3,2026-04-21
+fbcae76d-5e6b-4872-a034-51f2f5e7401c,nausea,mild stomach discomfort,2026-04-17 08:50:38.391233,3,2026-04-17
+fbcae76d-5e6b-4872-a034-51f2f5e7401c,nausea,waves of nausea in the morning,2026-04-17 06:48:38.391233,5,2026-04-17
+339aed81-c0eb-d4d9-f3e5-fbed41d999d5,nausea,waves of nausea in the morning,2026-04-18 11:21:38.391233,2,2026-04-18
+339aed81-c0eb-d4d9-f3e5-fbed41d999d5,other,unusual tingling sensation,2026-04-22 05:14:38.391233,2,2026-04-22
+339aed81-c0eb-d4d9-f3e5-fbed41d999d5,dizziness,brief dizziness episode,2026-04-23 07:00:38.391233,5,2026-04-23
+f11edaf7-9ab0-2c17-6bff-aa0b21a8fed8,nausea,mild stomach discomfort,2026-04-17 20:31:38.391233,4,2026-04-17
+f11edaf7-9ab0-2c17-6bff-aa0b21a8fed8,fatigue,feeling unusually tired,2026-04-21 15:27:38.391233,4,2026-04-21
+772935dd-e8ec-c05f-8b8a-3278cfed49e2,blurred_vision,temporary vision blurriness,2026-04-18 07:40:38.391233,2,2026-04-18
+155abd7d-730e-aa4e-eb4e-a61f80acffb7,fatigue,low energy throughout the day,2026-04-17 17:27:38.391233,2,2026-04-17
+155abd7d-730e-aa4e-eb4e-a61f80acffb7,blurred_vision,temporary vision blurriness,2026-04-22 17:00:38.391233,3,2026-04-22
+155abd7d-730e-aa4e-eb4e-a61f80acffb7,other,general feeling of being off,2026-04-23 16:43:38.391233,3,2026-04-23
+155abd7d-730e-aa4e-eb4e-a61f80acffb7,blurred_vision,temporary vision blurriness,2026-04-22 09:11:38.391233,5,2026-04-22
+155abd7d-730e-aa4e-eb4e-a61f80acffb7,fatigue,low energy throughout the day,2026-04-21 04:45:38.391233,3,2026-04-21
+00bbddf6-5cbf-7b57-a7e8-de0070568053,other,feeling jittery and unsettled,2026-04-16 23:27:38.391233,4,2026-04-16
+00bbddf6-5cbf-7b57-a7e8-de0070568053,headache,persistent headache today,2026-04-19 09:12:38.391233,2,2026-04-19
+00bbddf6-5cbf-7b57-a7e8-de0070568053,fatigue,feeling unusually tired,2026-04-23 08:21:38.391233,2,2026-04-23
+26d25471-553f-2e5f-3f1e-d10a7b511b04,nausea,felt slightly nauseous after eating,2026-04-19 00:51:38.391233,2,2026-04-19
+26d25471-553f-2e5f-3f1e-d10a7b511b04,headache,pressure behind eyes,2026-04-22 12:20:38.391233,2,2026-04-22
+26d25471-553f-2e5f-3f1e-d10a7b511b04,fatigue,low energy throughout the day,2026-04-22 03:34:38.391233,3,2026-04-22
+26d25471-553f-2e5f-3f1e-d10a7b511b04,dizziness,felt faint after walking,2026-04-23 06:15:38.391233,5,2026-04-23
+26d25471-553f-2e5f-3f1e-d10a7b511b04,dizziness,felt faint after walking,2026-04-21 03:51:38.391233,5,2026-04-21
+1a7ae629-e1dc-0e12-5878-1849709202ee,headache,persistent headache today,2026-04-17 05:30:38.391233,2,2026-04-17
+dc6ea6f5-8f51-c396-3b41-cd87f4dc14db,fatigue,low energy throughout the day,2026-04-18 22:38:38.391233,3,2026-04-18
+cd1bba66-463b-fd84-25e1-026bae33a4b4,dizziness,lightheaded when standing,2026-04-22 05:21:38.391233,4,2026-04-22
+cd1bba66-463b-fd84-25e1-026bae33a4b4,blurred_vision,slight blurry vision episode,2026-04-18 04:09:38.391233,3,2026-04-18
+cd1bba66-463b-fd84-25e1-026bae33a4b4,nausea,mild stomach discomfort,2026-04-18 16:49:38.391233,1,2026-04-18
+f3f18428-fb49-c6d4-1bdf-400d2d0d898c,fatigue,low energy throughout the day,2026-04-21 07:00:38.391233,2,2026-04-21
+f3f18428-fb49-c6d4-1bdf-400d2d0d898c,blurred_vision,temporary vision blurriness,2026-04-17 08:38:38.391233,3,2026-04-17
+9745cd8d-2747-79d1-fdd4-ab9951eed6a5,dizziness,brief dizziness episode,2026-04-23 17:59:38.391233,3,2026-04-23
+9745cd8d-2747-79d1-fdd4-ab9951eed6a5,dizziness,felt faint after walking,2026-04-19 18:19:38.391233,3,2026-04-19
+9745cd8d-2747-79d1-fdd4-ab9951eed6a5,nausea,waves of nausea in the morning,2026-04-20 20:12:38.391233,2,2026-04-20
+c23fe5cf-5a47-2da9-bad4-d27645f5f734,nausea,mild stomach discomfort,2026-04-23 00:50:38.391233,2,2026-04-23
+c23fe5cf-5a47-2da9-bad4-d27645f5f734,headache,mild headache in the afternoon,2026-04-22 15:06:38.391233,1,2026-04-22
+c23fe5cf-5a47-2da9-bad4-d27645f5f734,dizziness,brief dizziness episode,2026-04-19 14:06:38.391233,4,2026-04-19
+c23fe5cf-5a47-2da9-bad4-d27645f5f734,other,stomach discomfort not clearly nausea,2026-04-20 16:32:38.391233,3,2026-04-20
+25b81366-d4e2-213b-1b01-39d6502ee37c,other,general feeling of being off,2026-04-20 11:45:38.391233,4,2026-04-20
+25b81366-d4e2-213b-1b01-39d6502ee37c,nausea,waves of nausea in the morning,2026-04-23 11:58:38.391233,2,2026-04-23
+c03d4cdd-fd16-8dfc-bfd2-5d81831523ef,dizziness,felt faint after walking,2026-04-23 08:35:38.391233,4,2026-04-23
+4e014422-8d54-112b-a4fb-54ec1f924083,headache,persistent headache today,2026-04-20 22:53:38.391233,5,2026-04-20
+b3842b7f-f42b-1acf-6a04-392e49aeeadd,fatigue,feeling unusually tired,2026-04-19 07:24:38.391233,1,2026-04-19
+b3842b7f-f42b-1acf-6a04-392e49aeeadd,fatigue,exhausted after minimal activity,2026-04-18 23:19:38.391233,1,2026-04-18
+b3842b7f-f42b-1acf-6a04-392e49aeeadd,blurred_vision,difficulty focusing eyes,2026-04-17 21:21:38.391233,3,2026-04-17
+b3842b7f-f42b-1acf-6a04-392e49aeeadd,fatigue,exhausted after minimal activity,2026-04-20 06:30:38.391233,2,2026-04-20
+b3842b7f-f42b-1acf-6a04-392e49aeeadd,nausea,mild stomach discomfort,2026-04-16 23:50:38.391233,2,2026-04-16
+39407c75-ac7a-e88d-d56e-8145d803a5b1,headache,pressure behind eyes,2026-04-21 15:02:38.391233,4,2026-04-21
+4212a5d6-b9f8-7809-3bca-d52bae1f8b66,dizziness,brief dizziness episode,2026-04-17 05:33:38.391233,2,2026-04-17
+4212a5d6-b9f8-7809-3bca-d52bae1f8b66,nausea,felt slightly nauseous after eating,2026-04-21 13:04:38.391233,3,2026-04-21
+4212a5d6-b9f8-7809-3bca-d52bae1f8b66,dizziness,lightheaded when standing,2026-04-20 23:02:38.391233,2,2026-04-20
+4212a5d6-b9f8-7809-3bca-d52bae1f8b66,headache,persistent headache today,2026-04-22 11:46:38.391233,1,2026-04-22
+a7d01189-db64-aff1-f267-804112158ee7,headache,pressure behind eyes,2026-04-21 14:00:38.391233,1,2026-04-21
+a7d01189-db64-aff1-f267-804112158ee7,nausea,felt slightly nauseous after eating,2026-04-21 15:28:38.391233,2,2026-04-21
+a7d01189-db64-aff1-f267-804112158ee7,nausea,waves of nausea in the morning,2026-04-21 22:51:38.391233,1,2026-04-21
+da10b079-31c1-1e5d-ad68-3faa6ca775d6,other,feeling jittery and unsettled,2026-04-17 12:34:38.391233,1,2026-04-17
+da10b079-31c1-1e5d-ad68-3faa6ca775d6,other,stomach discomfort not clearly nausea,2026-04-23 04:42:38.391233,4,2026-04-23
+da10b079-31c1-1e5d-ad68-3faa6ca775d6,dizziness,lightheaded when standing,2026-04-19 21:59:38.391233,2,2026-04-19
+dcc7e083-b028-ea86-f425-53eff8744350,dizziness,lightheaded when standing,2026-04-23 05:53:38.391233,4,2026-04-23
+3ebb9e81-0dba-bd79-ca31-0d6eaaf273ca,headache,persistent headache today,2026-04-21 07:26:38.391233,3,2026-04-21
+3ebb9e81-0dba-bd79-ca31-0d6eaaf273ca,other,stomach discomfort not clearly nausea,2026-04-17 06:19:38.391233,3,2026-04-17
+a06dfa1e-b787-de00-c65b-6c8784ee0519,other,increased sweating without clear cause,2026-04-23 04:38:38.391233,2,2026-04-23
+a06dfa1e-b787-de00-c65b-6c8784ee0519,fatigue,feeling unusually tired,2026-04-18 00:11:38.391233,2,2026-04-18
+a06dfa1e-b787-de00-c65b-6c8784ee0519,headache,mild headache in the afternoon,2026-04-23 06:57:38.391233,2,2026-04-23
+a06dfa1e-b787-de00-c65b-6c8784ee0519,dizziness,felt faint after walking,2026-04-20 15:39:38.391233,3,2026-04-20
+a06dfa1e-b787-de00-c65b-6c8784ee0519,other,stomach discomfort not clearly nausea,2026-04-18 10:09:38.391233,1,2026-04-18
+27ee078a-5e3e-4ada-98a3-910342542e92,other,mild tremor in hands,2026-04-19 11:28:38.391233,1,2026-04-19
+27ee078a-5e3e-4ada-98a3-910342542e92,headache,mild headache in the afternoon,2026-04-21 06:31:38.391233,5,2026-04-21
+27ee078a-5e3e-4ada-98a3-910342542e92,other,stomach discomfort not clearly nausea,2026-04-19 08:50:38.391233,1,2026-04-19
+27ee078a-5e3e-4ada-98a3-910342542e92,dizziness,brief dizziness episode,2026-04-20 02:44:38.391233,3,2026-04-20
+5b8e6759-6caf-7d5a-3263-3ff8aba692f8,fatigue,low energy throughout the day,2026-04-20 22:03:38.391233,5,2026-04-20
+6990777e-fd4b-ad89-6251-180fa87bc471,blurred_vision,slight blurry vision episode,2026-04-17 05:28:38.391233,4,2026-04-17
+6990777e-fd4b-ad89-6251-180fa87bc471,other,feeling jittery and unsettled,2026-04-18 19:46:38.391233,2,2026-04-18
+80745ded-26ca-938d-da7b-91e27eb91205,fatigue,low energy throughout the day,2026-04-23 18:23:38.391233,1,2026-04-23
+80745ded-26ca-938d-da7b-91e27eb91205,dizziness,brief dizziness episode,2026-04-22 15:55:38.391233,3,2026-04-22
+80745ded-26ca-938d-da7b-91e27eb91205,blurred_vision,difficulty focusing eyes,2026-04-20 16:06:38.391233,3,2026-04-20
+5f04cb84-7dca-e4a0-2751-2512d8081b47,fatigue,low energy throughout the day,2026-04-19 00:15:38.391233,3,2026-04-19
+e44bfe48-5915-fdf9-6238-c45bfed75f59,dizziness,brief dizziness episode,2026-04-22 03:25:38.391233,5,2026-04-22
+e44bfe48-5915-fdf9-6238-c45bfed75f59,fatigue,feeling unusually tired,2026-04-17 01:31:38.391233,2,2026-04-17
+e44bfe48-5915-fdf9-6238-c45bfed75f59,fatigue,feeling unusually tired,2026-04-20 20:58:38.391233,4,2026-04-20
+865e3203-02d8-27ae-8b3f-b97acecb9812,headache,pressure behind eyes,2026-04-21 05:04:38.391233,1,2026-04-21
+865e3203-02d8-27ae-8b3f-b97acecb9812,fatigue,feeling unusually tired,2026-04-17 04:01:38.391233,1,2026-04-17
+865e3203-02d8-27ae-8b3f-b97acecb9812,blurred_vision,slight blurry vision episode,2026-04-17 21:59:38.391233,2,2026-04-17
+865e3203-02d8-27ae-8b3f-b97acecb9812,other,feeling jittery and unsettled,2026-04-17 02:37:38.391233,3,2026-04-17
+df4496e3-709a-0fdb-173c-afff82c27c59,blurred_vision,temporary vision blurriness,2026-04-17 18:15:38.391233,3,2026-04-17
+df4496e3-709a-0fdb-173c-afff82c27c59,fatigue,low energy throughout the day,2026-04-19 08:19:38.391233,2,2026-04-19
+d9b9f1c6-0aa8-effe-9e62-3598b950b2d8,headache,pressure behind eyes,2026-04-22 03:28:38.391233,5,2026-04-22
+139f7459-1af3-9895-a684-19dadbb4b153,headache,persistent headache today,2026-04-21 13:06:38.391233,2,2026-04-21
+139f7459-1af3-9895-a684-19dadbb4b153,dizziness,felt faint after walking,2026-04-17 17:39:38.391233,3,2026-04-17
+139f7459-1af3-9895-a684-19dadbb4b153,other,mild tremor in hands,2026-04-23 03:20:38.391233,1,2026-04-23
+0fb0c5c3-3bbd-064a-b1d9-5986c3e98536,other,stomach discomfort not clearly nausea,2026-04-17 14:09:38.391233,2,2026-04-17
+0fb0c5c3-3bbd-064a-b1d9-5986c3e98536,blurred_vision,difficulty focusing eyes,2026-04-20 03:58:38.391233,2,2026-04-20
+0fb0c5c3-3bbd-064a-b1d9-5986c3e98536,headache,pressure behind eyes,2026-04-21 12:27:38.391233,2,2026-04-21
+10eca7b3-4365-0f26-79e2-e9146cab2f3d,dizziness,brief dizziness episode,2026-04-19 00:37:38.391233,4,2026-04-19
+10eca7b3-4365-0f26-79e2-e9146cab2f3d,dizziness,brief dizziness episode,2026-04-21 19:32:38.391233,3,2026-04-21
+10eca7b3-4365-0f26-79e2-e9146cab2f3d,dizziness,brief dizziness episode,2026-04-23 15:13:38.391233,4,2026-04-23
+10eca7b3-4365-0f26-79e2-e9146cab2f3d,nausea,waves of nausea in the morning,2026-04-21 06:51:38.391233,3,2026-04-21
+a7730b65-1f3c-49fd-12e2-7684b79c18f9,headache,mild headache in the afternoon,2026-04-19 16:07:38.391233,3,2026-04-19
+a7730b65-1f3c-49fd-12e2-7684b79c18f9,headache,persistent headache today,2026-04-17 17:20:38.391233,1,2026-04-17
+a7730b65-1f3c-49fd-12e2-7684b79c18f9,fatigue,exhausted after minimal activity,2026-04-17 07:35:38.391233,2,2026-04-17
+a7730b65-1f3c-49fd-12e2-7684b79c18f9,fatigue,low energy throughout the day,2026-04-21 08:00:38.391233,2,2026-04-21
+a7730b65-1f3c-49fd-12e2-7684b79c18f9,other,unusual tingling sensation,2026-04-18 16:07:38.391233,2,2026-04-18
+da12777b-e74f-c65c-af76-3d38f462defb,blurred_vision,temporary vision blurriness,2026-04-22 20:31:38.391233,3,2026-04-22
+da12777b-e74f-c65c-af76-3d38f462defb,headache,pressure behind eyes,2026-04-17 01:07:38.391233,2,2026-04-17
+da12777b-e74f-c65c-af76-3d38f462defb,fatigue,feeling unusually tired,2026-04-21 06:53:38.391233,2,2026-04-21
+b75180af-26c0-dd49-9400-2f3ee3b9ca47,dizziness,brief dizziness episode,2026-04-18 12:50:38.391233,3,2026-04-18
+781672de-0fb3-0235-9f35-cba4ef8dba05,other,mild tremor in hands,2026-04-19 14:56:38.391233,3,2026-04-19
+781672de-0fb3-0235-9f35-cba4ef8dba05,blurred_vision,slight blurry vision episode,2026-04-20 01:07:38.391233,4,2026-04-20
+781672de-0fb3-0235-9f35-cba4ef8dba05,headache,pressure behind eyes,2026-04-21 13:46:38.391233,1,2026-04-21
+6620eb02-bc4e-2bac-74d8-49db3c98ec71,dizziness,lightheaded when standing,2026-04-17 04:45:38.391233,2,2026-04-17
+6620eb02-bc4e-2bac-74d8-49db3c98ec71,other,general feeling of being off,2026-04-19 12:59:38.391233,4,2026-04-19
+6620eb02-bc4e-2bac-74d8-49db3c98ec71,dizziness,lightheaded when standing,2026-04-19 20:20:38.391233,3,2026-04-19
+6620eb02-bc4e-2bac-74d8-49db3c98ec71,fatigue,feeling unusually tired,2026-04-18 17:43:38.391233,4,2026-04-18
+13acf900-1510-2333-8531-7e159268b230,dizziness,brief dizziness episode,2026-04-19 17:55:38.391233,3,2026-04-19
+13acf900-1510-2333-8531-7e159268b230,headache,mild headache in the afternoon,2026-04-21 00:54:38.391233,1,2026-04-21
+13acf900-1510-2333-8531-7e159268b230,headache,persistent headache today,2026-04-20 16:47:38.391233,1,2026-04-20
+8667a7c2-d4f5-2252-f075-c39140121e0c,headache,pressure behind eyes,2026-04-23 09:55:38.391233,1,2026-04-23
+8667a7c2-d4f5-2252-f075-c39140121e0c,blurred_vision,slight blurry vision episode,2026-04-21 02:58:38.391233,3,2026-04-21
+8667a7c2-d4f5-2252-f075-c39140121e0c,nausea,mild stomach discomfort,2026-04-17 21:47:38.391233,4,2026-04-17
+8667a7c2-d4f5-2252-f075-c39140121e0c,blurred_vision,difficulty focusing eyes,2026-04-19 08:51:38.391233,3,2026-04-19
+8667a7c2-d4f5-2252-f075-c39140121e0c,blurred_vision,difficulty focusing eyes,2026-04-17 23:04:38.391233,3,2026-04-17
+1a0acbe7-56c3-3a41-299f-c4bfa344478f,headache,pressure behind eyes,2026-04-20 16:41:38.391233,1,2026-04-20
+1a0acbe7-56c3-3a41-299f-c4bfa344478f,dizziness,brief dizziness episode,2026-04-20 12:27:38.391233,2,2026-04-20
+1a0acbe7-56c3-3a41-299f-c4bfa344478f,headache,persistent headache today,2026-04-22 14:17:38.391233,4,2026-04-22
+1a0acbe7-56c3-3a41-299f-c4bfa344478f,headache,mild headache in the afternoon,2026-04-20 19:49:38.391233,1,2026-04-20
+1a0acbe7-56c3-3a41-299f-c4bfa344478f,other,unusual tingling sensation,2026-04-20 19:34:38.391233,1,2026-04-20
+40aa5e0d-88d4-c00f-801b-a7b5b4db7f41,blurred_vision,difficulty focusing eyes,2026-04-22 12:02:38.391233,3,2026-04-22
+6cfc5634-d0d7-e178-4b3a-001c94055d88,other,feeling jittery and unsettled,2026-04-18 08:44:38.391233,4,2026-04-18
+6cfc5634-d0d7-e178-4b3a-001c94055d88,other,unusual tingling sensation,2026-04-17 12:27:38.391233,1,2026-04-17
+6cfc5634-d0d7-e178-4b3a-001c94055d88,blurred_vision,difficulty focusing eyes,2026-04-17 10:14:38.391233,3,2026-04-17
+d91fcfe8-358d-d5ed-7f13-6e0c931fd555,headache,pressure behind eyes,2026-04-23 04:32:38.391233,3,2026-04-23
+d91fcfe8-358d-d5ed-7f13-6e0c931fd555,nausea,waves of nausea in the morning,2026-04-18 04:06:38.391233,1,2026-04-18
+fd0c3919-b399-fd06-5a47-c1f094010afb,headache,persistent headache today,2026-04-22 04:57:38.391233,1,2026-04-22
+fd0c3919-b399-fd06-5a47-c1f094010afb,blurred_vision,difficulty focusing eyes,2026-04-18 21:53:38.391233,3,2026-04-18
+fd0c3919-b399-fd06-5a47-c1f094010afb,headache,mild headache in the afternoon,2026-04-21 10:50:38.391233,4,2026-04-21
+fd0c3919-b399-fd06-5a47-c1f094010afb,fatigue,feeling unusually tired,2026-04-18 22:25:38.391233,1,2026-04-18
+c37c59f7-1ea3-c1e3-95e6-37e1a306603c,nausea,mild stomach discomfort,2026-04-21 07:53:38.391233,2,2026-04-21
+b7ff7f52-11ad-a1a8-e080-3bb9240a0ac9,nausea,waves of nausea in the morning,2026-04-17 03:28:38.391233,2,2026-04-17
+b7ff7f52-11ad-a1a8-e080-3bb9240a0ac9,nausea,mild stomach discomfort,2026-04-20 15:38:38.391233,4,2026-04-20
+b7ff7f52-11ad-a1a8-e080-3bb9240a0ac9,nausea,felt slightly nauseous after eating,2026-04-20 05:36:38.391233,2,2026-04-20
+b7ff7f52-11ad-a1a8-e080-3bb9240a0ac9,dizziness,lightheaded when standing,2026-04-22 21:55:38.391233,3,2026-04-22
+0b30a929-00be-1b12-2033-62d85508c184,other,stomach discomfort not clearly nausea,2026-04-17 16:29:38.391233,2,2026-04-17
+f7d0fb68-94ac-ae38-4b4d-a4546fbd658d,blurred_vision,slight blurry vision episode,2026-04-18 16:07:38.391233,3,2026-04-18
+f7d0fb68-94ac-ae38-4b4d-a4546fbd658d,other,feeling jittery and unsettled,2026-04-21 07:08:38.391233,1,2026-04-21
+f7d0fb68-94ac-ae38-4b4d-a4546fbd658d,other,increased sweating without clear cause,2026-04-19 03:01:38.391233,3,2026-04-19
+f7d0fb68-94ac-ae38-4b4d-a4546fbd658d,other,unusual tingling sensation,2026-04-21 04:50:38.391233,2,2026-04-21
+f7d0fb68-94ac-ae38-4b4d-a4546fbd658d,headache,pressure behind eyes,2026-04-17 17:33:38.391233,3,2026-04-17
+faacde48-8f9f-642d-04ea-5509e88c78d2,other,stomach discomfort not clearly nausea,2026-04-19 03:42:38.391233,1,2026-04-19
+faacde48-8f9f-642d-04ea-5509e88c78d2,fatigue,feeling unusually tired,2026-04-19 01:23:38.391233,3,2026-04-19
+faacde48-8f9f-642d-04ea-5509e88c78d2,blurred_vision,difficulty focusing eyes,2026-04-20 12:42:38.391233,4,2026-04-20
+faacde48-8f9f-642d-04ea-5509e88c78d2,blurred_vision,difficulty focusing eyes,2026-04-23 14:36:38.391233,5,2026-04-23
+faacde48-8f9f-642d-04ea-5509e88c78d2,fatigue,low energy throughout the day,2026-04-21 05:53:38.391233,1,2026-04-21
+661fdee5-1ae9-bc0e-460b-1ac8e95ed601,headache,persistent headache today,2026-04-20 21:38:38.391233,2,2026-04-20
+661fdee5-1ae9-bc0e-460b-1ac8e95ed601,nausea,mild stomach discomfort,2026-04-23 20:05:38.391233,1,2026-04-23
+661fdee5-1ae9-bc0e-460b-1ac8e95ed601,other,unusual tingling sensation,2026-04-18 20:35:38.391233,3,2026-04-18
+661fdee5-1ae9-bc0e-460b-1ac8e95ed601,headache,pressure behind eyes,2026-04-20 12:35:38.391233,3,2026-04-20
+6b3c6a3a-5df6-8270-99c8-a5fb0fd5519f,nausea,mild stomach discomfort,2026-04-21 22:22:38.391233,3,2026-04-21
+6b3c6a3a-5df6-8270-99c8-a5fb0fd5519f,blurred_vision,slight blurry vision episode,2026-04-20 03:06:38.391233,3,2026-04-20
+18086d85-70c0-06be-5136-1c63de88ad4d,other,increased sweating without clear cause,2026-04-21 09:26:38.391233,1,2026-04-21
+18086d85-70c0-06be-5136-1c63de88ad4d,other,feeling jittery and unsettled,2026-04-18 22:41:38.391233,4,2026-04-18
+18086d85-70c0-06be-5136-1c63de88ad4d,nausea,felt slightly nauseous after eating,2026-04-22 04:12:38.391233,3,2026-04-22
+07764a14-2f7c-f94d-9ba8-80df0c59aec2,headache,mild headache in the afternoon,2026-04-17 11:38:38.391233,3,2026-04-17
+07764a14-2f7c-f94d-9ba8-80df0c59aec2,dizziness,lightheaded when standing,2026-04-21 22:39:38.391233,2,2026-04-21
+07764a14-2f7c-f94d-9ba8-80df0c59aec2,dizziness,brief dizziness episode,2026-04-19 22:33:38.391233,3,2026-04-19
+07764a14-2f7c-f94d-9ba8-80df0c59aec2,blurred_vision,temporary vision blurriness,2026-04-21 00:50:38.391233,3,2026-04-21
+07764a14-2f7c-f94d-9ba8-80df0c59aec2,other,mild tremor in hands,2026-04-22 16:51:38.391233,1,2026-04-22
+d7934835-19c6-3bdd-a008-042381177bb6,nausea,waves of nausea in the morning,2026-04-21 02:13:38.391233,1,2026-04-21
+d7934835-19c6-3bdd-a008-042381177bb6,dizziness,brief dizziness episode,2026-04-21 08:03:38.391233,2,2026-04-21
+d7934835-19c6-3bdd-a008-042381177bb6,fatigue,feeling unusually tired,2026-04-21 08:03:38.391233,2,2026-04-21
+d7934835-19c6-3bdd-a008-042381177bb6,other,unusual tingling sensation,2026-04-18 21:56:38.391233,2,2026-04-18
+1cf1a165-23f6-c3ba-d67c-0b6caa0889aa,dizziness,lightheaded when standing,2026-04-18 02:31:38.391233,3,2026-04-18
+1cf1a165-23f6-c3ba-d67c-0b6caa0889aa,fatigue,low energy throughout the day,2026-04-22 00:44:38.391233,2,2026-04-22
+1cf1a165-23f6-c3ba-d67c-0b6caa0889aa,fatigue,exhausted after minimal activity,2026-04-17 20:06:38.391233,2,2026-04-17
+1cf1a165-23f6-c3ba-d67c-0b6caa0889aa,headache,persistent headache today,2026-04-22 08:30:38.391233,3,2026-04-22
+1cf1a165-23f6-c3ba-d67c-0b6caa0889aa,nausea,felt slightly nauseous after eating,2026-04-22 01:52:38.391233,2,2026-04-22
+fc0eb3dd-ffd9-c640-2267-6dcfbf3df10a,nausea,waves of nausea in the morning,2026-04-23 16:02:38.391233,2,2026-04-23
+fc0eb3dd-ffd9-c640-2267-6dcfbf3df10a,headache,mild headache in the afternoon,2026-04-17 04:50:38.391233,1,2026-04-17
+fc0eb3dd-ffd9-c640-2267-6dcfbf3df10a,blurred_vision,slight blurry vision episode,2026-04-23 01:22:38.391233,3,2026-04-23
+a8ec296b-b795-0d68-6c4d-54caeac54a44,dizziness,lightheaded when standing,2026-04-17 02:30:38.391233,2,2026-04-17
+a8ec296b-b795-0d68-6c4d-54caeac54a44,fatigue,low energy throughout the day,2026-04-22 16:52:38.391233,1,2026-04-22
+a8ec296b-b795-0d68-6c4d-54caeac54a44,blurred_vision,difficulty focusing eyes,2026-04-21 08:43:38.391233,2,2026-04-21
+436cc438-5e12-81ac-0117-e7624e58d919,other,mild tremor in hands,2026-04-23 15:29:38.391233,2,2026-04-23
+436cc438-5e12-81ac-0117-e7624e58d919,fatigue,low energy throughout the day,2026-04-19 12:43:38.391233,2,2026-04-19
+436cc438-5e12-81ac-0117-e7624e58d919,other,stomach discomfort not clearly nausea,2026-04-18 15:45:38.391233,1,2026-04-18
+436cc438-5e12-81ac-0117-e7624e58d919,nausea,mild stomach discomfort,2026-04-18 01:38:38.391233,1,2026-04-18
+d0d88e38-4462-7d59-b66b-abb5c50350a8,fatigue,low energy throughout the day,2026-04-22 16:52:38.391233,3,2026-04-22
+d0d88e38-4462-7d59-b66b-abb5c50350a8,blurred_vision,slight blurry vision episode,2026-04-17 01:17:38.391233,3,2026-04-17
+d0d88e38-4462-7d59-b66b-abb5c50350a8,nausea,felt slightly nauseous after eating,2026-04-23 11:11:38.391233,2,2026-04-23
+d0d88e38-4462-7d59-b66b-abb5c50350a8,dizziness,lightheaded when standing,2026-04-20 15:56:38.391233,2,2026-04-20
+f8f241eb-8209-966d-88a8-61bfe19a3ccd,headache,persistent headache today,2026-04-17 17:15:38.391233,2,2026-04-17
+f8f241eb-8209-966d-88a8-61bfe19a3ccd,nausea,felt slightly nauseous after eating,2026-04-20 20:50:38.391233,1,2026-04-20
+f8f241eb-8209-966d-88a8-61bfe19a3ccd,nausea,mild stomach discomfort,2026-04-22 02:53:38.391233,2,2026-04-22
+6546998d-fa58-0262-761b-212cdf4ab516,other,increased sweating without clear cause,2026-04-18 05:40:38.391233,3,2026-04-18
+6546998d-fa58-0262-761b-212cdf4ab516,headache,persistent headache today,2026-04-19 04:57:38.391233,3,2026-04-19
+6546998d-fa58-0262-761b-212cdf4ab516,headache,mild headache in the afternoon,2026-04-23 00:19:38.391233,3,2026-04-23
+6546998d-fa58-0262-761b-212cdf4ab516,headache,persistent headache today,2026-04-17 21:35:38.391233,4,2026-04-17
+6546998d-fa58-0262-761b-212cdf4ab516,headache,mild headache in the afternoon,2026-04-18 19:52:38.391233,3,2026-04-18
+9d348f12-48e7-0320-ec94-e4960eebed50,dizziness,felt faint after walking,2026-04-19 08:16:38.391233,3,2026-04-19
+9d348f12-48e7-0320-ec94-e4960eebed50,dizziness,lightheaded when standing,2026-04-22 04:32:38.391233,5,2026-04-22
+9d348f12-48e7-0320-ec94-e4960eebed50,fatigue,low energy throughout the day,2026-04-22 20:27:38.391233,2,2026-04-22
+9d348f12-48e7-0320-ec94-e4960eebed50,fatigue,feeling unusually tired,2026-04-17 11:34:38.391233,2,2026-04-17
+9d348f12-48e7-0320-ec94-e4960eebed50,dizziness,lightheaded when standing,2026-04-18 01:12:38.391233,4,2026-04-18
+2440c0c8-6f6c-3e53-168a-8a89b3ac10ce,blurred_vision,difficulty focusing eyes,2026-04-20 14:36:38.391233,4,2026-04-20
+2440c0c8-6f6c-3e53-168a-8a89b3ac10ce,headache,persistent headache today,2026-04-19 03:43:38.391233,2,2026-04-19
+2440c0c8-6f6c-3e53-168a-8a89b3ac10ce,headache,pressure behind eyes,2026-04-21 13:19:38.391233,1,2026-04-21
+e2a6a615-e0b2-56ae-3d16-8840edcdbc49,dizziness,brief dizziness episode,2026-04-23 05:11:38.391233,2,2026-04-23
+e2a6a615-e0b2-56ae-3d16-8840edcdbc49,headache,mild headache in the afternoon,2026-04-21 22:54:38.391233,2,2026-04-21
+e2a6a615-e0b2-56ae-3d16-8840edcdbc49,blurred_vision,slight blurry vision episode,2026-04-18 05:16:38.391233,2,2026-04-18
+e2a6a615-e0b2-56ae-3d16-8840edcdbc49,nausea,waves of nausea in the morning,2026-04-22 06:43:38.391233,2,2026-04-22
+e2a6a615-e0b2-56ae-3d16-8840edcdbc49,headache,persistent headache today,2026-04-17 07:53:38.391233,3,2026-04-17
+e3eb83d8-0c01-c0e3-8801-e190ae7d17aa,blurred_vision,slight blurry vision episode,2026-04-22 08:20:38.391233,4,2026-04-22
+0814b738-c338-6e8e-b00a-168b29828871,dizziness,lightheaded when standing,2026-04-18 17:05:38.391233,3,2026-04-18
+93f3006b-0e29-f7fd-8c32-e1767e58f560,other,unusual tingling sensation,2026-04-17 10:14:38.391233,1,2026-04-17
+93f3006b-0e29-f7fd-8c32-e1767e58f560,nausea,felt slightly nauseous after eating,2026-04-19 00:10:38.391233,1,2026-04-19
+93f3006b-0e29-f7fd-8c32-e1767e58f560,headache,pressure behind eyes,2026-04-20 16:33:38.391233,4,2026-04-20
+93f3006b-0e29-f7fd-8c32-e1767e58f560,fatigue,feeling unusually tired,2026-04-19 03:39:38.391233,2,2026-04-19
+5abae611-4355-79fb-431a-92d19fd444e4,fatigue,low energy throughout the day,2026-04-21 20:03:38.391233,2,2026-04-21
+5abae611-4355-79fb-431a-92d19fd444e4,other,general feeling of being off,2026-04-17 12:23:38.391233,2,2026-04-17
+5abae611-4355-79fb-431a-92d19fd444e4,fatigue,low energy throughout the day,2026-04-19 17:05:38.391233,2,2026-04-19
+5abae611-4355-79fb-431a-92d19fd444e4,fatigue,exhausted after minimal activity,2026-04-17 01:41:38.391233,2,2026-04-17
+8c0063a8-f217-fb99-4cb0-70dd77ad1ba9,headache,pressure behind eyes,2026-04-18 14:59:38.391233,3,2026-04-18
+8c0063a8-f217-fb99-4cb0-70dd77ad1ba9,blurred_vision,slight blurry vision episode,2026-04-17 06:08:38.391233,4,2026-04-17
+8c0063a8-f217-fb99-4cb0-70dd77ad1ba9,headache,mild headache in the afternoon,2026-04-17 19:59:38.391233,2,2026-04-17
+6bc940c2-c348-6467-3ba8-2654b3888237,dizziness,felt faint after walking,2026-04-22 12:31:38.391233,5,2026-04-22
+6bc940c2-c348-6467-3ba8-2654b3888237,nausea,felt slightly nauseous after eating,2026-04-21 18:46:38.391233,1,2026-04-21
+d8992d56-c8e5-08d2-9a29-872e2568d58c,headache,pressure behind eyes,2026-04-17 16:53:38.391233,3,2026-04-17
+d8992d56-c8e5-08d2-9a29-872e2568d58c,nausea,mild stomach discomfort,2026-04-17 14:53:38.391233,1,2026-04-17
+d8992d56-c8e5-08d2-9a29-872e2568d58c,dizziness,brief dizziness episode,2026-04-20 15:53:38.391233,3,2026-04-20
+d8992d56-c8e5-08d2-9a29-872e2568d58c,nausea,felt slightly nauseous after eating,2026-04-17 00:30:38.391233,2,2026-04-17
+d8992d56-c8e5-08d2-9a29-872e2568d58c,dizziness,lightheaded when standing,2026-04-17 00:31:38.391233,4,2026-04-17
+bf5fd6a4-c8b3-f9c9-68d7-4edfcb7ce7ad,other,stomach discomfort not clearly nausea,2026-04-18 03:12:38.391233,1,2026-04-18
+bf5fd6a4-c8b3-f9c9-68d7-4edfcb7ce7ad,other,general feeling of being off,2026-04-17 06:10:38.391233,4,2026-04-17
+bf5fd6a4-c8b3-f9c9-68d7-4edfcb7ce7ad,fatigue,exhausted after minimal activity,2026-04-19 16:02:38.391233,4,2026-04-19
+bf5fd6a4-c8b3-f9c9-68d7-4edfcb7ce7ad,fatigue,feeling unusually tired,2026-04-17 00:02:38.391233,1,2026-04-17
+bf5fd6a4-c8b3-f9c9-68d7-4edfcb7ce7ad,fatigue,feeling unusually tired,2026-04-19 19:53:38.391233,3,2026-04-19
+b1d25235-8a55-73bb-ae05-0c442aae21f6,blurred_vision,temporary vision blurriness,2026-04-19 19:47:38.391233,3,2026-04-19
+b1d25235-8a55-73bb-ae05-0c442aae21f6,blurred_vision,slight blurry vision episode,2026-04-21 22:38:38.391233,3,2026-04-21
+b1d25235-8a55-73bb-ae05-0c442aae21f6,nausea,felt slightly nauseous after eating,2026-04-20 05:10:38.391233,3,2026-04-20
+b1d25235-8a55-73bb-ae05-0c442aae21f6,blurred_vision,slight blurry vision episode,2026-04-21 22:57:38.391233,3,2026-04-21
+b1d25235-8a55-73bb-ae05-0c442aae21f6,headache,mild headache in the afternoon,2026-04-18 16:31:38.391233,1,2026-04-18
+ab293c1c-3dba-c929-22a7-0dfe651b4aa9,nausea,mild stomach discomfort,2026-04-17 06:14:38.391233,1,2026-04-17
+af118bab-d2e7-3df7-c892-8d6b11633444,other,mild tremor in hands,2026-04-20 11:49:38.391233,3,2026-04-20
+af118bab-d2e7-3df7-c892-8d6b11633444,headache,pressure behind eyes,2026-04-17 21:08:38.391233,1,2026-04-17
+5a045ac1-e9a4-56a5-203d-b08ee1bb9a2f,headache,persistent headache today,2026-04-18 23:23:38.391233,2,2026-04-18
+5a045ac1-e9a4-56a5-203d-b08ee1bb9a2f,other,stomach discomfort not clearly nausea,2026-04-18 07:32:38.391233,1,2026-04-18
+ae6ee34b-5242-fc17-ac34-10eb115e6769,headache,pressure behind eyes,2026-04-20 19:10:38.391233,2,2026-04-20
+ae6ee34b-5242-fc17-ac34-10eb115e6769,fatigue,exhausted after minimal activity,2026-04-19 20:38:38.391233,5,2026-04-19
+ae6ee34b-5242-fc17-ac34-10eb115e6769,other,increased sweating without clear cause,2026-04-18 20:50:38.391233,1,2026-04-18
+ae6ee34b-5242-fc17-ac34-10eb115e6769,other,mild tremor in hands,2026-04-22 16:42:38.391233,4,2026-04-22
+ae6ee34b-5242-fc17-ac34-10eb115e6769,other,feeling jittery and unsettled,2026-04-18 19:29:38.391233,4,2026-04-18
+4a392ee9-1b18-1aad-2691-b4c5dad9c523,other,general feeling of being off,2026-04-21 04:16:38.391233,4,2026-04-21
+4a392ee9-1b18-1aad-2691-b4c5dad9c523,other,feeling jittery and unsettled,2026-04-17 19:45:38.391233,3,2026-04-17
+81423e22-5d19-1035-a993-196536e8c75e,dizziness,brief dizziness episode,2026-04-17 03:34:38.391233,3,2026-04-17
+81423e22-5d19-1035-a993-196536e8c75e,dizziness,brief dizziness episode,2026-04-21 14:25:38.391233,4,2026-04-21
+81423e22-5d19-1035-a993-196536e8c75e,fatigue,low energy throughout the day,2026-04-19 17:52:38.391233,1,2026-04-19
+81423e22-5d19-1035-a993-196536e8c75e,blurred_vision,slight blurry vision episode,2026-04-22 06:22:38.391233,3,2026-04-22
+81423e22-5d19-1035-a993-196536e8c75e,blurred_vision,temporary vision blurriness,2026-04-18 02:49:38.391233,5,2026-04-18
+311d64a1-7a18-3056-ef8e-ef56d1b9cfb7,blurred_vision,temporary vision blurriness,2026-04-19 18:48:38.391233,2,2026-04-19
+311d64a1-7a18-3056-ef8e-ef56d1b9cfb7,headache,mild headache in the afternoon,2026-04-21 10:16:38.391233,3,2026-04-21
+4a99c83b-f4c1-6540-1b14-acdb2e0d2105,blurred_vision,difficulty focusing eyes,2026-04-23 06:02:38.391233,2,2026-04-23
+4a99c83b-f4c1-6540-1b14-acdb2e0d2105,other,mild tremor in hands,2026-04-20 20:52:38.391233,1,2026-04-20
+4a99c83b-f4c1-6540-1b14-acdb2e0d2105,nausea,felt slightly nauseous after eating,2026-04-17 16:20:38.391233,2,2026-04-17
+4a99c83b-f4c1-6540-1b14-acdb2e0d2105,nausea,felt slightly nauseous after eating,2026-04-21 10:25:38.391233,3,2026-04-21
+4a99c83b-f4c1-6540-1b14-acdb2e0d2105,blurred_vision,temporary vision blurriness,2026-04-17 10:03:38.391233,4,2026-04-17
+4752d440-b205-3602-baa1-8e91b1f93c45,other,feeling jittery and unsettled,2026-04-17 17:08:38.391233,3,2026-04-17
+4752d440-b205-3602-baa1-8e91b1f93c45,dizziness,brief dizziness episode,2026-04-22 02:42:38.391233,3,2026-04-22
+4752d440-b205-3602-baa1-8e91b1f93c45,nausea,felt slightly nauseous after eating,2026-04-23 05:47:38.391233,3,2026-04-23
+4752d440-b205-3602-baa1-8e91b1f93c45,blurred_vision,temporary vision blurriness,2026-04-18 09:43:38.391233,4,2026-04-18
+86c42a18-e5f7-cd64-5815-45b79e454f05,dizziness,lightheaded when standing,2026-04-23 14:49:38.391233,3,2026-04-23
+86c42a18-e5f7-cd64-5815-45b79e454f05,nausea,mild stomach discomfort,2026-04-22 19:48:38.391233,2,2026-04-22
+86c42a18-e5f7-cd64-5815-45b79e454f05,fatigue,exhausted after minimal activity,2026-04-17 05:00:38.391233,3,2026-04-17
+86c42a18-e5f7-cd64-5815-45b79e454f05,fatigue,low energy throughout the day,2026-04-22 18:40:38.391233,1,2026-04-22
+86c42a18-e5f7-cd64-5815-45b79e454f05,other,mild tremor in hands,2026-04-21 01:33:38.391233,2,2026-04-21
+ddea190d-9b3b-dbcf-25be-b985156cb599,nausea,felt slightly nauseous after eating,2026-04-18 10:07:38.391233,4,2026-04-18
+ddea190d-9b3b-dbcf-25be-b985156cb599,headache,persistent headache today,2026-04-18 06:05:38.391233,2,2026-04-18
+ddea190d-9b3b-dbcf-25be-b985156cb599,blurred_vision,difficulty focusing eyes,2026-04-21 02:59:38.391233,4,2026-04-21
+755b6735-763a-2fa9-03d0-a53020dd61ce,nausea,felt slightly nauseous after eating,2026-04-18 03:37:38.391233,3,2026-04-18
+755b6735-763a-2fa9-03d0-a53020dd61ce,other,unusual tingling sensation,2026-04-20 16:02:38.391233,1,2026-04-20
+755b6735-763a-2fa9-03d0-a53020dd61ce,fatigue,exhausted after minimal activity,2026-04-23 16:05:38.391233,2,2026-04-23
+e636c3f7-d436-e935-dca7-467703a36557,headache,mild headache in the afternoon,2026-04-20 08:22:38.391233,2,2026-04-20
+e636c3f7-d436-e935-dca7-467703a36557,dizziness,brief dizziness episode,2026-04-17 00:58:38.391233,3,2026-04-17
+e636c3f7-d436-e935-dca7-467703a36557,blurred_vision,difficulty focusing eyes,2026-04-23 16:51:38.391233,2,2026-04-23
+e636c3f7-d436-e935-dca7-467703a36557,headache,mild headache in the afternoon,2026-04-17 09:11:38.391233,5,2026-04-17
+29522b1b-75c8-a06a-b4a5-1c2dbb409e41,headache,mild headache in the afternoon,2026-04-23 20:10:38.391233,2,2026-04-23
+47c576fc-534e-14c9-f29a-0596de50ff18,fatigue,feeling unusually tired,2026-04-19 01:35:38.391233,2,2026-04-19
+47c576fc-534e-14c9-f29a-0596de50ff18,fatigue,low energy throughout the day,2026-04-17 20:20:38.391233,2,2026-04-17
+47c576fc-534e-14c9-f29a-0596de50ff18,other,general feeling of being off,2026-04-18 22:38:38.391233,2,2026-04-18
+47c576fc-534e-14c9-f29a-0596de50ff18,nausea,waves of nausea in the morning,2026-04-21 18:43:38.391233,2,2026-04-21
+3e5d7bd1-6c18-c83c-1782-3d100bd409f9,nausea,mild stomach discomfort,2026-04-22 04:05:38.391233,1,2026-04-22
+3e5d7bd1-6c18-c83c-1782-3d100bd409f9,headache,persistent headache today,2026-04-22 10:33:38.391233,4,2026-04-22
+3e5d7bd1-6c18-c83c-1782-3d100bd409f9,dizziness,lightheaded when standing,2026-04-18 07:02:38.391233,3,2026-04-18
+3e5d7bd1-6c18-c83c-1782-3d100bd409f9,fatigue,feeling unusually tired,2026-04-19 22:55:38.391233,4,2026-04-19
+3e5d7bd1-6c18-c83c-1782-3d100bd409f9,headache,persistent headache today,2026-04-18 10:05:38.391233,2,2026-04-18
+4ff70468-bcc9-dcc4-4fb8-9f256a735fa4,other,stomach discomfort not clearly nausea,2026-04-20 11:29:38.391233,1,2026-04-20
+4ff70468-bcc9-dcc4-4fb8-9f256a735fa4,blurred_vision,temporary vision blurriness,2026-04-23 07:56:38.391233,5,2026-04-23
+4ff70468-bcc9-dcc4-4fb8-9f256a735fa4,blurred_vision,temporary vision blurriness,2026-04-19 18:02:38.391233,2,2026-04-19
+4ff70468-bcc9-dcc4-4fb8-9f256a735fa4,blurred_vision,slight blurry vision episode,2026-04-17 05:59:38.391233,2,2026-04-17
+4ff70468-bcc9-dcc4-4fb8-9f256a735fa4,blurred_vision,difficulty focusing eyes,2026-04-22 16:42:38.391233,3,2026-04-22
+4dc97104-298e-5254-fb1c-081427effaad,headache,persistent headache today,2026-04-19 17:07:38.391233,3,2026-04-19
+4dc97104-298e-5254-fb1c-081427effaad,headache,mild headache in the afternoon,2026-04-21 04:22:38.391233,3,2026-04-21
+9af50d66-b765-2260-eccc-d1aa20886763,other,stomach discomfort not clearly nausea,2026-04-23 03:10:38.391233,1,2026-04-23
+9af50d66-b765-2260-eccc-d1aa20886763,headache,persistent headache today,2026-04-17 04:01:38.391233,2,2026-04-17
+9af50d66-b765-2260-eccc-d1aa20886763,dizziness,felt faint after walking,2026-04-19 07:42:38.391233,3,2026-04-19
+78f7f5dd-380f-6d11-88c3-618082c63fe5,fatigue,exhausted after minimal activity,2026-04-19 20:55:38.391233,3,2026-04-19
+ea69e717-c63c-b49d-7cb7-1ec2bd6631a5,dizziness,lightheaded when standing,2026-04-20 14:41:38.391233,2,2026-04-20
+ea69e717-c63c-b49d-7cb7-1ec2bd6631a5,headache,persistent headache today,2026-04-19 23:08:38.391233,5,2026-04-19
+ea69e717-c63c-b49d-7cb7-1ec2bd6631a5,blurred_vision,temporary vision blurriness,2026-04-20 11:22:38.391233,3,2026-04-20
+ea69e717-c63c-b49d-7cb7-1ec2bd6631a5,fatigue,exhausted after minimal activity,2026-04-22 04:45:38.391233,1,2026-04-22
+ea69e717-c63c-b49d-7cb7-1ec2bd6631a5,other,feeling jittery and unsettled,2026-04-18 18:42:38.391233,2,2026-04-18
+161b1c08-505b-fb2e-0dcc-1587dda5b15d,dizziness,brief dizziness episode,2026-04-18 04:28:38.391233,3,2026-04-18
+161b1c08-505b-fb2e-0dcc-1587dda5b15d,other,unusual tingling sensation,2026-04-20 02:33:38.391233,3,2026-04-20
+161b1c08-505b-fb2e-0dcc-1587dda5b15d,headache,pressure behind eyes,2026-04-22 14:19:38.391233,2,2026-04-22
+9d1adf1b-c462-0012-1431-30f2ed38ee4c,headache,pressure behind eyes,2026-04-23 18:53:38.391233,3,2026-04-23
+c0ff8b57-e74e-1378-5944-dbb2f56f2dcc,nausea,felt slightly nauseous after eating,2026-04-23 22:19:38.391233,4,2026-04-23
+c0ff8b57-e74e-1378-5944-dbb2f56f2dcc,fatigue,low energy throughout the day,2026-04-21 19:37:38.391233,2,2026-04-21
+c0ff8b57-e74e-1378-5944-dbb2f56f2dcc,nausea,felt slightly nauseous after eating,2026-04-22 15:52:38.391233,2,2026-04-22
+c0ff8b57-e74e-1378-5944-dbb2f56f2dcc,dizziness,brief dizziness episode,2026-04-19 20:18:38.391233,2,2026-04-19
+c0ff8b57-e74e-1378-5944-dbb2f56f2dcc,blurred_vision,slight blurry vision episode,2026-04-17 16:42:38.391233,4,2026-04-17
+7d0121a7-5ff8-4ca6-c188-5bcff660ce04,nausea,felt slightly nauseous after eating,2026-04-23 22:29:38.391233,2,2026-04-23
+bc7bf3be-5e87-d2f6-1a9f-cfa19073a30d,blurred_vision,slight blurry vision episode,2026-04-23 20:51:38.391233,4,2026-04-23
+5ee97054-5c05-72d0-f0e8-2862629542c9,fatigue,exhausted after minimal activity,2026-04-19 14:58:38.391233,3,2026-04-19
+4558aa5c-19c3-22f1-76dd-bdff725a9be6,dizziness,brief dizziness episode,2026-04-23 12:25:38.391233,4,2026-04-23
+4558aa5c-19c3-22f1-76dd-bdff725a9be6,blurred_vision,difficulty focusing eyes,2026-04-17 07:35:38.391233,5,2026-04-17
+4558aa5c-19c3-22f1-76dd-bdff725a9be6,other,stomach discomfort not clearly nausea,2026-04-23 17:52:38.391233,2,2026-04-23
+4558aa5c-19c3-22f1-76dd-bdff725a9be6,fatigue,exhausted after minimal activity,2026-04-20 05:14:38.391233,3,2026-04-20
+809f41fd-73a8-9ffe-bd25-195dd45716ed,other,general feeling of being off,2026-04-18 14:44:38.391233,2,2026-04-18
+809f41fd-73a8-9ffe-bd25-195dd45716ed,headache,mild headache in the afternoon,2026-04-19 20:41:38.391233,4,2026-04-19
+c52a37a6-5e4a-78f3-b166-be83010fcd37,blurred_vision,temporary vision blurriness,2026-04-18 13:28:38.391233,3,2026-04-18
+c52a37a6-5e4a-78f3-b166-be83010fcd37,dizziness,felt faint after walking,2026-04-22 04:22:38.391233,3,2026-04-22
+c52a37a6-5e4a-78f3-b166-be83010fcd37,blurred_vision,difficulty focusing eyes,2026-04-21 21:11:38.391233,3,2026-04-21
+c52a37a6-5e4a-78f3-b166-be83010fcd37,blurred_vision,temporary vision blurriness,2026-04-20 12:31:38.391233,3,2026-04-20
+c52a37a6-5e4a-78f3-b166-be83010fcd37,blurred_vision,slight blurry vision episode,2026-04-23 20:37:38.391233,4,2026-04-23
+7d3ae44d-be8c-3dca-21ba-1005c2f9436c,dizziness,felt faint after walking,2026-04-21 17:47:38.391233,4,2026-04-21
+7d3ae44d-be8c-3dca-21ba-1005c2f9436c,dizziness,lightheaded when standing,2026-04-21 14:19:38.391233,3,2026-04-21
+7d3ae44d-be8c-3dca-21ba-1005c2f9436c,blurred_vision,temporary vision blurriness,2026-04-22 16:27:38.391233,4,2026-04-22
+0179ab69-47b0-7f55-9b4d-c7718519e559,dizziness,lightheaded when standing,2026-04-22 11:51:38.391233,2,2026-04-22
+8c575586-60ed-222e-88f6-8e7c548dee57,fatigue,feeling unusually tired,2026-04-18 14:15:38.391233,1,2026-04-18
+8c575586-60ed-222e-88f6-8e7c548dee57,other,general feeling of being off,2026-04-22 07:28:38.391233,2,2026-04-22
+8c575586-60ed-222e-88f6-8e7c548dee57,other,unusual tingling sensation,2026-04-20 08:52:38.391233,3,2026-04-20
+5c258e17-9d76-4392-3f40-0bf589c43923,headache,mild headache in the afternoon,2026-04-21 09:21:38.391233,3,2026-04-21
+5c258e17-9d76-4392-3f40-0bf589c43923,blurred_vision,temporary vision blurriness,2026-04-17 06:28:38.391233,4,2026-04-17
+5c258e17-9d76-4392-3f40-0bf589c43923,fatigue,feeling unusually tired,2026-04-21 11:54:38.391233,2,2026-04-21
+5c258e17-9d76-4392-3f40-0bf589c43923,blurred_vision,temporary vision blurriness,2026-04-21 19:18:38.391233,2,2026-04-21
+a8fdfcf8-3f9e-11e6-3b70-b47b6b95a86d,other,general feeling of being off,2026-04-21 19:55:38.391233,2,2026-04-21
+a8fdfcf8-3f9e-11e6-3b70-b47b6b95a86d,dizziness,brief dizziness episode,2026-04-19 06:39:38.391233,2,2026-04-19
+a8fdfcf8-3f9e-11e6-3b70-b47b6b95a86d,fatigue,low energy throughout the day,2026-04-16 23:09:38.391233,2,2026-04-16
+3326493f-e3d7-f1f0-2a77-41ac3578c7b9,nausea,felt slightly nauseous after eating,2026-04-19 17:48:38.391233,1,2026-04-19
+3326493f-e3d7-f1f0-2a77-41ac3578c7b9,nausea,felt slightly nauseous after eating,2026-04-19 22:47:38.391233,3,2026-04-19
+3326493f-e3d7-f1f0-2a77-41ac3578c7b9,headache,mild headache in the afternoon,2026-04-18 15:20:38.391233,2,2026-04-18
+3326493f-e3d7-f1f0-2a77-41ac3578c7b9,fatigue,exhausted after minimal activity,2026-04-22 02:58:38.391233,1,2026-04-22
+c213b795-452d-4b01-1d2e-32022028467c,dizziness,lightheaded when standing,2026-04-22 15:13:38.391233,4,2026-04-22
+589ef0e1-1d64-8261-2000-bb3b8e804ae7,fatigue,feeling unusually tired,2026-04-17 21:04:38.391233,1,2026-04-17
+a0638a2c-9b91-35ba-caa0-3d189f0d721f,fatigue,feeling unusually tired,2026-04-19 05:35:38.391233,2,2026-04-19
+a0638a2c-9b91-35ba-caa0-3d189f0d721f,nausea,felt slightly nauseous after eating,2026-04-17 18:29:38.391233,4,2026-04-17
+a0638a2c-9b91-35ba-caa0-3d189f0d721f,dizziness,brief dizziness episode,2026-04-22 10:01:38.391233,3,2026-04-22
+a0638a2c-9b91-35ba-caa0-3d189f0d721f,headache,pressure behind eyes,2026-04-22 23:08:38.391233,5,2026-04-22
+3c816d49-09d1-62b0-6515-8afa459820f4,other,increased sweating without clear cause,2026-04-22 14:09:38.391233,1,2026-04-22
+3c816d49-09d1-62b0-6515-8afa459820f4,fatigue,feeling unusually tired,2026-04-19 12:59:38.391233,1,2026-04-19
+3c816d49-09d1-62b0-6515-8afa459820f4,other,mild tremor in hands,2026-04-19 16:34:38.391233,1,2026-04-19
+3c816d49-09d1-62b0-6515-8afa459820f4,headache,persistent headache today,2026-04-17 11:13:38.391233,2,2026-04-17
+3c816d49-09d1-62b0-6515-8afa459820f4,blurred_vision,difficulty focusing eyes,2026-04-23 21:56:38.391233,2,2026-04-23
+bb146df6-8a03-a193-1fa7-caa32e4485bd,nausea,felt slightly nauseous after eating,2026-04-17 10:48:38.391233,4,2026-04-17
+bb146df6-8a03-a193-1fa7-caa32e4485bd,other,mild tremor in hands,2026-04-23 07:49:38.391233,1,2026-04-23
+bb146df6-8a03-a193-1fa7-caa32e4485bd,fatigue,exhausted after minimal activity,2026-04-20 02:12:38.391233,3,2026-04-20
+bb146df6-8a03-a193-1fa7-caa32e4485bd,blurred_vision,slight blurry vision episode,2026-04-17 00:11:38.391233,3,2026-04-17
+0618ace0-91c9-8c0d-e36c-e1a3eef65b7a,fatigue,exhausted after minimal activity,2026-04-17 00:45:38.391233,3,2026-04-17
+0618ace0-91c9-8c0d-e36c-e1a3eef65b7a,other,general feeling of being off,2026-04-20 23:05:38.391233,1,2026-04-20
+0618ace0-91c9-8c0d-e36c-e1a3eef65b7a,nausea,felt slightly nauseous after eating,2026-04-22 04:06:38.391233,2,2026-04-22
+0618ace0-91c9-8c0d-e36c-e1a3eef65b7a,nausea,mild stomach discomfort,2026-04-21 18:02:38.391233,2,2026-04-21
+02a3a7bf-eee7-d0fa-9fe1-b26c2fe4d16a,nausea,mild stomach discomfort,2026-04-21 15:16:38.391233,3,2026-04-21
+02a3a7bf-eee7-d0fa-9fe1-b26c2fe4d16a,other,mild tremor in hands,2026-04-21 04:54:38.391233,2,2026-04-21
+02a3a7bf-eee7-d0fa-9fe1-b26c2fe4d16a,headache,pressure behind eyes,2026-04-22 05:35:38.391233,3,2026-04-22
+02a3a7bf-eee7-d0fa-9fe1-b26c2fe4d16a,headache,mild headache in the afternoon,2026-04-23 13:29:38.391233,1,2026-04-23
+555f43ab-3d6b-520e-87c1-12aceea07714,headache,pressure behind eyes,2026-04-23 02:47:38.391233,1,2026-04-23
+555f43ab-3d6b-520e-87c1-12aceea07714,fatigue,feeling unusually tired,2026-04-22 06:56:38.391233,3,2026-04-22
+555f43ab-3d6b-520e-87c1-12aceea07714,dizziness,lightheaded when standing,2026-04-20 16:53:38.391233,4,2026-04-20
+a5858d03-eaa3-c01d-6a08-db73fb78c4c4,other,general feeling of being off,2026-04-17 07:17:38.391233,2,2026-04-17
+a5858d03-eaa3-c01d-6a08-db73fb78c4c4,dizziness,felt faint after walking,2026-04-20 08:54:38.391233,5,2026-04-20
+a5858d03-eaa3-c01d-6a08-db73fb78c4c4,other,general feeling of being off,2026-04-23 02:56:38.391233,3,2026-04-23
+a5858d03-eaa3-c01d-6a08-db73fb78c4c4,nausea,mild stomach discomfort,2026-04-19 04:34:38.391233,2,2026-04-19
+8e2f07aa-498e-251d-5bab-c464b9070315,headache,persistent headache today,2026-04-20 15:22:38.391233,1,2026-04-20
+8e2f07aa-498e-251d-5bab-c464b9070315,nausea,waves of nausea in the morning,2026-04-20 13:29:38.391233,2,2026-04-20
+8e2f07aa-498e-251d-5bab-c464b9070315,dizziness,lightheaded when standing,2026-04-18 04:32:38.391233,4,2026-04-18
+7a072db5-a27f-da63-f0f0-9e5864af35ec,other,unusual tingling sensation,2026-04-20 19:28:38.391233,3,2026-04-20
+7a072db5-a27f-da63-f0f0-9e5864af35ec,nausea,felt slightly nauseous after eating,2026-04-17 15:09:38.391233,1,2026-04-17
+f6528c6b-2488-ef08-93c0-fb051ffae4c2,fatigue,low energy throughout the day,2026-04-21 07:39:38.391233,2,2026-04-21
+f6528c6b-2488-ef08-93c0-fb051ffae4c2,fatigue,feeling unusually tired,2026-04-18 06:45:38.391233,3,2026-04-18
+f6528c6b-2488-ef08-93c0-fb051ffae4c2,nausea,felt slightly nauseous after eating,2026-04-21 22:11:38.391233,2,2026-04-21
+f6528c6b-2488-ef08-93c0-fb051ffae4c2,nausea,felt slightly nauseous after eating,2026-04-22 10:46:38.391233,3,2026-04-22
+f6528c6b-2488-ef08-93c0-fb051ffae4c2,dizziness,felt faint after walking,2026-04-21 08:08:38.391233,3,2026-04-21
+99cf3035-1890-adbc-37a3-b412e78cd2ff,other,stomach discomfort not clearly nausea,2026-04-19 21:02:38.391233,4,2026-04-19
+99cf3035-1890-adbc-37a3-b412e78cd2ff,nausea,mild stomach discomfort,2026-04-19 01:49:38.391233,2,2026-04-19
+99cf3035-1890-adbc-37a3-b412e78cd2ff,nausea,felt slightly nauseous after eating,2026-04-20 16:27:38.391233,3,2026-04-20
+99cf3035-1890-adbc-37a3-b412e78cd2ff,nausea,mild stomach discomfort,2026-04-21 06:33:38.391233,3,2026-04-21
+99cf3035-1890-adbc-37a3-b412e78cd2ff,fatigue,exhausted after minimal activity,2026-04-21 08:44:38.391233,2,2026-04-21
+6636ee5d-0254-772b-ab10-32e5abf6d68f,fatigue,feeling unusually tired,2026-04-17 23:37:38.391233,2,2026-04-17
+6636ee5d-0254-772b-ab10-32e5abf6d68f,nausea,felt slightly nauseous after eating,2026-04-17 00:53:38.391233,4,2026-04-17
+36732e54-cd63-3f2e-7461-f2e7410b5799,other,unusual tingling sensation,2026-04-23 11:16:38.391233,4,2026-04-23
+867c9411-28e0-106d-d040-1d82c562fa3d,nausea,mild stomach discomfort,2026-04-17 11:40:38.391233,1,2026-04-17
+867c9411-28e0-106d-d040-1d82c562fa3d,headache,pressure behind eyes,2026-04-21 14:03:38.391233,1,2026-04-21
+867c9411-28e0-106d-d040-1d82c562fa3d,other,mild tremor in hands,2026-04-21 20:11:38.391233,1,2026-04-21
+867c9411-28e0-106d-d040-1d82c562fa3d,dizziness,felt faint after walking,2026-04-17 00:14:38.391233,4,2026-04-17
+98f53bdc-b205-e9de-6a40-ce1fcc695668,blurred_vision,difficulty focusing eyes,2026-04-20 05:42:38.391233,3,2026-04-20
+98f53bdc-b205-e9de-6a40-ce1fcc695668,blurred_vision,slight blurry vision episode,2026-04-20 04:45:38.391233,3,2026-04-20
+aa643bed-2626-0649-78fa-af8a7de4e6b4,nausea,mild stomach discomfort,2026-04-21 04:33:38.391233,2,2026-04-21
+aa643bed-2626-0649-78fa-af8a7de4e6b4,headache,mild headache in the afternoon,2026-04-20 07:24:38.391233,2,2026-04-20
+aa643bed-2626-0649-78fa-af8a7de4e6b4,dizziness,brief dizziness episode,2026-04-21 11:17:38.391233,3,2026-04-21
+aa643bed-2626-0649-78fa-af8a7de4e6b4,blurred_vision,temporary vision blurriness,2026-04-20 15:27:38.391233,3,2026-04-20
+aa643bed-2626-0649-78fa-af8a7de4e6b4,nausea,mild stomach discomfort,2026-04-22 09:03:38.391233,2,2026-04-22
+b137efec-f49d-c2df-7d17-2cd4fa2b8e4b,nausea,waves of nausea in the morning,2026-04-22 04:38:38.391233,1,2026-04-22
+b137efec-f49d-c2df-7d17-2cd4fa2b8e4b,other,unusual tingling sensation,2026-04-23 19:29:38.391233,2,2026-04-23
+b137efec-f49d-c2df-7d17-2cd4fa2b8e4b,blurred_vision,slight blurry vision episode,2026-04-19 17:33:38.391233,3,2026-04-19
+9305b8fb-9678-76ea-7598-481679d54948,nausea,waves of nausea in the morning,2026-04-18 01:59:38.391233,4,2026-04-18
+3a2dc40e-ff4d-5947-0fff-25b0bb0f665a,other,mild tremor in hands,2026-04-18 08:19:38.391233,3,2026-04-18
+36ffd8ba-da6c-0e00-8607-30dafb7ed33f,other,general feeling of being off,2026-04-23 08:01:38.391233,1,2026-04-23
+36ffd8ba-da6c-0e00-8607-30dafb7ed33f,dizziness,lightheaded when standing,2026-04-22 09:06:38.391233,3,2026-04-22
+36ffd8ba-da6c-0e00-8607-30dafb7ed33f,fatigue,low energy throughout the day,2026-04-19 09:43:38.391233,3,2026-04-19
+33f30fdd-6f5f-871c-dfec-53177415551c,dizziness,brief dizziness episode,2026-04-19 01:01:38.391233,4,2026-04-19
+33f30fdd-6f5f-871c-dfec-53177415551c,blurred_vision,difficulty focusing eyes,2026-04-21 05:45:38.391233,4,2026-04-21
+33f76e72-5c4d-bf91-9da3-d13e645d7301,nausea,waves of nausea in the morning,2026-04-20 00:19:38.391233,2,2026-04-20
+33f76e72-5c4d-bf91-9da3-d13e645d7301,dizziness,brief dizziness episode,2026-04-21 07:22:38.391233,2,2026-04-21
+50735381-3368-a505-0ecc-08bef149f5b8,blurred_vision,difficulty focusing eyes,2026-04-19 20:02:38.391233,3,2026-04-19
+50735381-3368-a505-0ecc-08bef149f5b8,blurred_vision,difficulty focusing eyes,2026-04-22 18:34:38.391233,3,2026-04-22
+50735381-3368-a505-0ecc-08bef149f5b8,blurred_vision,temporary vision blurriness,2026-04-21 01:18:38.391233,3,2026-04-21
+50735381-3368-a505-0ecc-08bef149f5b8,other,unusual tingling sensation,2026-04-17 02:04:38.391233,4,2026-04-17
+50735381-3368-a505-0ecc-08bef149f5b8,dizziness,lightheaded when standing,2026-04-18 02:36:38.391233,4,2026-04-18
+c1d33e3b-f81b-3389-9c0a-ac89964f06fc,fatigue,exhausted after minimal activity,2026-04-19 20:30:38.391233,4,2026-04-19
+c1d33e3b-f81b-3389-9c0a-ac89964f06fc,headache,persistent headache today,2026-04-21 06:33:38.391233,1,2026-04-21
+c1d33e3b-f81b-3389-9c0a-ac89964f06fc,other,general feeling of being off,2026-04-17 01:03:38.391233,2,2026-04-17
+c1d33e3b-f81b-3389-9c0a-ac89964f06fc,dizziness,felt faint after walking,2026-04-18 14:31:38.391233,4,2026-04-18
+77fd1c5c-ff15-a7d4-29e1-d181c01c6876,blurred_vision,difficulty focusing eyes,2026-04-22 10:53:38.391233,5,2026-04-22
+1eab269d-68f7-e821-9a67-d39c2f5c214e,fatigue,low energy throughout the day,2026-04-18 10:56:38.391233,2,2026-04-18
+1eab269d-68f7-e821-9a67-d39c2f5c214e,blurred_vision,difficulty focusing eyes,2026-04-19 23:25:38.391233,3,2026-04-19
+1eab269d-68f7-e821-9a67-d39c2f5c214e,other,stomach discomfort not clearly nausea,2026-04-21 10:58:38.391233,1,2026-04-21
+f187eaf9-b177-06eb-b3df-7dab54adfa75,dizziness,lightheaded when standing,2026-04-20 19:01:38.391233,4,2026-04-20
+37437e19-d2c9-d204-a18a-ce4cbea2868f,blurred_vision,difficulty focusing eyes,2026-04-20 17:16:38.391233,4,2026-04-20
+37437e19-d2c9-d204-a18a-ce4cbea2868f,blurred_vision,difficulty focusing eyes,2026-04-22 16:09:38.391233,2,2026-04-22
+37437e19-d2c9-d204-a18a-ce4cbea2868f,dizziness,lightheaded when standing,2026-04-19 05:47:38.391233,3,2026-04-19
+1ce81772-6b3f-6555-ada0-63ea0f8e263c,headache,mild headache in the afternoon,2026-04-20 18:29:38.391233,2,2026-04-20
+1ce81772-6b3f-6555-ada0-63ea0f8e263c,headache,persistent headache today,2026-04-17 23:47:38.391233,2,2026-04-17
+1ce81772-6b3f-6555-ada0-63ea0f8e263c,nausea,waves of nausea in the morning,2026-04-20 14:25:38.391233,2,2026-04-20
+1ce81772-6b3f-6555-ada0-63ea0f8e263c,blurred_vision,slight blurry vision episode,2026-04-19 17:54:38.391233,3,2026-04-19
+40be9857-ba0d-0793-2ee2-694bee2d604d,nausea,felt slightly nauseous after eating,2026-04-18 13:28:38.391233,1,2026-04-18
+40be9857-ba0d-0793-2ee2-694bee2d604d,dizziness,lightheaded when standing,2026-04-18 03:46:38.391233,3,2026-04-18
+40be9857-ba0d-0793-2ee2-694bee2d604d,dizziness,brief dizziness episode,2026-04-23 04:48:38.391233,3,2026-04-23
+b647bc6a-5e54-3d1c-2722-fc43d90a1848,fatigue,exhausted after minimal activity,2026-04-17 23:23:38.391233,1,2026-04-17
+b647bc6a-5e54-3d1c-2722-fc43d90a1848,other,feeling jittery and unsettled,2026-04-23 17:54:38.391233,3,2026-04-23
+b647bc6a-5e54-3d1c-2722-fc43d90a1848,fatigue,feeling unusually tired,2026-04-18 08:48:38.391233,4,2026-04-18
+b647bc6a-5e54-3d1c-2722-fc43d90a1848,dizziness,lightheaded when standing,2026-04-19 19:32:38.391233,4,2026-04-19
+55f164f1-352d-788d-a561-ee1cc4d9bc08,blurred_vision,difficulty focusing eyes,2026-04-20 06:29:38.391233,2,2026-04-20
+55f164f1-352d-788d-a561-ee1cc4d9bc08,other,general feeling of being off,2026-04-18 10:55:38.391233,2,2026-04-18
+55f164f1-352d-788d-a561-ee1cc4d9bc08,headache,mild headache in the afternoon,2026-04-21 03:29:38.391233,2,2026-04-21
+55f164f1-352d-788d-a561-ee1cc4d9bc08,headache,mild headache in the afternoon,2026-04-19 12:14:38.391233,3,2026-04-19
+93ba07a6-d175-a515-d910-13438d1b0f4a,headache,pressure behind eyes,2026-04-22 18:45:38.391233,2,2026-04-22
+93ba07a6-d175-a515-d910-13438d1b0f4a,other,unusual tingling sensation,2026-04-23 01:37:38.391233,1,2026-04-23
+5d21565f-f56f-73c9-b854-573f20e16387,fatigue,feeling unusually tired,2026-04-20 01:52:38.391233,2,2026-04-20
+5d21565f-f56f-73c9-b854-573f20e16387,other,general feeling of being off,2026-04-19 09:22:38.391233,1,2026-04-19
+5d21565f-f56f-73c9-b854-573f20e16387,fatigue,low energy throughout the day,2026-04-18 09:18:38.391233,2,2026-04-18
+f63506a4-ab47-e4eb-7ee8-a4fd0eefdefb,blurred_vision,difficulty focusing eyes,2026-04-22 18:10:38.391233,2,2026-04-22
+f63506a4-ab47-e4eb-7ee8-a4fd0eefdefb,nausea,waves of nausea in the morning,2026-04-18 13:07:38.391233,3,2026-04-18
+f63506a4-ab47-e4eb-7ee8-a4fd0eefdefb,nausea,mild stomach discomfort,2026-04-17 04:36:38.391233,2,2026-04-17
+13d9e431-9822-2495-7c7a-eca3bb59fc1f,other,feeling jittery and unsettled,2026-04-21 10:12:38.391233,1,2026-04-21
+13d9e431-9822-2495-7c7a-eca3bb59fc1f,headache,mild headache in the afternoon,2026-04-18 20:13:38.391233,3,2026-04-18
+13d9e431-9822-2495-7c7a-eca3bb59fc1f,other,feeling jittery and unsettled,2026-04-18 02:43:38.391233,1,2026-04-18
+bbd1455a-b6ad-c00d-15f5-cb4271ecd289,blurred_vision,slight blurry vision episode,2026-04-21 15:42:38.391233,3,2026-04-21
+9ce581af-52f3-6307-b195-06c96afa5781,fatigue,feeling unusually tired,2026-04-18 18:13:38.391233,4,2026-04-18
+9ce581af-52f3-6307-b195-06c96afa5781,other,feeling jittery and unsettled,2026-04-21 06:39:38.391233,1,2026-04-21
+9ce581af-52f3-6307-b195-06c96afa5781,other,increased sweating without clear cause,2026-04-18 12:52:38.391233,1,2026-04-18
+9ce581af-52f3-6307-b195-06c96afa5781,blurred_vision,difficulty focusing eyes,2026-04-17 22:10:38.391233,2,2026-04-17
+940bfad9-e135-8652-058e-eed71ed73679,headache,pressure behind eyes,2026-04-20 12:32:38.391233,4,2026-04-20
+940bfad9-e135-8652-058e-eed71ed73679,headache,persistent headache today,2026-04-23 17:34:38.391233,4,2026-04-23
+940bfad9-e135-8652-058e-eed71ed73679,dizziness,lightheaded when standing,2026-04-18 09:10:38.391233,4,2026-04-18
+940bfad9-e135-8652-058e-eed71ed73679,dizziness,brief dizziness episode,2026-04-23 10:09:38.391233,3,2026-04-23
+b88b0d4c-a647-1561-bd22-28a55c0322e6,blurred_vision,slight blurry vision episode,2026-04-23 13:25:38.391233,4,2026-04-23
+c6d262b2-b1de-ab33-7d99-d60c6b7a2def,fatigue,low energy throughout the day,2026-04-17 17:49:38.391233,3,2026-04-17
+4d589bcd-8db1-0342-167e-052970343359,nausea,waves of nausea in the morning,2026-04-19 01:16:38.391233,3,2026-04-19
+4d589bcd-8db1-0342-167e-052970343359,dizziness,brief dizziness episode,2026-04-21 02:08:38.391233,2,2026-04-21
+4d589bcd-8db1-0342-167e-052970343359,blurred_vision,slight blurry vision episode,2026-04-22 16:42:38.391233,3,2026-04-22
+4d589bcd-8db1-0342-167e-052970343359,other,general feeling of being off,2026-04-18 17:25:38.391233,3,2026-04-18
+d0617324-1a74-c5e7-00b8-9821b927be11,blurred_vision,temporary vision blurriness,2026-04-19 10:39:38.391233,2,2026-04-19
+b697fc94-a944-4a80-a4dc-eb0af6062984,fatigue,feeling unusually tired,2026-04-23 05:53:38.391233,2,2026-04-23
+b697fc94-a944-4a80-a4dc-eb0af6062984,headache,persistent headache today,2026-04-18 21:59:38.391233,4,2026-04-18
+b697fc94-a944-4a80-a4dc-eb0af6062984,headache,persistent headache today,2026-04-17 21:37:38.391233,3,2026-04-17
+b697fc94-a944-4a80-a4dc-eb0af6062984,other,feeling jittery and unsettled,2026-04-23 06:29:38.391233,1,2026-04-23
+b697fc94-a944-4a80-a4dc-eb0af6062984,nausea,felt slightly nauseous after eating,2026-04-22 15:17:38.391233,1,2026-04-22
+3cf2524c-3e7c-e82c-a10b-758546a5e742,nausea,waves of nausea in the morning,2026-04-17 20:31:38.391233,3,2026-04-17
+12d87b32-99ca-a505-c8c7-17897eb0bdba,headache,persistent headache today,2026-04-23 09:52:38.391233,2,2026-04-23
+12d87b32-99ca-a505-c8c7-17897eb0bdba,blurred_vision,temporary vision blurriness,2026-04-18 22:54:38.391233,3,2026-04-18
+12d87b32-99ca-a505-c8c7-17897eb0bdba,headache,persistent headache today,2026-04-23 03:41:38.391233,1,2026-04-23
+a7407158-29bd-dbac-8b07-12673aa19cd4,nausea,waves of nausea in the morning,2026-04-17 08:56:38.391233,4,2026-04-17
+a7407158-29bd-dbac-8b07-12673aa19cd4,other,unusual tingling sensation,2026-04-19 02:29:38.391233,1,2026-04-19
+a7407158-29bd-dbac-8b07-12673aa19cd4,blurred_vision,slight blurry vision episode,2026-04-20 21:22:38.391233,2,2026-04-20
+a7407158-29bd-dbac-8b07-12673aa19cd4,blurred_vision,slight blurry vision episode,2026-04-17 12:15:38.391233,4,2026-04-17
+8cc9b662-602b-1d93-0659-eacee1543a78,fatigue,low energy throughout the day,2026-04-20 21:36:38.391233,3,2026-04-20
+266f82eb-1a03-bc4b-6d93-2d73f9c1bd41,dizziness,brief dizziness episode,2026-04-18 16:44:38.391233,2,2026-04-18
+266f82eb-1a03-bc4b-6d93-2d73f9c1bd41,headache,pressure behind eyes,2026-04-22 21:10:38.391233,2,2026-04-22
+266f82eb-1a03-bc4b-6d93-2d73f9c1bd41,fatigue,exhausted after minimal activity,2026-04-19 13:16:38.391233,2,2026-04-19
+266f82eb-1a03-bc4b-6d93-2d73f9c1bd41,nausea,waves of nausea in the morning,2026-04-18 10:42:38.391233,1,2026-04-18
+266f82eb-1a03-bc4b-6d93-2d73f9c1bd41,nausea,felt slightly nauseous after eating,2026-04-18 03:05:38.391233,2,2026-04-18
+7cf5a557-89cc-9f20-c7c3-4ae3f9ebfa80,nausea,waves of nausea in the morning,2026-04-19 14:18:38.391233,1,2026-04-19
+7cf5a557-89cc-9f20-c7c3-4ae3f9ebfa80,nausea,felt slightly nauseous after eating,2026-04-21 07:22:38.391233,1,2026-04-21
+61dcb34a-dbad-ff8a-52cc-bca016e0a2ec,dizziness,lightheaded when standing,2026-04-23 15:58:38.391233,3,2026-04-23
+61dcb34a-dbad-ff8a-52cc-bca016e0a2ec,headache,mild headache in the afternoon,2026-04-19 18:07:38.391233,1,2026-04-19
+61dcb34a-dbad-ff8a-52cc-bca016e0a2ec,headache,pressure behind eyes,2026-04-21 10:45:38.391233,2,2026-04-21
+61dcb34a-dbad-ff8a-52cc-bca016e0a2ec,nausea,felt slightly nauseous after eating,2026-04-20 12:12:38.391233,3,2026-04-20
+61dcb34a-dbad-ff8a-52cc-bca016e0a2ec,dizziness,lightheaded when standing,2026-04-23 20:08:38.391233,5,2026-04-23
+4b549518-e456-d5c3-f211-3fce2f306f94,blurred_vision,slight blurry vision episode,2026-04-21 20:44:38.391233,3,2026-04-21
+4b549518-e456-d5c3-f211-3fce2f306f94,fatigue,exhausted after minimal activity,2026-04-23 11:24:38.391233,2,2026-04-23
+4b549518-e456-d5c3-f211-3fce2f306f94,headache,persistent headache today,2026-04-21 22:59:38.391233,2,2026-04-21
+25cf6263-a28a-c866-2a00-ef63a1a0d942,dizziness,brief dizziness episode,2026-04-20 15:02:38.391233,3,2026-04-20
+25cf6263-a28a-c866-2a00-ef63a1a0d942,nausea,mild stomach discomfort,2026-04-19 06:39:38.391233,4,2026-04-19
+25cf6263-a28a-c866-2a00-ef63a1a0d942,fatigue,low energy throughout the day,2026-04-19 13:04:38.391233,1,2026-04-19
+25cf6263-a28a-c866-2a00-ef63a1a0d942,other,stomach discomfort not clearly nausea,2026-04-17 15:00:38.391233,1,2026-04-17
+5d6f1bee-0cc6-8339-db22-c7c3fa55c0b4,headache,persistent headache today,2026-04-18 09:49:38.391233,3,2026-04-18
+5d6f1bee-0cc6-8339-db22-c7c3fa55c0b4,blurred_vision,slight blurry vision episode,2026-04-19 11:40:38.391233,4,2026-04-19
+5d6f1bee-0cc6-8339-db22-c7c3fa55c0b4,nausea,felt slightly nauseous after eating,2026-04-19 12:54:38.391233,3,2026-04-19
+2cb3a65f-5636-5e4a-189d-bd070a3a41e7,headache,pressure behind eyes,2026-04-20 14:37:38.391233,2,2026-04-20
+2cb3a65f-5636-5e4a-189d-bd070a3a41e7,headache,persistent headache today,2026-04-21 11:19:38.391233,2,2026-04-21
+2cb3a65f-5636-5e4a-189d-bd070a3a41e7,other,stomach discomfort not clearly nausea,2026-04-19 01:16:38.391233,2,2026-04-19
+2cb3a65f-5636-5e4a-189d-bd070a3a41e7,fatigue,low energy throughout the day,2026-04-23 16:39:38.391233,3,2026-04-23
+b569d4a6-798e-e237-89f6-4e8aff5edade,nausea,mild stomach discomfort,2026-04-23 07:39:38.391233,1,2026-04-23
+b569d4a6-798e-e237-89f6-4e8aff5edade,nausea,waves of nausea in the morning,2026-04-23 18:28:38.391233,1,2026-04-23
+c3faf58e-ca84-fdcc-6da6-0398a0f04b7a,nausea,mild stomach discomfort,2026-04-19 16:44:38.391233,5,2026-04-19
+c3faf58e-ca84-fdcc-6da6-0398a0f04b7a,dizziness,felt faint after walking,2026-04-17 16:25:38.391233,2,2026-04-17
+c3faf58e-ca84-fdcc-6da6-0398a0f04b7a,headache,pressure behind eyes,2026-04-19 17:50:38.391233,4,2026-04-19
+c3faf58e-ca84-fdcc-6da6-0398a0f04b7a,dizziness,lightheaded when standing,2026-04-21 15:45:38.391233,4,2026-04-21
+e91c11f9-3608-54fd-640c-127b9c487e3d,nausea,waves of nausea in the morning,2026-04-21 07:36:38.391233,2,2026-04-21
+e91c11f9-3608-54fd-640c-127b9c487e3d,blurred_vision,slight blurry vision episode,2026-04-22 02:26:38.391233,4,2026-04-22
+e91c11f9-3608-54fd-640c-127b9c487e3d,dizziness,lightheaded when standing,2026-04-19 15:24:38.391233,3,2026-04-19
+e91c11f9-3608-54fd-640c-127b9c487e3d,blurred_vision,temporary vision blurriness,2026-04-17 07:25:38.391233,2,2026-04-17
+e91c11f9-3608-54fd-640c-127b9c487e3d,fatigue,feeling unusually tired,2026-04-18 14:15:38.391233,3,2026-04-18
+75d74c1c-2f83-1c53-03dd-293c54f60934,blurred_vision,difficulty focusing eyes,2026-04-17 22:15:38.391233,4,2026-04-17
+75d74c1c-2f83-1c53-03dd-293c54f60934,blurred_vision,temporary vision blurriness,2026-04-21 08:28:38.391233,2,2026-04-21
+75d74c1c-2f83-1c53-03dd-293c54f60934,dizziness,lightheaded when standing,2026-04-17 23:00:38.391233,3,2026-04-17
+75d74c1c-2f83-1c53-03dd-293c54f60934,other,mild tremor in hands,2026-04-23 18:04:38.391233,1,2026-04-23
+31ff1f7b-c9a7-a528-a40b-238d9918f50a,fatigue,feeling unusually tired,2026-04-23 19:46:38.391233,3,2026-04-23
+31ff1f7b-c9a7-a528-a40b-238d9918f50a,headache,persistent headache today,2026-04-18 23:13:38.391233,4,2026-04-18
+31ff1f7b-c9a7-a528-a40b-238d9918f50a,dizziness,felt faint after walking,2026-04-22 18:18:38.391233,5,2026-04-22
+d97bd537-79bd-096a-32a3-a00da8edf44f,fatigue,exhausted after minimal activity,2026-04-17 13:40:38.391233,2,2026-04-17
+f1eb4fed-0661-14d6-79e0-7937e96e532e,nausea,waves of nausea in the morning,2026-04-21 01:29:38.391233,3,2026-04-21
+4c6f7c95-0e00-c96b-5bf5-d60bf1e3069c,fatigue,feeling unusually tired,2026-04-22 01:40:38.391233,2,2026-04-22
+4c6f7c95-0e00-c96b-5bf5-d60bf1e3069c,other,unusual tingling sensation,2026-04-20 01:19:38.391233,2,2026-04-20
+dd3f8b63-74a4-f426-18de-afee6a4918f3,nausea,mild stomach discomfort,2026-04-19 14:21:38.391233,5,2026-04-19
+dd3f8b63-74a4-f426-18de-afee6a4918f3,nausea,felt slightly nauseous after eating,2026-04-18 22:38:38.391233,3,2026-04-18
+dd3f8b63-74a4-f426-18de-afee6a4918f3,headache,mild headache in the afternoon,2026-04-20 02:21:38.391233,2,2026-04-20
+69633fc1-97d3-4ee3-21a6-6b830c393715,fatigue,low energy throughout the day,2026-04-20 08:43:38.391233,2,2026-04-20
+69633fc1-97d3-4ee3-21a6-6b830c393715,dizziness,brief dizziness episode,2026-04-22 13:54:38.391233,3,2026-04-22
+894be931-9c56-662c-982a-d1c8d37e1e02,dizziness,brief dizziness episode,2026-04-21 08:22:38.391233,4,2026-04-21
+894be931-9c56-662c-982a-d1c8d37e1e02,other,general feeling of being off,2026-04-23 07:47:38.391233,1,2026-04-23
+3f237cc6-811f-2d62-b43f-7bb9fa0eafd0,dizziness,brief dizziness episode,2026-04-23 10:55:38.391233,5,2026-04-23
+ff1347f0-99e7-4a5a-bb42-9b8d4d395313,fatigue,exhausted after minimal activity,2026-04-23 21:49:38.391233,2,2026-04-23
+ff1347f0-99e7-4a5a-bb42-9b8d4d395313,dizziness,felt faint after walking,2026-04-17 01:52:38.391233,3,2026-04-17
+ff1347f0-99e7-4a5a-bb42-9b8d4d395313,fatigue,feeling unusually tired,2026-04-21 07:36:38.391233,2,2026-04-21
+ff1347f0-99e7-4a5a-bb42-9b8d4d395313,nausea,felt slightly nauseous after eating,2026-04-23 01:33:38.391233,2,2026-04-23
+b8227598-bfc2-f0c3-837b-cdda5df79c32,nausea,felt slightly nauseous after eating,2026-04-20 14:53:38.391233,3,2026-04-20
+b8227598-bfc2-f0c3-837b-cdda5df79c32,blurred_vision,difficulty focusing eyes,2026-04-19 06:30:38.391233,3,2026-04-19
+b8227598-bfc2-f0c3-837b-cdda5df79c32,nausea,waves of nausea in the morning,2026-04-18 01:18:38.391233,4,2026-04-18
+4229de6d-08fd-a338-1577-8c65bc8c4e1e,blurred_vision,difficulty focusing eyes,2026-04-20 12:29:38.391233,2,2026-04-20
+4229de6d-08fd-a338-1577-8c65bc8c4e1e,other,unusual tingling sensation,2026-04-18 20:40:38.391233,1,2026-04-18
+4229de6d-08fd-a338-1577-8c65bc8c4e1e,dizziness,felt faint after walking,2026-04-21 09:16:38.391233,4,2026-04-21
+4229de6d-08fd-a338-1577-8c65bc8c4e1e,nausea,waves of nausea in the morning,2026-04-17 05:55:38.391233,3,2026-04-17
+3cefa312-9943-4636-a79f-96afaa75f0b2,other,general feeling of being off,2026-04-23 03:05:38.391233,1,2026-04-23
+3cefa312-9943-4636-a79f-96afaa75f0b2,other,general feeling of being off,2026-04-19 15:44:38.391233,1,2026-04-19
+3cefa312-9943-4636-a79f-96afaa75f0b2,other,feeling jittery and unsettled,2026-04-18 20:46:38.391233,1,2026-04-18
+12cfd3ca-8773-8c09-bfe0-5708eb665db7,headache,mild headache in the afternoon,2026-04-17 15:01:38.391233,2,2026-04-17
+12cfd3ca-8773-8c09-bfe0-5708eb665db7,nausea,mild stomach discomfort,2026-04-21 11:56:38.391233,3,2026-04-21
+12cfd3ca-8773-8c09-bfe0-5708eb665db7,nausea,mild stomach discomfort,2026-04-20 16:06:38.391233,2,2026-04-20
+12cfd3ca-8773-8c09-bfe0-5708eb665db7,headache,persistent headache today,2026-04-22 17:45:38.391233,3,2026-04-22
+43e5bce0-49d4-38d4-1397-cb0ed684e133,dizziness,brief dizziness episode,2026-04-21 08:08:38.391233,4,2026-04-21
+43e5bce0-49d4-38d4-1397-cb0ed684e133,other,mild tremor in hands,2026-04-18 05:00:38.391233,3,2026-04-18
+852fab18-4192-9dd5-3d8f-51e091ed25dd,dizziness,lightheaded when standing,2026-04-20 20:57:38.391233,4,2026-04-20
+852fab18-4192-9dd5-3d8f-51e091ed25dd,headache,persistent headache today,2026-04-19 13:43:38.391233,3,2026-04-19
+852fab18-4192-9dd5-3d8f-51e091ed25dd,nausea,waves of nausea in the morning,2026-04-23 20:14:38.391233,3,2026-04-23
+5e060b1d-39a7-f808-4571-75fc9a21960d,dizziness,felt faint after walking,2026-04-20 21:43:38.391233,4,2026-04-20
+5e060b1d-39a7-f808-4571-75fc9a21960d,headache,persistent headache today,2026-04-20 01:45:38.391233,2,2026-04-20
+c2be82c7-66a8-000d-2cc4-430135c42f40,nausea,waves of nausea in the morning,2026-04-17 16:46:38.391233,2,2026-04-17
+e898de80-bde8-e12c-7cbd-709c1bde91c5,other,stomach discomfort not clearly nausea,2026-04-18 17:04:38.391233,2,2026-04-18
+e898de80-bde8-e12c-7cbd-709c1bde91c5,blurred_vision,slight blurry vision episode,2026-04-17 00:11:38.391233,2,2026-04-17
+e898de80-bde8-e12c-7cbd-709c1bde91c5,other,feeling jittery and unsettled,2026-04-18 22:39:38.391233,3,2026-04-18
+e898de80-bde8-e12c-7cbd-709c1bde91c5,fatigue,feeling unusually tired,2026-04-20 23:57:38.391233,1,2026-04-20
+e898de80-bde8-e12c-7cbd-709c1bde91c5,fatigue,feeling unusually tired,2026-04-16 23:23:38.391233,2,2026-04-16
+b32c1ca0-ab29-c36f-1547-9177629bcb20,dizziness,felt faint after walking,2026-04-19 09:57:38.391233,4,2026-04-19
+b32c1ca0-ab29-c36f-1547-9177629bcb20,headache,mild headache in the afternoon,2026-04-22 08:10:38.391233,1,2026-04-22
+b32c1ca0-ab29-c36f-1547-9177629bcb20,fatigue,feeling unusually tired,2026-04-22 06:47:38.391233,2,2026-04-22
+b32c1ca0-ab29-c36f-1547-9177629bcb20,dizziness,lightheaded when standing,2026-04-23 11:47:38.391233,4,2026-04-23
+b32c1ca0-ab29-c36f-1547-9177629bcb20,blurred_vision,difficulty focusing eyes,2026-04-23 18:30:38.391233,4,2026-04-23
+95210c74-7b37-b8d2-ed23-c458356d07a3,blurred_vision,temporary vision blurriness,2026-04-23 09:28:38.391233,4,2026-04-23
+4572439d-e668-8f7e-d5e2-6cd4a96514c2,headache,persistent headache today,2026-04-19 20:43:38.391233,3,2026-04-19
+4572439d-e668-8f7e-d5e2-6cd4a96514c2,dizziness,lightheaded when standing,2026-04-19 14:25:38.391233,3,2026-04-19
+4572439d-e668-8f7e-d5e2-6cd4a96514c2,nausea,mild stomach discomfort,2026-04-18 07:05:38.391233,1,2026-04-18
+ebf4e85a-8ee0-f9f8-14e2-af7db5733675,dizziness,lightheaded when standing,2026-04-21 18:59:38.391233,3,2026-04-21
+ebf4e85a-8ee0-f9f8-14e2-af7db5733675,nausea,felt slightly nauseous after eating,2026-04-23 22:23:38.391233,4,2026-04-23
+ebf4e85a-8ee0-f9f8-14e2-af7db5733675,other,feeling jittery and unsettled,2026-04-22 18:05:38.391233,1,2026-04-22
+ad907ed3-fe59-97e3-a03f-8713ff6f1ff0,dizziness,lightheaded when standing,2026-04-18 00:19:38.391233,2,2026-04-18
+ad907ed3-fe59-97e3-a03f-8713ff6f1ff0,blurred_vision,temporary vision blurriness,2026-04-20 17:04:38.391233,3,2026-04-20
+a7f18627-8eb7-f6c5-f018-42d0709b4d99,headache,persistent headache today,2026-04-23 04:02:38.391233,5,2026-04-23
+a7f18627-8eb7-f6c5-f018-42d0709b4d99,dizziness,lightheaded when standing,2026-04-21 05:02:38.391233,2,2026-04-21
+a7f18627-8eb7-f6c5-f018-42d0709b4d99,fatigue,low energy throughout the day,2026-04-21 15:57:38.391233,2,2026-04-21
+b3ae3434-a8a2-5d41-9d69-fd7a7761b8a8,nausea,waves of nausea in the morning,2026-04-17 02:38:38.391233,2,2026-04-17
+b3ae3434-a8a2-5d41-9d69-fd7a7761b8a8,headache,persistent headache today,2026-04-22 12:13:38.391233,4,2026-04-22
+b3ae3434-a8a2-5d41-9d69-fd7a7761b8a8,other,increased sweating without clear cause,2026-04-21 13:30:38.391233,3,2026-04-21
+b3ae3434-a8a2-5d41-9d69-fd7a7761b8a8,fatigue,feeling unusually tired,2026-04-21 09:54:38.391233,2,2026-04-21
+b3ae3434-a8a2-5d41-9d69-fd7a7761b8a8,headache,mild headache in the afternoon,2026-04-22 14:50:38.391233,1,2026-04-22
+51bc7a9f-a060-3acc-b86e-67147d63b153,headache,pressure behind eyes,2026-04-19 17:21:38.391233,2,2026-04-19
+51bc7a9f-a060-3acc-b86e-67147d63b153,headache,mild headache in the afternoon,2026-04-19 11:07:38.391233,2,2026-04-19
+51bc7a9f-a060-3acc-b86e-67147d63b153,other,increased sweating without clear cause,2026-04-17 17:32:38.391233,1,2026-04-17
+51bc7a9f-a060-3acc-b86e-67147d63b153,other,unusual tingling sensation,2026-04-22 20:08:38.391233,1,2026-04-22
+0b116db9-4a0c-9858-f79d-2e30d0e1a2fe,other,mild tremor in hands,2026-04-21 18:50:38.391233,4,2026-04-21
+0b116db9-4a0c-9858-f79d-2e30d0e1a2fe,fatigue,low energy throughout the day,2026-04-18 16:16:38.391233,3,2026-04-18
+0b116db9-4a0c-9858-f79d-2e30d0e1a2fe,fatigue,low energy throughout the day,2026-04-19 14:30:38.391233,3,2026-04-19
+0b116db9-4a0c-9858-f79d-2e30d0e1a2fe,headache,mild headache in the afternoon,2026-04-22 15:45:38.391233,2,2026-04-22
+4e8f156e-c3db-5c01-6570-d441b0d5d0a5,dizziness,brief dizziness episode,2026-04-22 19:58:38.391233,4,2026-04-22
+4e8f156e-c3db-5c01-6570-d441b0d5d0a5,nausea,mild stomach discomfort,2026-04-23 02:57:38.391233,3,2026-04-23
+4e8f156e-c3db-5c01-6570-d441b0d5d0a5,dizziness,lightheaded when standing,2026-04-20 01:27:38.391233,3,2026-04-20
+4e8f156e-c3db-5c01-6570-d441b0d5d0a5,dizziness,brief dizziness episode,2026-04-17 08:19:38.391233,2,2026-04-17
+210e2b96-02b6-5fe9-57c3-5d6d4c03e2db,nausea,felt slightly nauseous after eating,2026-04-19 13:12:38.391233,2,2026-04-19
+210e2b96-02b6-5fe9-57c3-5d6d4c03e2db,headache,pressure behind eyes,2026-04-19 05:19:38.391233,1,2026-04-19
+210e2b96-02b6-5fe9-57c3-5d6d4c03e2db,fatigue,feeling unusually tired,2026-04-20 03:27:38.391233,2,2026-04-20
+210e2b96-02b6-5fe9-57c3-5d6d4c03e2db,headache,persistent headache today,2026-04-23 15:01:38.391233,1,2026-04-23
+210e2b96-02b6-5fe9-57c3-5d6d4c03e2db,fatigue,feeling unusually tired,2026-04-18 22:01:38.391233,5,2026-04-18
+18de0313-7522-21a1-bbd3-3dc254fec36c,other,feeling jittery and unsettled,2026-04-19 02:14:38.391233,1,2026-04-19
+18de0313-7522-21a1-bbd3-3dc254fec36c,other,feeling jittery and unsettled,2026-04-22 12:54:38.391233,3,2026-04-22
+423c6057-31e1-6eb4-3eb1-97407d0bb222,nausea,mild stomach discomfort,2026-04-22 08:43:38.391233,5,2026-04-22
+423c6057-31e1-6eb4-3eb1-97407d0bb222,nausea,mild stomach discomfort,2026-04-21 21:09:38.391233,5,2026-04-21
+74939d17-bba7-f3ab-5b2a-9a07077a0242,fatigue,low energy throughout the day,2026-04-21 22:07:38.391233,2,2026-04-21
+74939d17-bba7-f3ab-5b2a-9a07077a0242,fatigue,exhausted after minimal activity,2026-04-18 10:56:38.391233,1,2026-04-18
+74939d17-bba7-f3ab-5b2a-9a07077a0242,headache,mild headache in the afternoon,2026-04-20 19:53:38.391233,3,2026-04-20
+74939d17-bba7-f3ab-5b2a-9a07077a0242,other,feeling jittery and unsettled,2026-04-19 20:55:38.391233,2,2026-04-19
+99e53ec8-1dcf-9eec-cfe7-d2a4827949cd,nausea,waves of nausea in the morning,2026-04-19 05:37:38.391233,4,2026-04-19
+99e53ec8-1dcf-9eec-cfe7-d2a4827949cd,other,feeling jittery and unsettled,2026-04-21 15:25:38.391233,1,2026-04-21
+99e53ec8-1dcf-9eec-cfe7-d2a4827949cd,nausea,waves of nausea in the morning,2026-04-18 06:23:38.391233,1,2026-04-18
+99e53ec8-1dcf-9eec-cfe7-d2a4827949cd,headache,pressure behind eyes,2026-04-21 19:28:38.391233,3,2026-04-21
+99e53ec8-1dcf-9eec-cfe7-d2a4827949cd,blurred_vision,difficulty focusing eyes,2026-04-19 12:51:38.391233,4,2026-04-19
+33a09709-7cdc-9774-9a8f-bf7971942684,fatigue,feeling unusually tired,2026-04-23 19:27:38.391233,3,2026-04-23
+33a09709-7cdc-9774-9a8f-bf7971942684,blurred_vision,temporary vision blurriness,2026-04-19 22:52:38.391233,2,2026-04-19
+33a09709-7cdc-9774-9a8f-bf7971942684,blurred_vision,difficulty focusing eyes,2026-04-19 23:39:38.391233,4,2026-04-19
+33a09709-7cdc-9774-9a8f-bf7971942684,fatigue,feeling unusually tired,2026-04-21 15:59:38.391233,2,2026-04-21
+d77e122e-dc41-8a11-d0a5-778efe72d059,headache,mild headache in the afternoon,2026-04-22 23:29:38.391233,3,2026-04-22
+d77e122e-dc41-8a11-d0a5-778efe72d059,nausea,mild stomach discomfort,2026-04-20 13:06:38.391233,3,2026-04-20
+d77e122e-dc41-8a11-d0a5-778efe72d059,headache,persistent headache today,2026-04-17 09:10:38.391233,4,2026-04-17
+d77e122e-dc41-8a11-d0a5-778efe72d059,fatigue,low energy throughout the day,2026-04-19 05:31:38.391233,4,2026-04-19
+d77e122e-dc41-8a11-d0a5-778efe72d059,dizziness,felt faint after walking,2026-04-21 06:52:38.391233,3,2026-04-21
+f67e7182-e3a1-037e-43a7-f9a4573bd413,headache,pressure behind eyes,2026-04-17 08:18:38.391233,1,2026-04-17
+f67e7182-e3a1-037e-43a7-f9a4573bd413,other,general feeling of being off,2026-04-22 14:14:38.391233,3,2026-04-22
