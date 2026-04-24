@@ -115,6 +115,15 @@ export default function AnalyticsPage() {
         )
       : null;
 
+// The medication with the highest adherence rate, this will be used to generate insights and highlight 
+// which medication has the best patient adherence based on the current filtered dataset.
+  const bestAdherence =
+    filteredSummary.length > 0
+      ? filteredSummary.reduce((best, med) =>
+          med.adherence > best.adherence ? med : best
+        )
+      : null;
+
   // Generating insights only for the medications that are currently filtered, this will keep the
   // insights panel consistent with the filters that have been user-selected
   // which in turn ensures that the summaries that are displayed will reflect the same subset of data in the
@@ -146,6 +155,10 @@ export default function AnalyticsPage() {
           <p className="text-sm text-gray-600 capitalize">
             Best Glucose Control:{bestMed?.med}
             </p>
+          
+          <p className="text-sm text-gray-600 capitalize">
+            Best Adherence: {bestAdherence?.med}
+          </p>
         </div>
 
         {/* Charts */}
