@@ -356,11 +356,11 @@ CREATE TABLE supply (
 -- =============================================================================
 
 CREATE TABLE medication_knowledge (
-    id                        SERIAL PRIMARY KEY,
-    description               TEXT NOT NULL,
-    status                    TEXT,
-    dose_form                 TEXT NOT NULL,
-    administration_guidelines TEXT
+    id                       TEXT PRIMARY KEY,
+    description              TEXT NOT NULL,
+    status                   TEXT,
+    dose_form                TEXT NOT NULL,
+    administration_guideline TEXT
 );
 
 -- medication column is a free-text name; for coded lookups use the
@@ -369,17 +369,17 @@ CREATE TABLE medication_requests (
     id         SERIAL PRIMARY KEY,
     patient_id UUID NOT NULL REFERENCES patient(id),
     medication TEXT NOT NULL,
-    status     DATE NOT NULL
+    status     TEXT NOT NULL
 );
 
 CREATE TABLE medication_statements (
     id            SERIAL PRIMARY KEY,
     patient_id    UUID NOT NULL REFERENCES patient(id),
-    medication_id TEXT,
-    status        DATE NOT NULL,
+    medication_id TEXT REFERENCES medication_knowledge(id),
+    status        TEXT NOT NULL,
     dosage_text   TEXT NOT NULL,
     route         TEXT NOT NULL,
-    dose_value    INT  NOT NULL,
+    dose_value    NUMERIC NOT NULL,
     dose_unit     TEXT NOT NULL
 );
 
@@ -423,6 +423,17 @@ CREATE TABLE adherence (
     medication_name TEXT NOT NULL,
     created_at      TIMESTAMPTZ DEFAULT NOW(),
     date            DATE NOT NULL
+);
+
+CREATE TABLE glucose (
+    id          SERIAL PRIMARY KEY,
+    patient_id  UUID    NOT NULL REFERENCES patient(id),
+    reading     NUMERIC NOT NULL,  -- mg/dL
+    meal_context TEXT CHECK (meal_context IN ('fasting', 'pre_meal', 'post_meal', 'bedtime', 'other')),
+    notes       TEXT,
+    created_at  TIMESTAMPTZ DEFAULT NOW(),
+    date        DATE    NOT NULL,
+    time_taken  TIME    NOT NULL
 );
 
 -- =============================================================================
@@ -515,9 +526,9 @@ CREATE INDEX idx_supply_code           ON supply(code_id);
 CREATE INDEX idx_user_patient_patient  ON user_patient(patient_id);
 
 -- FHIR legacy
-CREATE INDEX idx_fhir_medreq_patient   ON fhir_medication_request(patient_id);
-CREATE INDEX idx_fhir_medstat_patient  ON fhir_medication_statement(patient_id);
-CREATE INDEX idx_fhir_medstat_med      ON fhir_medication_statement(medication_id);
+CREATE INDEX idx_fhir_medreq_patient   ON medication_requests(patient_id);
+CREATE INDEX idx_fhir_medstat_patient  ON medication_statements(patient_id);
+CREATE INDEX idx_fhir_medstat_med      ON medication_statements(medication_id);
 
 -- =============================================================================
 -- 9. SEED DATA — ADMINISTRATIVE  (Batch1 CSV loads)
@@ -1227,24 +1238,24 @@ BEGIN
         RETURN;
     END IF;
 
-    -- fhir_medication_knowledge
-    INSERT INTO fhir_medication_knowledge (id, description, status, dose_form, administration_guideline) VALUES
+    -- medication_knowledge
+    INSERT INTO medication_knowledge (id, description, status, dose_form, administration_guideline) VALUES
         ('medknow-1', 'Metformin 500mg',       'active', 'Tablet',    'Take with meals to reduce GI upset'),
         ('medknow-2', 'Insulin Glargine',      'active', 'Injection', 'Inject once daily at bedtime'),
         ('medknow-3', 'Glipizide 5mg',         'active', 'Tablet',    'Take before breakfast'),
         ('medknow-4', 'Pioglitazone 15mg',     'active', 'Tablet',    'Take once daily'),
         ('medknow-5', 'Acarbose 50mg',         'active', 'Tablet',    'Take with first bite of each main meal');
 
-    -- fhir_medication_request
-    INSERT INTO fhir_medication_request (id, patient_id, medication, status) VALUES
-        ('med-1', v_patient_id, 'Metformin 500mg',           'active'),
-        ('med-2', v_patient_id, 'Insulin Glargine 10 units', 'active'),
-        ('med-3', v_patient_id, 'Glipizide 5mg',             'active'),
-        ('med-4', v_patient_id, 'Pioglitazone 15mg',         'active'),
-        ('med-5', v_patient_id, 'Acarbose 50mg',             'active');
+    -- medication_requests
+    INSERT INTO medication_requests (patient_id, medication, status) VALUES
+        (v_patient_id, 'Metformin 500mg',           'active'),
+        (v_patient_id, 'Insulin Glargine 10 units', 'active'),
+        (v_patient_id, 'Glipizide 5mg',             'active'),
+        (v_patient_id, 'Pioglitazone 15mg',         'active'),
+        (v_patient_id, 'Acarbose 50mg',             'active');
 
-    -- fhir_medication_statement
-    INSERT INTO fhir_medication_statement (id, patient_id, medication_id, status, dosage_text, route, dose_value, dose_unit) VALUES
+    -- medication_statements
+    INSERT INTO medication_statements (id, patient_id, medication_id, status, dosage_text, route, dose_value, dose_unit) VALUES
         ('medstat-1', v_patient_id, 'medknow-1', 'active', 'Take 1 tablet twice daily',                       'Oral',          500, 'mg'),
         ('medstat-2', v_patient_id, 'medknow-2', 'active', 'Inject 10 units subcutaneously once daily',       'Subcutaneous',   10, 'units'),
         ('medstat-3', v_patient_id, 'medknow-3', 'active', 'Take 1 tablet once daily before breakfast',       'Oral',            5, 'mg'),
