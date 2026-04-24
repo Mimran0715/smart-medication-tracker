@@ -33,12 +33,6 @@ interface MedSchedule {
   [medName: string]: string[];
 }
 
-// async function getDashboard(){
-//     const res = await fetch('/api/dashboard');
-//     const { adherence, glucose, sideEffects } = await res.json();
-//     return {adherence, glucose, sideEffects};
-// }
-
 interface MedicationInfo {
   name: string;
   dosage: string;
@@ -136,15 +130,11 @@ export default function Dashboard() {
   const [reminderResult, setReminderResult] = useState("");
   const schedulePickerRef = useRef<HTMLDivElement>(null);
 
-  // Chart data
-  // const glucoseData = [120, 130, 115, 140, 125, 135, 128];
-  // const adherence = 88;
-  // const sideEffectData = [150, 155, 152, 160, 159, 157];
-  const [dashboardData, setDashboardData] = useState<{
-    adherence: number[];
-    glucose: number[];
-    sideEffectData: number[];
-  } | null>(null);
+ const [dashboardData, setDashboardData] = useState<{
+  adherence: { adherence: number }[];
+  glucose: { reading: number }[];
+  sideEffects: { date: string; occurrences: number }[];
+} | null>(null);
 
   useEffect(() => {
     const loadedMeds = loadActiveMeds();
@@ -193,10 +183,9 @@ export default function Dashboard() {
 
   if (!dashboardData) return <div>Loading...</div>;
 
-  const { adherence, glucose, sideEffectData } = dashboardData;
-  // const adherence = 88;
-  // const glucose = [120, 130, 115, 140, 125, 135, 128];
-  const sideEffectBackup = [150, 155, 152, 160, 159, 157];
+  const adherenceValue = dashboardData.adherence?.[0]?.adherence ?? 0;
+  const glucose = dashboardData.glucose.map((g) => g.reading);
+  const sideEffects = dashboardData.sideEffects;
 
   // --- Medications component handlers ---
 
@@ -299,15 +288,15 @@ export default function Dashboard() {
   };
 
   const sideEffectChartData = {
-    labels: sideEffectBackup.map((_, i) => `Week ${i + 1}`),
-    datasets: [
-      {
-        label: "Weight",
-        data: sideEffectBackup,
-        borderColor: "#1AA1E3",
-        backgroundColor: "rgba(26, 161, 227, 0.2)",
-      },
-    ],
+  labels: sideEffects.map((s) => s.date),
+  datasets: [
+    {
+      label: "Occurrences",
+      data: sideEffects.map((s) => s.occurrences),
+      borderColor: "#FF4D4F",
+      backgroundColor: "rgba(255, 77, 79, 0.2)",
+    },
+  ],
   };
 
   function logGlucose(glucose: number): void {
@@ -324,7 +313,7 @@ export default function Dashboard() {
 
         <div className="bg-white rounded shadow p-4 flex flex-col items-center justify-center">
           <h2 className="font-bold mb-2">Adherence</h2>
-          <div className="text-4xl font-bold text-[#1AA1E3]">{adherence}%</div>
+          <div className="text-4xl font-bold text-[#1AA1E3]">{adherenceValue}%</div>
         </div>
 
         <ReminderPopup />

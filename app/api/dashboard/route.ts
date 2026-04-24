@@ -1,10 +1,14 @@
 import { NextRequest } from "next/server";
 import { adminAuth } from "@/lib/firebase-admin";
-import { getAdherenceDashboard, getGlucoseDashboard, getSideEffectDashboard, getPatientByFirebaseUid } from "@/lib/data";
+import {getPatientByFirebaseUid } from "@/lib/data";
+import { getAdherenceDashboard, getGlucoseDashboard, getSideEffectsDashboard } from  "@/lib/dashboard";
 
 export async function GET(request: NextRequest) {
   // Extract patient context from auth cookie
-  let patientId: string | null = null;
+  //let patientId: string | null = null;
+   let patientId: string | null = null;
+   let medication = "Metformin";
+   let category = "Dizziness";
   const sessionCookie = request.cookies.get("__session")?.value;
   if (sessionCookie) {
     try {
@@ -14,12 +18,15 @@ export async function GET(request: NextRequest) {
       // Continue with default data if auth fails
     }
   }
+  if (!patientId) {
+  return new Response(JSON.stringify({ error: "Unauthorized" }), { status: 401 });  
+  }
 
   // TODO: Pass patientId to data functions once they query real DB
   const [adherence, glucose, sideEffects] = await Promise.all([
-    getAdherenceDashboard(),
-    getGlucoseDashboard(),
-    getSideEffectDashboard(),
+    getAdherenceDashboard(patientId!, medication),
+    getGlucoseDashboard(patientId!),
+    getSideEffectsDashboard(patientId!, category),
   ]);
 
   return new Response(JSON.stringify({
