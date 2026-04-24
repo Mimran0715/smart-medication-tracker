@@ -1,5 +1,4 @@
 "use client";
-
 import { Line } from "react-chartjs-2";
 import { useState, useEffect, useRef } from "react";
 import {
@@ -14,7 +13,10 @@ import {
 } from "chart.js";
 import CommunicationModal from "./communicationModal";
 import MedicationModal from "./medicationModal";
+import ReminderPopup from "../../components/reminderPopup"
 import medicationData from "@/data/fhir_medication_example.json";
+import LogGlucoseModal from "./logGlucoseModal";
+import LogMedicationModal from "./logMedicationModal";
 
 ChartJS.register(
   CategoryScale,
@@ -32,6 +34,12 @@ const ACTIVE_MEDS_KEY = "active-medications";
 interface MedSchedule {
   [medName: string]: string[];
 }
+
+// async function getDashboard(){
+//     const res = await fetch('/api/dashboard');
+//     const { adherence, glucose, sideEffects } = await res.json();
+//     return {adherence, glucose, sideEffects};
+// }
 
 interface MedicationInfo {
   name: string;
@@ -126,17 +134,21 @@ export default function Dashboard() {
   const [reminderStatus, setReminderStatus] = useState<
     "idle" | "loading" | "success" | "error"
   >("idle");
+  const [isModalOpen, setIsModalOpen] = useState(false); // com request
   const [reminderResult, setReminderResult] = useState("");
-
-  //comm request
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
   const schedulePickerRef = useRef<HTMLDivElement>(null);
+  const [isGlucoseModalOpen, setIsGlucoseModalOpen] = useState(false);
+  const [isLogMedicationModalOpen, setIsLogMedicationModalOpen] = useState(false);
 
   // Chart data
-  const glucoseData = [120, 130, 115, 140, 125, 135, 128];
-  const adherence = 88;
-  const sideEffectData = [150, 155, 152, 160, 159, 157];
+  // const glucoseData = [120, 130, 115, 140, 125, 135, 128];
+  // const adherence = 88;
+  // const sideEffectData = [150, 155, 152, 160, 159, 157];
+  const [dashboardData, setDashboardData] = useState<{
+    adherence: number[];
+    glucose: number[];
+    sideEffectData: number[];
+  } | null>(null);
 
   useEffect(() => {
     const loadedMeds = loadActiveMeds();
@@ -163,6 +175,15 @@ export default function Dashboard() {
     setSchedules(loadedSchedules);
   }, []);
 
+  useEffect(() => {
+    async function fetchData() {
+      const res = await fetch('/api/dashboard');
+      const data = await res.json();
+      setDashboardData(data);
+    }
+    fetchData();
+  }, []);
+
   // Close dropdowns on outside click
   useEffect(() => {
     function handleClickOutside(e: MouseEvent) {
@@ -173,6 +194,13 @@ export default function Dashboard() {
     document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
+
+  if (!dashboardData) return <div>Loading...</div>;
+
+  const { adherence, glucose, sideEffectData } = dashboardData;
+  // const adherence = 88;
+  // const glucose = [120, 130, 115, 140, 125, 135, 128];
+  const sideEffectBackup = [150, 155, 152, 160, 159, 157];
 
   // --- Medications component handlers ---
 
@@ -263,11 +291,11 @@ export default function Dashboard() {
   }
 
   const glucoseChartData = {
-    labels: glucoseData.map((_, i) => `Day ${i + 1}`),
+    labels: glucose.map((_, i) => `Day ${i + 1}`),
     datasets: [
       {
         label: "Glucose Level",
-        data: glucoseData,
+        data: glucose,
         borderColor: "#1AA1E3",
         backgroundColor: "rgba(26, 161, 227, 0.2)",
       },
@@ -275,16 +303,20 @@ export default function Dashboard() {
   };
 
   const sideEffectChartData = {
-    labels: sideEffectData.map((_, i) => `Week ${i + 1}`),
+    labels: sideEffectBackup.map((_, i) => `Week ${i + 1}`),
     datasets: [
       {
         label: "Weight",
-        data: sideEffectData,
+        data: sideEffectBackup,
         borderColor: "#1AA1E3",
         backgroundColor: "rgba(26, 161, 227, 0.2)",
       },
     ],
   };
+
+  function logGlucose(glucose: number): void {
+    return; 
+  }
 
   return (
     <div className="p-6 space-y-6">
@@ -299,16 +331,22 @@ export default function Dashboard() {
           <div className="text-4xl font-bold text-[#1AA1E3]">{adherence}%</div>
         </div>
 
+        <ReminderPopup />
         <div className="bg-white rounded shadow p-4 flex flex-col justify-center gap-4">
           <h2 className="font-bold mb-2">Quick Actions</h2>
-          <button className="bg-[#1AA1E3] text-white py-2 px-4 rounded hover:bg-blue-600">
+          <button 
+          onClick={() => setIsGlucoseModalOpen(true)}
+          className="bg-[#1AA1E3] text-white py-2 px-4 rounded hover:bg-blue-600">
             Log Glucose
           </button>
-          <button className="bg-[#1AA1E3] text-white py-2 px-4 rounded hover:bg-blue-600">
+          <button 
+          onClick={() => setIsLogMedicationModalOpen(true)}
+          className="bg-[#1AA1E3] text-white py-2 px-4 rounded hover:bg-blue-600">
             Log Medication
           </button>
         </div>
       </div>
+
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         {/* Medication Schedule */}
@@ -488,7 +526,18 @@ export default function Dashboard() {
             </div>
           </div>
         </div>
+
       )}
+
+      <LogGlucoseModal
+        isOpen={isGlucoseModalOpen}
+        onClose={() => setIsGlucoseModalOpen(false)}
+      />
+      <LogMedicationModal
+        isOpen={isLogMedicationModalOpen}
+        onClose={() => setIsLogMedicationModalOpen(false)}
+      />
     </div>
+    
   );
 }

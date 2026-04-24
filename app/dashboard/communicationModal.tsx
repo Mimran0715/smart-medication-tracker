@@ -9,6 +9,7 @@ type CommunicationModalProps = {
 export default function CommunicationModal({ onClose }: CommunicationModalProps) {
   const [selectedProvider, setSelectedProvider] = useState("");
   const [message, setMessage] = useState("");
+  const [includeStats, setIncludeStats] = useState(false);
 
   //sample data change later
   const providers = [
@@ -16,15 +17,50 @@ export default function CommunicationModal({ onClose }: CommunicationModalProps)
     { id: "2", name: "Dr. Jane Smith", email: "fake-doctor2@example.com" },
   ];
 
+  // const handleSend = () => {
+  //   if (!selectedProvider || !message) {
+  //     alert("Please select a provider and type a message.");
+  //     return;
+  //   }
+  //   //change later
+  //   console.log(`Sending message to ${selectedProvider}: ${message}`);
+  //   onClose();
+  // };
   const handleSend = () => {
-    if (!selectedProvider || !message) {
-      alert("Please select a provider and type a message.");
-      return;
-    }
-    //change later
-    console.log(`Sending message to ${selectedProvider}: ${message}`);
-    onClose();
-  };
+      if (!selectedProvider || !message) {
+        alert("Please select a provider and type a message.");
+        return;
+      }
+
+      let body = `Hello,
+
+    ${message}
+    `;
+      if (includeStats) {
+        body += `
+
+    --- Medication Summary ---
+    Adherence: 85%
+    Missed doses: 3
+    Last missed dose: Monday
+    `;
+      }
+
+      body += `
+
+    Best,
+    [Your Name]
+    `;
+
+      const subject = "Patient Update";
+
+      const mailtoLink = `mailto:${selectedProvider}?subject=${encodeURIComponent(
+        subject
+      )}&body=${encodeURIComponent(body)}`;
+      window.location.href = mailtoLink;
+
+      onClose();
+    };
 
   return (
     <div className="fixed inset-0 z-100 flex items-center justify-center bg-white bg-opacity-20">
@@ -63,11 +99,23 @@ export default function CommunicationModal({ onClose }: CommunicationModalProps)
         {/* meds button */}
         <button
           type="button"
+          className={`mb-4 font-medium ${
+            includeStats ? "text-green-800" : "text-green-600"
+          }`}
+          onClick={() => setIncludeStats((prev) => !prev)}
+        >
+          {includeStats ? "✓ Medication Stats Included" : "+ Include Medication Stats"}
+        </button>
+        <p className="text-sm text-gray-500 mt-2">
+          This will open your email app to send the message.
+        </p>
+        {/* <button
+          type="button"
           className="mb-4 text-green-600 hover:text-green-800 font-medium"
           onClick={() => alert("Include Medication Stats (not implemented)")}
         >
           + Include Medication Stats
-        </button>
+        </button> */}
 
         {/* action buttons */}
         <div className="flex justify-end space-x-3">

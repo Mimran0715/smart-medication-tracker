@@ -3,8 +3,65 @@ services:
     build: .
     ports:
       - "3000:3000"
-    volumes:
-      - .:/app
-      - /app/node_modules
+    # Removed volume mount - use a proper build in production,
+    # not a live mount of your source directory
     env_file:
+      - .env
       - .env.local
+    environment:
+      # Use internal docker network hostname, not localhost
+      API_URL: http://api:8000
+      DATABASE_URL: postgres://${POSTGRES_USER}:${POSTGRES_PASSWORD}@db:5432/${POSTGRES_DB}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_DB}
+    depends_on:
+      db:
+        condition: service_healthy
+      api:
+        condition: service_healthy
+
+  api:
+    build: ./api
+    # No ports: binding - only reachable internally by the app container
+    expose:
+      - "8000"
+    # Removed volume mount for production
+    env_file: .env
+    environment:
+      DATABASE_URL: postgresql://${POSTGRES_USER}:${POSTGRES_PASSWORD}@db:5432/${POSTGRES_DB}
+      FIREBASE_PROJECT_ID: ${FIREBASE_PROJECT_ID}
+      FIREBASE_CLIENT_EMAIL: ${FIREBASE_CLIENT_EMAIL}
+      FIREBASE_PRIVATE_KEY: ${FIREBASE_PRIVATE_KEY}
+    depends_on:
+      db:
+        condition: service_healthy
+    healthcheck:
+      # Use a dedicated /health endpoint instead of /docs
+      test: ["CMD-SHELL", "python -c \"import urllib.request; urllib.request.urlopen('http://localhost:8000/health')\""]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 15s
+
+  db:
+    image: postgres:16
+    restart: unless-stopped
+    env_file: .env
+    # No ports: binding - only reachable internally by app and api containers
+    expose:
+      - "5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./data:/docker-entrypoint-initdb.d
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER} -d ${POSTGRES_DB}"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  # Adminer removed - do not expose a database admin UI in production.
+  # If you need to inspect the DB, use: docker compose exec db psql -U <user> <dbname>
+
+volumes:
+  postgres_data:

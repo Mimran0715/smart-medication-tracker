@@ -61,15 +61,15 @@ export default function AnalyticsPage() {
   };
 
   const data = {
-  timeseries: [
-    { date: "2026-04-01", metformin: 130, insulin: 160, ozempic: 150 },
-    { date: "2026-04-02", metformin: 125, insulin: 155, ozempic: 148 },
-    { date: "2026-04-03", metformin: 120, insulin: 150, ozempic: 145 },
-    { date: "2026-04-04", metformin: 118, insulin: 148, ozempic: 140 },
-    { date: "2026-04-05", metformin: 115, insulin: 145, ozempic: 138 },
-    { date: "2026-04-06", metformin: 112, insulin: 140, ozempic: 135 },
-    { date: "2026-04-07", metformin: 110, insulin: 138, ozempic: 132 },
-  ],
+    timeseries: [
+      { date: "2026-04-01", metformin: 130, insulin: 160, ozempic: 150 },
+      { date: "2026-04-02", metformin: 125, insulin: 155, ozempic: 148 },
+      { date: "2026-04-03", metformin: 120, insulin: 150, ozempic: 145 },
+      { date: "2026-04-04", metformin: 118, insulin: 148, ozempic: 140 },
+      { date: "2026-04-05", metformin: 115, insulin: 145, ozempic: 138 },
+      { date: "2026-04-06", metformin: 112, insulin: 140, ozempic: 135 },
+      { date: "2026-04-07", metformin: 110, insulin: 138, ozempic: 132 },
+    ],
 
   summary: [
     {
@@ -120,11 +120,11 @@ return (
       </p>
       </div>
 
-      {/* Charts */}
-      <div className="bg-white rounded-2xl shadow-sm border p-4">
-       <h2 className="text-lg font-semibold mb-4">Trends</h2>  
-        <Charts data={data} filters={filters} />
-      </div>
+        {/* Charts */}
+        <div className="bg-white rounded-2xl shadow-sm border p-6">
+          <h2 className="text-lg font-semibold mb-4">Trends</h2>
+          <Charts data={data} filters={filters} />
+        </div>
 
       {/* Table */}
       <div className="bg-white rounded-2xl shadow-sm border p-4">
@@ -138,6 +138,18 @@ return (
         />
       </div>
 
-  </div>
+      {/* INSIGHTS SIDEBAR */}
+      <div className="bg-white rounded-2xl shadow-sm border p-6 h-fit sticky top-6">
+        <h2 className="text-lg font-semibold mb-4">Insights</h2>
+
+        <ul className="space-y-3 text-sm text-gray-700">
+          {insights.map((item, idx) => (
+            <li key={idx} className="p-3 bg-gray-50 rounded-lg">
+              <span className="font-medium capitalize">{item.med}</span>: {item.text}
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
   );
 }

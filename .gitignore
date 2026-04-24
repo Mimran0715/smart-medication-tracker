@@ -36,3 +36,11 @@ Thumbs.db
 
 # turbopack
 .turbo
+
+# pycache
+.pyc
+api/__pycache__
+
+# firebase
+firebase-adminsdk.json
+*.json.key

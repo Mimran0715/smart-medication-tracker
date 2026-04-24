@@ -3,10 +3,18 @@
 import { usePathname } from "next/navigation";
 import Header from "./Header";
 
-export default function OptionalHeader() {
+export default function OptionalHeader({
+  onNotificationsClick,
+}: {
+  onNotificationsClick?: () => void;
+}) {
   const pathname = usePathname();
 
-  if (pathname === "/login" || pathname === "/onboarding" || pathname.startsWith("/reminder")) return null;
+  if (pathname === "/login" || 
+    pathname === "/onboarding" || 
+    pathname.startsWith("/reminder") ||
+    pathname.startsWith("/dashboard") 
+    ) return null;
 
-  return <Header />;
+   return <Header onNotificationsClick={onNotificationsClick} />;
 }
