@@ -170,22 +170,22 @@ export default function AnalyticsPage() {
 
         {/* Charts */}
         <div className="bg-white rounded-2xl shadow-sm border p-4">
-          <h2 className="text-lg font-semibold mb-4">Trends</h2>
+          <h2 className="text-2xl font-semibold text-center mb-6">Trends</h2>
           <Charts data={data} filters={filters} />
         </div>
 
         {/* Scatter plot for medication effectiveness */}
       <div className="bg-white rounded-2xl shadow-sm border p-4">
-          <h2 className="text-lg font-semibold mb-4">
+          <h2 className="text-lg font-semibold mb-2 text-center">
             Medication Effectiveness Map
           </h2>
 
-          <p className="text-sm text-gray-600 mb-4">
+          <p className="text-sm text-gray-600 mb-4 text-center">
             Comparing adherence vs average glucose for selected medications that are highlighted
             with stronger overall outcomes.
           </p>
 
-        <ResponsiveContainer width="100%" height={350}>
+        <ResponsiveContainer width="100%" height={500}>
           <ScatterChart margin={{ top: 20, right: 30, left: 50, bottom: 40 }}>
             <CartesianGrid strokeDasharray="3 3" />
             <XAxis
