@@ -185,6 +185,7 @@ export default function Dashboard() {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
+  // --- Getting Dashboard data ---
   if (!dashboardData) return <div>Loading...</div>;
 
   const adherenceValue = dashboardData.adherence?.[0]?.adherence ?? 0;
@@ -279,6 +280,8 @@ export default function Dashboard() {
     }
   }
 
+  // --- Getting Chart Data ---
+
   const glucoseChartData = {
     labels: glucose.map((_, i) => `Day ${i + 1}`),
     datasets: [
@@ -303,24 +306,24 @@ export default function Dashboard() {
   ],
   };
 
-  function logGlucose(glucose: number): void {
-    return; 
-  }
-
   return (
     <div className="p-6 space-y-6">
+      {/* Glucose Chart */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         <div className="bg-white rounded shadow p-4">
           <h2 className="font-bold mb-2">Glucose Levels</h2>
           <Line data={glucoseChartData} />
         </div>
 
+      {/* Adherence */}
         <div className="bg-white rounded shadow p-4 flex flex-col items-center justify-center">
           <h2 className="font-bold mb-2">Adherence</h2>
           <div className="text-4xl font-bold text-[#1AA1E3]">{adherenceValue}%</div>
         </div>
 
+      {/* Popup Notifications */}
         <ReminderPopup />
+        {/* Quick-Actions */}
         <div className="bg-white rounded shadow p-4 flex flex-col justify-center gap-4">
           <h2 className="font-bold mb-2">Quick Actions</h2>
           <button 
@@ -416,6 +419,7 @@ export default function Dashboard() {
           </ul>
         </div>
 
+        {/* Side Effect Chart */}
         <div className="bg-white rounded shadow p-4">
           <h3 className="font-bold mb-2">Side Effects</h3>
           <div className="flex gap-6">
@@ -430,7 +434,6 @@ export default function Dashboard() {
       </div>
 
       {/* Send Reminders + Communication */}
-
       <div className="flex gap-4 items-center">
         <button
           className="bg-green-500 text-white px-3 py-1 rounded hover:bg-green-600"

@@ -20,6 +20,7 @@ export async function logGlucose({
   const dt = new Date(recordedAt);
   const date = dt.toISOString().split("T")[0];
   const timeTaken = dt.toTimeString().split(" ")[0];
+  const id = 1;
 
   const result = await pool.query(
     `
@@ -34,18 +35,19 @@ export async function logGlucose({
       time_taken
     )
     VALUES (
-      gen_random_uuid(),
       $1,
       $2,
       $3,
       $4,
-      NOW(),
       $5,
-      $6
+      NOW(),
+      $6,
+      $7
     )
     RETURNING *;
     `,
     [
+      id,
       patientId,
       glucose,
       mealContext,
