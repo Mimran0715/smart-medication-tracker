@@ -15,17 +15,13 @@ export async function logGlucose({
   mealContext,
   notes,
 }: LogGlucoseParams) {
-
-
   const dt = new Date(recordedAt);
   const date = dt.toISOString().split("T")[0];
   const timeTaken = dt.toTimeString().split(" ")[0];
-  const id = 1;
 
   const result = await pool.query(
     `
     INSERT INTO glucose (
-      id,
       patient_id,
       reading,
       meal_context,
@@ -39,15 +35,13 @@ export async function logGlucose({
       $2,
       $3,
       $4,
-      $5,
       NOW(),
-      $6,
-      $7
+      $5,
+      $6
     )
     RETURNING *;
     `,
     [
-      id,
       patientId,
       glucose,
       mealContext,
