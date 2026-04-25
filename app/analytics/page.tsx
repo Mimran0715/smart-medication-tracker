@@ -160,7 +160,7 @@ export default function AnalyticsPage() {
           </p>
 
           <p className="text-sm text-gray-600 capitalize">
-            Best Glucose Control:{bestMed?.med}
+            Best Glucose Control: {bestMed?.med}
             </p>
           
           <p className="text-sm text-gray-600 capitalize">
