@@ -15,21 +15,6 @@ const dbConfig = {
 
 const pool = new Pool(dbConfig);
 
-export async function getGlucoseDashboard(){
-    const glucose = [120, 130, 115, 140, 125, 135, 128];
-    return glucose; 
-}
-
-export async function getAdherenceDashboard(){
-    const adherence = 88;
-    return adherence; 
-}
-
-export async function getSideEffectDashboard() {
-    const sideEffectData = [150, 155, 152, 160, 159, 157];
-    return sideEffectData;
-}
-
 export async function getPatientByFirebaseUid(uid: string): Promise<string | null> {
     const result = await pool.query(
         "SELECT patient_id FROM user_patient WHERE firebase_uid = $1",
@@ -63,5 +48,9 @@ export async function getPatientName(patientId: string): Promise<string | null> 
     );
     if (result.rows.length === 0) return null;
     const { first_name, last_name } = result.rows[0];
-    return `${first_name} ${last_name}`;
+    //console.log(first_name, last_name);
+    const clean_first_name = first_name.replace(/\d+$/, "").trim();
+    const clean_last_name = last_name.replace(/\d+$/, "").trim();
+
+    return `${clean_first_name} ${clean_last_name}`;
 }
