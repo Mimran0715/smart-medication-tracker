@@ -424,7 +424,6 @@ CHECK (
     )
 );
 
-
 CREATE TABLE exercise (
     patient_id UUID    NOT NULL REFERENCES patient(id),
     exercised  BOOLEAN NOT NULL,
@@ -440,6 +439,7 @@ CREATE TABLE weight (
 );
 
 CREATE TABLE adherence (
+    id              UUID PRIMARY KEY DEFAULT gen_random_uuid(),
     patient_id      UUID NOT NULL REFERENCES patient(id),
     medication_id   INT  NOT NULL,
     medication_name TEXT NOT NULL,
@@ -456,6 +456,15 @@ CREATE TABLE glucose (
     created_at  TIMESTAMPTZ DEFAULT NOW(),
     date        DATE    NOT NULL,
     time_taken  TIME    NOT NULL
+);
+
+CREATE TABLE notifications (
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    patient_id UUID NOT NULL REFERENCES patient(id),
+    title TEXT,
+    body TEXT,
+    is_read BOOLEAN DEFAULT FALSE,
+    created_at TIMESTAMPTZ DEFAULT NOW()
 );
 
 -- =============================================================================
@@ -970,17 +979,48 @@ INSERT INTO adherence (
 )
 SELECT
     patient_id::uuid,
-
     REPLACE(medication_id, 'med-', '')::int,
-
     medication_name,
     date::date
 FROM _adherence_raw;
 
 DROP TABLE _adherence_raw;
 
+-- ---------------------------------------------------------------------------
+-- Notifications
+-- ---------------------------------------------------------------------------
 
+CREATE TEMP TABLE _notifications_raw (
+    id TEXT,
+    patient_id TEXT,
+    title TEXT,
+    body TEXT,
+    is_read TEXT,
+    created_at TEXT
+);
 
+COPY _notifications_raw
+FROM '/docker-entrypoint-initdb.d/notifications_timeseries.csv'
+WITH (FORMAT csv, HEADER true);
+
+INSERT INTO notifications (
+    id,
+    patient_id,
+    title,
+    body,
+    is_read,
+    created_at
+)
+SELECT
+    id::uuid,
+    patient_id::uuid,
+    title,
+    body,
+    is_read::boolean,
+    created_at::timestamptz
+FROM _notifications_raw;
+
+DROP TABLE _notifications_raw;
 
 
 -- =============================================================================

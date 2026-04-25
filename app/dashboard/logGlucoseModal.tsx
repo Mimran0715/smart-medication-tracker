@@ -13,32 +13,40 @@ export default function LogGlucoseModal({
 }: LogGlucoseModalProps) {
   const [glucose, setGlucose] = useState("");
   const [datetime, setDatetime] = useState("");
+  const [mealContext, setMealContext] = useState("fasting");
+  const [notes, setNotes] = useState("");
 
   if (!isOpen) return null;
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    if (!glucose || !datetime) {
-      alert("Please fill out all fields.");
+    if (!glucose || !datetime || !mealContext) {
+      alert("Please fill out all required fields.");
       return;
     }
 
     try {
-      await fetch("/api/glucose", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          glucose: Number(glucose),
-          recordedAt: datetime,
-        }),
-      });
+      await fetch("/api/quick-actions", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        type: "log_glucose",
+        patientId: "demo-patient-id", 
+        glucose: Number(glucose),
+        recordedAt: datetime,
+        mealContext,
+        notes,
+      }),
+    });
 
       // reset + close
       setGlucose("");
       setDatetime("");
+      setMealContext("fasting");
+      setNotes("");
       onClose();
     } catch (err) {
       console.error("Failed to save glucose:", err);
@@ -80,6 +88,35 @@ export default function LogGlucoseModal({
               onChange={(e) => setDatetime(e.target.value)}
               className="mt-1 w-full border rounded-md p-2"
               required
+            />
+          </label>
+
+          {/* meal context dropdown */}
+          <label className="block">
+            <span className="text-gray-700">Meal Context</span>
+            <select
+              value={mealContext}
+              onChange={(e) => setMealContext(e.target.value)}
+              className="mt-1 w-full border rounded-md p-2"
+              required
+            >
+              <option value="fasting">Fasting</option>
+              <option value="pre_meal">Pre-meal</option>
+              <option value="post_meal">Post-meal</option>
+              <option value="bedtime">Bedtime</option>
+              <option value="other">Other</option>
+            </select>
+          </label>
+
+          {/* notes textarea */}
+          <label className="block">
+            <span className="text-gray-700">Notes (optional)</span>
+            <textarea
+              value={notes}
+              onChange={(e) => setNotes(e.target.value)}
+              placeholder="Add any notes..."
+              className="mt-1 w-full border rounded-md p-2"
+              rows={3}
             />
           </label>
 
