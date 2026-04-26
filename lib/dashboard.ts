@@ -1,5 +1,6 @@
 import { pool } from "./pool.ts";
 
+
 const log = (label: string, data?: any) => {
   console.log(`🧠 [DASHBOARD DEBUG] ${label}`);
   if (data !== undefined) console.log(JSON.stringify(data, null, 2));

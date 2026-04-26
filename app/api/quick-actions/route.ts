@@ -1,34 +1,22 @@
 import { NextRequest } from "next/server";
-import { adminAuth } from "@/lib/firebase-admin";
-import { getPatientByFirebaseUid } from "@/lib/data";
+import { getOrCreatePatientId } from "@/lib/auth";
 import { logGlucose, markMedicationTaken } from "@/lib/quick-action";
 
 export async function POST(req: NextRequest) {
-  const sessionCookie = req.cookies.get("__session")?.value;
-
-  if (!sessionCookie) {
-    return new Response(JSON.stringify({ error: "Unauthorized" }), {
-      status: 401,
-    });
-  }
-
   let patientId: string;
 
   try {
-    const decoded = await adminAuth.verifyIdToken(sessionCookie);
-    const resolvedId = await getPatientByFirebaseUid(decoded.uid);
-
-    if (!resolvedId) {
-      return new Response(JSON.stringify({ error: "Patient not found" }), {
-        status: 404,
+    patientId = await getOrCreatePatientId(req);
+  } catch (err: any) {
+    if (err.message === "UNAUTHORIZED") {
+      return new Response(JSON.stringify({ error: "Unauthorized" }), {
+        status: 401,
       });
     }
 
-    patientId = resolvedId;
-  } catch (err) {
     console.error("Auth error:", err);
-    return new Response(JSON.stringify({ error: "Unauthorized" }), {
-      status: 401,
+    return new Response(JSON.stringify({ error: "Auth failure" }), {
+      status: 500,
     });
   }
 
@@ -55,7 +43,7 @@ export async function POST(req: NextRequest) {
 
         return Response.json(result);
       }
-      
+
       case "mark_med_taken": {
         const result = await markMedicationTaken(
           patientId,
@@ -64,7 +52,7 @@ export async function POST(req: NextRequest) {
 
         return Response.json(result);
       }
-      
+
       default:
         return new Response(
           JSON.stringify({ error: "Invalid action type" }),
