@@ -75,7 +75,7 @@ export async function POST(request: NextRequest) {
         );
       }
 
-      // Insert side effects 
+      // Insert side effects
       for (const symptom of body.symptoms) {
         const category = symptomCategoryMap[symptom.name] || "other";
         const notes = category === "other" ? symptom.name : null;

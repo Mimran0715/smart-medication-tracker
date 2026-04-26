@@ -127,6 +127,7 @@ export default function Dashboard() {
     "idle" | "loading" | "success" | "error"
   >("idle");
   const [isModalOpen, setIsModalOpen] = useState(false); // com request
+  const [showCheckInPicker, setShowCheckInPicker] = useState(false);
   const [reminderResult, setReminderResult] = useState("");
   const schedulePickerRef = useRef<HTMLDivElement>(null);
 
@@ -325,6 +326,45 @@ export default function Dashboard() {
           <button className="bg-[#1AA1E3] text-white py-2 px-4 rounded hover:bg-blue-600">
             Log Medication
           </button>
+          <div className="relative">
+            <button
+              className="bg-orange-500 text-white py-2 px-4 rounded hover:bg-orange-600 w-full"
+              onClick={() => setShowCheckInPicker(!showCheckInPicker)}
+            >
+              Daily Check-In
+            </button>
+            {showCheckInPicker && (
+              <div className="absolute left-0 bottom-full mb-1 bg-white border rounded shadow-lg z-10 w-full">
+                {activeMeds.map((med) => (
+                  <button
+                    key={med.name}
+                    className="block w-full text-left px-4 py-2 hover:bg-gray-100 text-sm"
+                    onClick={async () => {
+                      setShowCheckInPicker(false);
+                      try {
+                        const now = new Date();
+                        const time = now.toLocaleTimeString("en-US", { hour12: false, hour: "2-digit", minute: "2-digit" });
+                        const date = now.toLocaleDateString("en-CA");
+                        const res = await fetch("/api/reminder/generate", {
+                          method: "POST",
+                          headers: { "Content-Type": "application/json" },
+                          body: JSON.stringify({ medicationName: med.name, time, date }),
+                        });
+                        const data = await res.json();
+                        if (data.token) {
+                          window.open(`/reminder/${data.token}`, "_blank");
+                        }
+                      } catch (err) {
+                        console.error("Failed to open questionnaire:", err);
+                      }
+                    }}
+                  >
+                    {med.name}
+                  </button>
+                ))}
+              </div>
+            )}
+          </div>
         </div>
       </div>
 
