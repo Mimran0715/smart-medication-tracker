@@ -33,7 +33,7 @@ export default function LogMedicationModal({
     }
 
     try {
-      await fetch("/api/quick-action", {
+      await fetch("/api/quick-actions", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

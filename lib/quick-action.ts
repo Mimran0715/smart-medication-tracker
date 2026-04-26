@@ -1,4 +1,8 @@
 import { pool } from "./pool.ts";
+import {
+  MEDICATION_ID_MAP,
+  MEDICATION_NAME_MAP,
+} from "./constants/medications";
 
 type LogGlucoseParams = {
   patientId: string;
@@ -56,27 +60,44 @@ export async function logGlucose({
 
 export async function markMedicationTaken(
   patientId: string,
-  medicationId: string
+  medicationKey: string
 ) {
+  const medicationId =
+    MEDICATION_ID_MAP[medicationKey.toLowerCase()];
+
+  if (!medicationId) {
+    throw new Error("Invalid medication key");
+  }
+
+  const medicationName =
+    MEDICATION_NAME_MAP[medicationId];
+
+  const today = new Date().toISOString().split("T")[0];
+
   const result = await pool.query(
     `
     INSERT INTO adherence (
-      id,
       patient_id,
       medication_id,
-      taken_at,
-      created_at
+      medication_name,
+      created_at,
+      date
     )
     VALUES (
-      gen_random_uuid(),
       $1,
       $2,
+      $3,
       NOW(),
-      NOW()
+      $4
     )
     RETURNING *;
     `,
-    [patientId, medicationId]
+    [
+      patientId,
+      medicationId,
+      medicationName, // ✅ FIXED (this was null)
+      today,
+    ]
   );
 
   return result.rows[0];
