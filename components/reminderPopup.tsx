@@ -1,40 +1,67 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
+
+type Notification = {
+  id: string;
+  title: string;
+  body: string;
+  created_at: string;
+  is_read: boolean;
+};
 
 export default function ReminderPopup() {
-  const [visible, setVisible] = useState(false);
+  const [notification, setNotification] = useState<Notification | null>(null);
 
   useEffect(() => {
-    // show after 1 second (simulate real reminder)
-    const timer = setTimeout(() => setVisible(true), 1000);
-    return () => clearTimeout(timer);
+    async function fetchNotifications() {
+      try {
+        const res = await fetch("/api/notifications");
+        const data = await res.json();
+
+        // pick first unread notification
+        const unread = data.find((n: Notification) => !n.is_read);
+
+        if (unread) {
+          setNotification(unread);
+        }
+      } catch (err) {
+        console.error("Failed to fetch notifications", err);
+      }
+    }
+
+    fetchNotifications();
   }, []);
 
-  if (!visible) return null;
+  if (!notification) return null;
 
   return (
     <div className="fixed bottom-6 right-6 bg-white shadow-xl rounded-xl p-4 w-80 border z-50">
-      <h3 className="font-semibold mb-2">Medication Reminder</h3>
+      <h3 className="font-semibold mb-2">{notification.title}</h3>
+
       <p className="text-sm text-gray-600 mb-4">
-        Did you take <span className="font-medium">Metformin</span> today?
+        {notification.body}
       </p>
 
       <div className="flex justify-end gap-2">
         <button
           className="px-3 py-1 text-sm rounded border"
-          onClick={() => setVisible(false)}
+          onClick={() => setNotification(null)}
         >
           Dismiss
         </button>
+
         <button
           className="px-3 py-1 text-sm rounded bg-green-500 text-white"
-          onClick={() => {
-            alert("Marked as taken");
-            setVisible(false);
+          onClick={async () => {
+            await fetch(`/api/notifications/${notification.id}/read`, {
+              method: "POST",
+            });
+
+            setNotification(null);
           }}
         >
-          Yes
+          Mark as read
         </button>
       </div>
     </div>

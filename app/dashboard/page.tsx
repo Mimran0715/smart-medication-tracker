@@ -187,11 +187,15 @@ export default function Dashboard() {
   }, []);
 
   // --- Getting Dashboard data ---
+ 
   if (!dashboardData) return <div>Loading...</div>;
 
-  const adherenceValue = dashboardData.adherence?.[0]?.adherence ?? 0;
-  const glucose = dashboardData.glucose.map((g) => g.reading);
-  const sideEffects = dashboardData.sideEffects;
+  const adherenceValue = dashboardData?.adherence?.[0]?.adherence ?? 0;
+  const glucose =
+  Array.isArray(dashboardData?.glucose)
+    ? dashboardData.glucose.map((g) => g.reading)
+    : [];
+  const sideEffects = dashboardData?.sideEffects ?? [];
 
   // --- Medications component handlers ---
 

@@ -2,11 +2,13 @@ import { pool } from "./pool.ts";
 
 
 const log = (label: string, data?: any) => {
+  return;
   console.log(`🧠 [DASHBOARD DEBUG] ${label}`);
   if (data !== undefined) console.log(JSON.stringify(data, null, 2));
 };
 
 const logError = (label: string, err: any) => {
+  return;
   console.error(`❌ [DASHBOARD ERROR] ${label}`);
   console.error(err);
 };
