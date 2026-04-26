@@ -55,7 +55,7 @@ export async function POST(req: NextRequest) {
 
         return Response.json(result);
       }
-
+      
       case "mark_med_taken": {
         const result = await markMedicationTaken(
           patientId,
