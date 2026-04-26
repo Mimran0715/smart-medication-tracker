@@ -1,9 +1,12 @@
+"use client";
+
 type Props = {
   title: string;
   body: string;
   createdAt: string;
   isRead: boolean;
   onMarkRead?: () => void;
+  showActions?: boolean;
 };
 
 export default function NotificationCard({
@@ -12,6 +15,7 @@ export default function NotificationCard({
   createdAt,
   isRead,
   onMarkRead,
+  showActions = true,
 }: Props) {
   return (
     <div className="p-3 border rounded-lg bg-white shadow-sm hover:shadow transition">
@@ -28,17 +32,19 @@ export default function NotificationCard({
 
       <p className="text-sm text-gray-700 mt-1">{body}</p>
 
-      <button
-        onClick={onMarkRead}
-        disabled={isRead}
-        className={`mt-3 text-xs px-2 py-1 rounded ${
-          isRead
-            ? "bg-green-100 text-green-600"
-            : "bg-blue-600 text-white"
-        }`}
-      >
-        {isRead ? "Read" : "Mark as read"}
-      </button>
+      {showActions && (
+        <button
+          onClick={onMarkRead}
+          disabled={isRead}
+          className={`mt-3 text-xs px-2 py-1 rounded ${
+            isRead
+              ? "bg-green-100 text-green-600"
+              : "bg-blue-600 text-white"
+          }`}
+        >
+          {isRead ? "Read" : "Mark as read"}
+        </button>
+      )}
     </div>
   );
 }

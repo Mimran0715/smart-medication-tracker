@@ -105,7 +105,7 @@ export default function DashboardDrawer({ isOpen, onClose }: Props) {
               body={n.body}
               createdAt={n.created_at}
               isRead={n.is_read}
-              onMarkRead={() => handleMarkRead(n)}
+              showActions={false}
             />
           ))}
         </div>
