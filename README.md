@@ -1,35 +1,29 @@
 # Smart Medication Tracker for Diabetes Patients
 
-Course Project for CS 6440 - Health Informatics
+# Course Project for CS 6440 - Health Informatics
 
 Our goal was to create a smart medication tracker for diabetes patients. Users can create 
 an account and login to view their glucose levels, track their medications, and understand
 side effects. 
 
 
-To run dev server: 
+# To use with Docker
 
-```bash
-npm run dev
-# or
-pnpm dev
-```
-
-## To use with Docker
-
-# First time / fresh start
+## First time / fresh start
 docker compose up -d
 
-# View logs (both services)
+## View logs (both services)
 docker compose logs -f
 
-# View logs for one service
+## View logs for one service
 docker compose logs -f app
+
 docker compose logs -f db
 
-# Stop everything (preserve data)
+## Stop everything (preserve data)
 docker compose down
 
-# Reset everything including the database
+## Reset everything including the database
 docker compose down -v
+
 docker compose up -d
