@@ -1,5 +1,7 @@
 "use client";
-import {useState} from "react";
+
+import { useState, useEffect } from "react";
+import { useAuth } from "@/context/AuthContext";
 
 interface InputFieldProps {
   label: string;
@@ -36,20 +38,39 @@ function InputField({
 }
 
 export default function SettingsPage() {
-  const [firstName, setFirstName] = useState("Jane");
-  const [lastName, setLastName] = useState("Doe");
+  const { user, patientName, logout } = useAuth();
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+
   const [email, setEmail] = useState("jdoe@example.com");
 
   const [currentPassword, setCurrentPassword] = useState("");
   const [newPassword, setNewPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
 
+  useEffect(() => {
+    if (patientName) {
+      const parts = patientName.split(" ");
+      setFirstName(parts[0] || "");
+      setLastName(parts.slice(1).join(" ") || "");
+    }
+  }, [patientName]);
+
   return (
-    <div className="flex flex-col gap-5"> {/* page card*/}
+    <div className="flex flex-col gap-5">
       <div className="bg-white rounded shadow p-6 flex flex-col gap-6">
+
+        {/* ACCOUNT INFO */}
         <div className="flex flex-col gap-4">
-          {/*accnt info */}
           <h1 className="font-bold text-lg">Account Info</h1>
+
+          <div className="text-sm text-stone-500">
+            Signed in as{" "}
+            <span className="font-medium text-stone-700">
+              {patientName || "Loading patient..."}
+            </span>
+          </div>
+
           <div className="grid grid-cols-2 gap-4">
             <InputField
               label="First name"
@@ -73,9 +94,10 @@ export default function SettingsPage() {
           </div>
         </div>
 
-        {/*password*/}
+        {/* PASSWORD */}
         <div className="flex flex-col gap-4">
           <h1 className="font-bold text-lg">Password</h1>
+
           <div className="grid grid-cols-2 gap-4">
             <InputField
               label="Current password"
@@ -100,42 +122,38 @@ export default function SettingsPage() {
               placeholder="••••••••"
             />
           </div>
-          <button className="self-start text-sm px-5 py-2 bg-emerald-500 text-white hover:bg-emerald-600 active:scale-95 transition-all">
+
+          <button 
+          onClick={() => alert("Demo only: account deletion disabled")}
+          className="self-start text-sm px-5 py-2 bg-emerald-500 text-white hover:bg-emerald-600 active:scale-95 transition-all">
             Update password
           </button>
         </div>
 
-      {/* export */}
-      <div className="flex flex-col gap-4" > 
-        <h1 className="font-bold text-lg">Export Data</h1>
-        <p className="text-sm text-stone-500">
-            Includes your medication list, dosage history, and account info in JSON format.
-          </p>
-          <button className="self-start text-sm px-5 py-2 border border-stone-200 text-stone-700 hover:bg-stone-50 active:scale-95 transition-all">
-            Request data export
+        {/* DELETE ACCOUNT */}
+        <div className="flex flex-col gap-4">
+          <h1 className="font-bold text-lg">Delete Account</h1>
+
+          <div className="flex flex-col gap-2">
+            <p className="text-sm text-stone-500">
+              Deleting your account will permanently remove all your medications,
+              history, and personal data from Smart Medication Tracker.
+            </p>
+
+            <p className="text-sm text-red-400">
+              This action is permanent and cannot be undone.
+            </p>
+          </div>
+
+          <button
+            onClick={() => alert("Demo only: account deletion disabled")}
+            className="self-start text-sm px-5 py-2 bg-red-500 text-white hover:bg-red-600 active:scale-95 transition-all"
+          >
+            Delete my account
           </button>
-      </div>
-
-      {/* delete */}
-      <div className="flex flex-col gap-4" > 
-        <h1 className="font-bold text-lg">Delete</h1>
-        <div className= "flex flex-wrap gap-2">
-          <p className="text-sm text-stone-500">
-            Deleting your account will permanently remove all your medications,
-            history, and personal data from Smart Medication Tracker.
-          </p>
-          <p className="text-sm text-red-400">This action is 
-            permanent and cannot be undone. </p>
         </div>
-        <button className="self-start text-sm px-5 py-2 bg-red-500 text-white hover:bg-red-600 active:scale-95 transition-all">
-          Delete my account
-        </button>
 
       </div>
-      {/*end box*/}
-      </div> 
-
-    {/* end page card*/}
-    </div> 
+    </div>
   );
 }
