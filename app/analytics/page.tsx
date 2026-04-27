@@ -154,7 +154,7 @@ export default function AnalyticsPage() {
 
         {/* Scatter plot */}
         <div className="bg-white rounded-2xl shadow-sm border p-4">
-          <h2 className="text-lg font-semibold mb-2 text-center">
+          <h2 className="text-lg font-bold text-center mb-3">
             Medication Effectiveness Map
           </h2>
 
@@ -162,7 +162,7 @@ export default function AnalyticsPage() {
             Comparing adherence vs average glucose for selected medications.
           </p>
 
-          <ResponsiveContainer width="100%" height={500}>
+          <ResponsiveContainer width="100%" height={550}>
             <ScatterChart margin={{ top: 20, right: 30, left: 50, bottom: 40 }}>
               <CartesianGrid strokeDasharray="3 3" />
 
@@ -175,8 +175,8 @@ export default function AnalyticsPage() {
               >
                 <Label
                   value="Adherence (%)"
-                  position="insideBottom"
-                  offset={-25}
+                  position="bottom"
+                  offset={10}
                   style={{ fontWeight: "bold", fontSize: 14 }}
                 />
               </XAxis>

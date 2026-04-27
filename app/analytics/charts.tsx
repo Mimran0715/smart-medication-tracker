@@ -39,9 +39,15 @@ export function Charts({ data, filters }) {
       {/* ---------------- GLUCOSE ---------------- */}
       {metrics.includes("glucose") && (
         <div>
-          <h3 className="text-2xl font-bold text-center mb-6">
+          <h3 className="text-2xl font-bold text-center mb-3">
             Glucose Trends Over Time
           </h3>
+
+          <p className="text-sm text-gray-600 text-center mb-8">
+            Tracks glucose levels over time for selected medications. 
+            Useful for identifying trends, comparing treatment effects, 
+            and evaluating overall glucose control.
+          </p>
 
           <ResponsiveContainer width="100%" height={550}>
             <LineChart
@@ -60,7 +66,7 @@ export function Charts({ data, filters }) {
                 height={60}
               >
                 <Label
-                  value="Date"
+                  value="ObservationDate"
                   position="bottom"
                   offset={10}
                   style={{ fontWeight: "bold", fontSize: 14 }}
@@ -101,9 +107,13 @@ export function Charts({ data, filters }) {
       {/* ---------------- SIDE EFFECTS ---------------- */}
       {metrics.includes("side_effects") && (
         <div>
-          <h3 className="text-2xl font-bold text-center mb-6">
+          <h3 className="text-2xl font-bold text-center mb-3">
             Side Effects Over Time
           </h3>
+
+          <p className="text-sm text-gray-600 text-center mb-8">
+            Displays when selected side effects were reported over time. Each point represents a recorded occurrence.
+          </p>
 
           <ResponsiveContainer width="100%" height={450}>
             <LineChart
@@ -119,9 +129,32 @@ export function Charts({ data, filters }) {
                 angle={-20}
                 textAnchor="end"
                 height={60}
-              />
+              >
+                <Label
+                  value="Observation Date"
+                  position="bottom"
+                  offset={10}
+                  style={{ fontWeight: "bold", fontSize: 14 }}
+                />
+              </XAxis>
 
-              <YAxis />
+              <YAxis
+                domain={[0, 1]}
+                ticks={[0, 1]}
+                width={80}
+              >
+                <Label
+                  value="Occurrence (0 = none, 1 = reported)"
+                  angle={-90}
+                  position="insideLeft"
+                  offset={-5}
+                  style={{
+                    textAnchor: "middle",
+                    fontWeight: "bold",
+                    fontSize: 14,
+                  }}
+                />
+              </YAxis>
 
               <Tooltip />
 
@@ -135,7 +168,7 @@ export function Charts({ data, filters }) {
                   dataKey={se}
                   type="monotone"
                   stroke={sideEffectColors[se] || "#6b7280"}
-                  strokeWidth={3}
+                  strokeWidth={0}
                   dot={{ r: 3 }}
                   activeDot={{ r: 5 }}
                 />
