@@ -1,7 +1,8 @@
-"use client"
-import Filters from "./filters"
-import {Charts} from "./charts"
-import Table from "./table"
+"use client";
+
+import Filters from "./filters";
+import { Charts } from "./charts";
+import Table from "./table";
 import { useState } from "react";
 
 // Components from recharts are here to build additional visualizations that are relationship-based
@@ -15,75 +16,50 @@ import {
   YAxis,
   CartesianGrid,
   Tooltip,
-  Legend,
   ResponsiveContainer,
   Label,
-  Cell
+  Cell,
 } from "recharts";
+
+/* -----------------------------
+   BACKUP ANALYTICS DATA
+------------------------------*/
+import {
+  glucoseTimeseries,
+  sideEffectsTimeseries,
+  MEDICATIONS,
+} from "./analytics-backup";
 
 export default function AnalyticsPage() {
   const [filters, setFilters] = useState({
-    medications: ["insulin", "metformin", "ozempic"],
-    metrics: ['glucose'],
+    medications: ["Metformin", "Insulin", "Glipizide"],
+    metrics: ["glucose", "side_effects"],
+    sideEffects: [],
   });
 
-  // Chart data
-  const glucoseData = [120, 130, 115, 140, 125, 135, 128];
-  const adherence = 88;
-  const sideEffectData = [150, 155, 152, 160, 159, 157];
-
-  const glucoseChartData = {
-    labels: glucoseData.map((_, i) => `Day ${i + 1}`),
-    datasets: [
-      {
-        label: "Glucose Level",
-        data: glucoseData,
-        borderColor: "#1AA1E3",
-        backgroundColor: "rgba(26, 161, 227, 0.2)",
-      },
-    ],
-  };
-
-  const sideEffectChartData = {
-    labels: sideEffectData.map((_, i) => `Week ${i + 1}`),
-    datasets: [
-      {
-        label: "Weight",
-        data: sideEffectData,
-        borderColor: "#1AA1E3",
-        backgroundColor: "rgba(26, 161, 227, 0.2)",
-      },
-    ],
-  };
-
+  /* -----------------------------
+     FULL DATA OBJECT (MVP SOURCE OF TRUTH)
+  ------------------------------*/
   const data = {
-    timeseries: [
-      { date: "2026-04-01", metformin: 130, insulin: 160, ozempic: 150 },
-      { date: "2026-04-02", metformin: 125, insulin: 155, ozempic: 148 },
-      { date: "2026-04-03", metformin: 120, insulin: 150, ozempic: 145 },
-      { date: "2026-04-04", metformin: 118, insulin: 148, ozempic: 140 },
-      { date: "2026-04-05", metformin: 115, insulin: 145, ozempic: 138 },
-      { date: "2026-04-06", metformin: 112, insulin: 140, ozempic: 135 },
-      { date: "2026-04-07", metformin: 110, insulin: 138, ozempic: 132 },
-    ],
-
+    timeseries: glucoseTimeseries,
+    sideEffectsTimeseries,
     summary: [
       {
-        med: "metformin",
+        med: "Metformin",
         avgGlucose: 118,
         adherence: 0.93,
         weightChange: -2.1,
         topSideEffect: "nausea",
       },
       {
-        med: "insulin",
+        med: "Insulin",
         avgGlucose: 148,
         adherence: 0.87,
         weightChange: +1.4,
         topSideEffect: "hypoglycemia",
       },
       {
-        med: "ozempic",
+        med: "Glipizide",
         avgGlucose: 141,
         adherence: 0.9,
         weightChange: -3.5,
@@ -92,27 +68,22 @@ export default function AnalyticsPage() {
     ],
   };
 
-  // Placing a filter on the summary data to only include medications that are currently selected in the filters.
-  // This ensures that downstream components like tables and charts are reflecting the user selections
-  // and dynamically update based on the active filter state.
+  /* -----------------------------
+     FILTER SUMMARY
+  ------------------------------*/
   const filteredSummary = data.summary.filter((med) =>
     filters.medications.includes(med.med)
   );
 
-  // Next, this will be basic analytics and associated summary metrics for display
   const totalMeds = filteredSummary.length;
 
-  // Identify the medication with the lowest average glucode using array reduction, this will be used to generate insights 
-  // and highlight the most effective medication in terms of glucose control based on the current filtered dataset.
-  const bestMed = 
+  const bestMed =
     filteredSummary.length > 0
       ? filteredSummary.reduce((best, med) =>
           med.avgGlucose < best.avgGlucose ? med : best
         )
       : null;
 
-// The medication with the highest adherence rate, this will be used to generate insights and highlight 
-// which medication has the best patient adherence based on the current filtered dataset.
   const bestAdherence =
     filteredSummary.length > 0
       ? filteredSummary.reduce((best, med) =>
@@ -120,32 +91,35 @@ export default function AnalyticsPage() {
         )
       : null;
 
-
-  // Build data for the medication effectiveness scatter plot.
-  // This will compare adherence against average glucose for each selected medication.
+  /* -----------------------------
+     SCATTER DATA
+  ------------------------------*/
   const effectivenessData = filteredSummary.map((med) => ({
     med: med.med,
-    adherence: med.adherence * 100, // Convert to percentage for better readability
+    adherence: med.adherence * 100,
     avgGlucose: med.avgGlucose,
     weightChange: med.weightChange,
     sideEffect: med.topSideEffect,
   }));
 
-  // Generating insights only for the medications that are currently filtered, this will keep the
-  // insights panel consistent with the filters that have been user-selected
-  // which in turn ensures that the summaries that are displayed will reflect the same subset of data in the
-  // table and charts, creating a cohesive and unified user experience across the analytics dashboard.
-  const insights = filteredSummary.map((med) => {
-    return {
-      med: med.med,
-      text: `${med.med} shows avg glucose ${med.avgGlucose}, adherence ${(med.adherence * 100).toFixed(0)}%, and ${med.weightChange > 0 ? "weight gain" : "weight loss"} of ${Math.abs(med.weightChange)} lbs.`,
-    };
-  });
+  /* -----------------------------
+     INSIGHTS
+  ------------------------------*/
+  const insights = filteredSummary.map((med) => ({
+    med: med.med,
+    text: `${med.med} shows avg glucose ${
+      med.avgGlucose
+    }, adherence ${(med.adherence * 100).toFixed(0)}%, and ${
+      med.weightChange > 0 ? "weight gain" : "weight loss"
+    } of ${Math.abs(med.weightChange)} lbs.`,
+  }));
 
   return (
     <div className="p-6 grid grid-cols-1 lg:grid-cols-4 gap-6">
+
       {/* MAIN CONTENT */}
       <div className="lg:col-span-3 space-y-6">
+
         {/* Filters */}
         <div className="bg-white rounded-2xl shadow-sm border p-4">
           <h2 className="text-lg font-semibold mb-3">Filters</h2>
@@ -155,14 +129,15 @@ export default function AnalyticsPage() {
         {/* Analytics Overview */}
         <div className="bg-white rounded-2xl shadow-sm border p-4">
           <h2 className="text-lg font-semibold mb-2">Analytics Overview</h2>
+
           <p className="text-sm text-gray-600">
             Total Medications: {totalMeds}
           </p>
 
           <p className="text-sm text-gray-600 capitalize">
             Best Glucose Control: {bestMed?.med}
-            </p>
-          
+          </p>
+
           <p className="text-sm text-gray-600 capitalize">
             Best Adherence: {bestAdherence?.med}
           </p>
@@ -170,88 +145,95 @@ export default function AnalyticsPage() {
 
         {/* Charts */}
         <div className="bg-white rounded-2xl shadow-sm border p-4">
-          <h2 className="text-2xl font-semibold text-center mb-6">Trends</h2>
+          <h2 className="text-2xl font-semibold text-center mb-6">
+            Trends
+          </h2>
+
           <Charts data={data} filters={filters} />
         </div>
 
-        {/* Scatter plot for medication effectiveness */}
-      <div className="bg-white rounded-2xl shadow-sm border p-4">
-          <h2 className="text-lg font-semibold mb-2 text-center">
+        {/* Scatter plot */}
+        <div className="bg-white rounded-2xl shadow-sm border p-4">
+          <h2 className="text-lg font-bold text-center mb-3">
             Medication Effectiveness Map
           </h2>
 
           <p className="text-sm text-gray-600 mb-4 text-center">
-            Comparing adherence vs average glucose for selected medications that are highlighted
-            with stronger overall outcomes.
+            Comparing adherence vs average glucose for selected medications.
           </p>
 
-        <ResponsiveContainer width="100%" height={500}>
-          <ScatterChart margin={{ top: 20, right: 30, left: 50, bottom: 40 }}>
-            <CartesianGrid strokeDasharray="3 3" />
-            <XAxis
-              type="number"
-              dataKey="adherence"
-              name="Adherence"
-              unit="%"
-              domain={[80, 100]}
-            >
-              <Label
-                value="Adherence (%)"
-                position="insideBottom"
-                offset={-25}
-                style={{ fontWeight: "bold", fontSize: 14 }}
-              />
-            </XAxis>
+          <ResponsiveContainer width="100%" height={550}>
+            <ScatterChart margin={{ top: 20, right: 30, left: 50, bottom: 40 }}>
+              <CartesianGrid strokeDasharray="3 3" />
 
-            <YAxis
-              type="number"
-              dataKey="avgGlucose"
-              name="Average Glucose"
-              unit="mg/dL"
-              width={80}
-            >
-              <Label
-                value="Average Glucose (mg/dL)"
-                angle={-90}
-                position="insideLeft"
-                offset={-25}
-                style={{ 
-                  textAnchor: "middle", 
-                  fontWeight: "bold", 
-                  fontSize: 14 
-                }}
-            />
-          </YAxis>
-
-            <Tooltip />
-            <Scatter
-              name="Medications"
-              data={effectivenessData}
-            >
-              {effectivenessData.map((entry, index) => (
-                <Cell
-                  key={`cell-${index}`}
-                  fill={
-                    entry.med === "insulin"
-                      ? "#2563eb"
-                      : entry.med === "metformin"
-                      ? "#16a34a"
-                      : "#dc2626"
-                  }
+              <XAxis
+                type="number"
+                dataKey="adherence"
+                name="Adherence"
+                unit="%"
+                domain={[80, 100]}
+              >
+                <Label
+                  value="Adherence (%)"
+                  position="bottom"
+                  offset={10}
+                  style={{ fontWeight: "bold", fontSize: 14 }}
                 />
-              ))}
-            </Scatter>
-          </ScatterChart>
-        </ResponsiveContainer>
-      </div>
+              </XAxis>
+
+              <YAxis
+                type="number"
+                dataKey="avgGlucose"
+                name="Average Glucose"
+                unit="mg/dL"
+                width={80}
+              >
+                <Label
+                  value="Average Glucose (mg/dL)"
+                  angle={-90}
+                  position="insideLeft"
+                  offset={-25}
+                  style={{
+                    textAnchor: "middle",
+                    fontWeight: "bold",
+                    fontSize: 14,
+                  }}
+                />
+              </YAxis>
+
+              <Tooltip />
+
+              <Scatter name="Medications" data={effectivenessData}>
+                {effectivenessData.map((entry, index) => (
+                  <Cell
+                    key={`cell-${index}`}
+                    fill={
+                      entry.med === "Metformin"
+                        ? "#16a34a"
+                        : entry.med === "Insulin"
+                        ? "#2563eb"
+                        : "#dc2626"
+                    }
+                  />
+                ))}
+              </Scatter>
+            </ScatterChart>
+          </ResponsiveContainer>
+        </div>
 
         {/* Table */}
         <div className="bg-white rounded-2xl shadow-sm border p-4">
-          <h2 className="text-lg font-semibold mb-3">Medication Summary</h2>
+          <h2 className="text-lg font-semibold mb-3">
+            Medication Summary
+          </h2>
+
           <Table
             data={filteredSummary}
-            onSelectMed={(med: any) =>
-              setFilters((f) => ({ ...f, medications: [med] }))
+            onSelectMed={(med: string) =>
+              setFilters((f) => ({
+                ...f,
+                medications: [med],
+              }))
             }
           />
         </div>
@@ -264,7 +246,10 @@ export default function AnalyticsPage() {
         <ul className="space-y-3 text-sm text-gray-700">
           {insights.map((item, idx) => (
             <li key={idx} className="p-3 bg-gray-50 rounded-lg">
-              <span className="font-medium capitalize">{item.med}</span>: {item.text}
+              <span className="font-medium capitalize">
+                {item.med}
+              </span>
+              : {item.text}
             </li>
           ))}
         </ul>

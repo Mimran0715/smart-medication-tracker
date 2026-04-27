@@ -9,8 +9,10 @@ type LogMedicationModalProps = {
 
 const MEDICATIONS = {
   metformin: { label: "Metformin", dose: 500, unit: "mg" },
-  insulin: { label: "Insulin", dose: 10, unit: "units" },
-  lisinopril: { label: "Lisinopril", dose: 20, unit: "mg" },
+  insulin: { label: "Insulin Glargine", dose: 10, unit: "units" },
+  glipizide: { label: "Glipizide", dose: 5, unit: "mg" },
+  pioglitazone: { label: "Pioglitazone", dose: 15, unit: "mg" },
+  acarbose: { label: "Acarbose", dose: 50, unit: "mg" },
 };
 
 export default function LogMedicationModal({
@@ -30,29 +32,30 @@ export default function LogMedicationModal({
       return;
     }
 
-    const medData =
-      MEDICATIONS[selectedMed as keyof typeof MEDICATIONS];
+    try {
+      await fetch("/api/quick-actions", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        credentials: "include",
+        body: JSON.stringify({
+          type: "mark_med_taken",
+          medicationId: selectedMed,
+        }),
+      });
 
-    await fetch("/api/medication", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        medication: selectedMed,
-        dose: medData.dose,
-        unit: medData.unit,
-        recordedAt: datetime,
-      }),
-    });
-
-    setSelectedMed("");
-    setDatetime("");
-    onClose();
+      setSelectedMed("");
+      setDatetime("");
+      onClose();
+    } catch (err) {
+      console.error("Failed to log medication:", err);
+    }
   };
 
-  const selectedData =
-    selectedMed ? MEDICATIONS[selectedMed as keyof typeof MEDICATIONS] : null;
+  const selectedData = selectedMed
+    ? MEDICATIONS[selectedMed as keyof typeof MEDICATIONS]
+    : null;
 
   return (
     <div
@@ -63,12 +66,9 @@ export default function LogMedicationModal({
         className="bg-white rounded-2xl shadow-xl w-full max-w-md p-6 mx-4"
         onClick={(e) => e.stopPropagation()}
       >
-        <h2 className="text-xl font-semibold mb-4">
-          Log Medication
-        </h2>
+        <h2 className="text-xl font-semibold mb-4">Log Medication</h2>
 
         <form onSubmit={handleSubmit} className="space-y-4">
-
           {/* medication dropdown */}
           <label className="block">
             <span className="text-gray-700">Medication</span>
@@ -87,15 +87,14 @@ export default function LogMedicationModal({
             </select>
           </label>
 
-          {/* auto-preview dose */}
+          {/* preview */}
           {selectedData && (
             <div className="text-sm text-gray-600 bg-gray-50 p-2 rounded">
-              Dose: <strong>{selectedData.dose}</strong>{" "}
-              {selectedData.unit}
+              Dose: <strong>{selectedData.dose}</strong> {selectedData.unit}
             </div>
           )}
 
-          {/* datetime */}
+          {/* datetime (UI only, not currently sent to backend) */}
           <label className="block">
             <span className="text-gray-700">Date & Time</span>
             <input
@@ -124,7 +123,6 @@ export default function LogMedicationModal({
               Save
             </button>
           </div>
-
         </form>
       </div>
     </div>
