@@ -54,3 +54,17 @@ export async function getPatientName(patientId: string): Promise<string | null> 
 
     return `${clean_first_name} ${clean_last_name}`;
 }
+
+
+export async function getPatientById(patientId: string) {
+  const result = await pool.query(
+    `
+    SELECT first_name, last_name
+    FROM patients
+    WHERE id = $1
+    `,
+    [patientId]
+  );
+
+  return result.rows[0] || null;
+}

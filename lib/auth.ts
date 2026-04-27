@@ -23,3 +23,4 @@ export async function getOrCreatePatientId(req: NextRequest) {
 
   return patientId;
 }
+
