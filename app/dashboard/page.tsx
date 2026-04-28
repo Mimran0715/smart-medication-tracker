@@ -190,7 +190,8 @@ export default function Dashboard() {
  
   if (!dashboardData) return <div>Loading...</div>;
 
-  const adherenceValue = dashboardData?.adherence?.[0]?.adherence ?? 87;
+  //const adherenceValue = dashboardData?.adherence?.[0]?.adherence ?? 87;
+  const adherenceValue = 87; 
   const glucose =
   Array.isArray(dashboardData?.glucose)
     ? dashboardData.glucose.map((g) => g.reading)
