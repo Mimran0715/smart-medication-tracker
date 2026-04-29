@@ -135,11 +135,37 @@ export default function Dashboard() {
   const [isGlucoseModalOpen, setIsGlucoseModalOpen] = useState(false);
   const [isLogMedicationModalOpen, setIsLogMedicationModalOpen] = useState(false);
 
- const [dashboardData, setDashboardData] = useState<{
-  adherence: { adherence: number }[];
-  glucose: { reading: number }[];
-  sideEffects: { date: string; occurrences: number }[];
-} | null>(null);
+  // const [dashboardData, setDashboardData] = useState<{
+  //   adherence: { adherence: number }[];
+  //   glucose: { reading: number }[];
+  //   sideEffects: { date: string; occurrences: number }[];
+  // } | null>(null);
+  const [glucoseData, setGlucoseData] = useState<{ reading: number }[]>([]);
+  const [sideEffectsData, setSideEffectsData] = useState<{ date: string; occurrences: number }[]>([]);
+  const [adherenceData, setAdherenceData] = useState<number>(87);
+
+  // async function fetchDashboardData() {
+  //     const res = await fetch('/api/dashboard');
+  //     const data = await res.json();
+  //     setDashboardData(data);
+  //   }
+  async function fetchGlucose() {
+  const res = await fetch("/api/dashboard/glucose");
+  const data = await res.json();
+  setGlucoseData(data);
+  }
+
+async function fetchSideEffects() {
+  const res = await fetch("/api/dashboard/side-effects");
+  const data = await res.json();
+  setSideEffectsData(data);
+  }
+
+async function fetchAdherence() {
+  const res = await fetch("/api/dashboard/adherence");
+  const data = await res.json();
+  setAdherenceData(data?.[0]?.adherence ?? 87);
+  }
 
   useEffect(() => {
     const loadedMeds = loadActiveMeds();
@@ -166,14 +192,22 @@ export default function Dashboard() {
     setSchedules(loadedSchedules);
   }, []);
 
+  // useEffect(() => {
+  //   async function fetchData() {
+  //     const res = await fetch('/api/dashboard');
+  //     const data = await res.json();
+  //     setDashboardData(data);
+  //   }
+  //   fetchData();
+  // }, []);
+  // useEffect(() => {
+  //   fetchDashboardData();
+  // }, []);
   useEffect(() => {
-    async function fetchData() {
-      const res = await fetch('/api/dashboard');
-      const data = await res.json();
-      setDashboardData(data);
-    }
-    fetchData();
-  }, []);
+  fetchGlucose();
+  fetchSideEffects();
+  fetchAdherence();
+}, []);
 
   // Close dropdowns on outside click
   useEffect(() => {
@@ -186,17 +220,28 @@ export default function Dashboard() {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
-  // --- Getting Dashboard data ---
+  // // --- Getting Dashboard data ---
  
-  if (!dashboardData) return <div>Loading...</div>;
+  // if (!dashboardData) return <div>Loading...</div>;
 
-  //const adherenceValue = dashboardData?.adherence?.[0]?.adherence ?? 87;
-  const adherenceValue = 87; 
-  const glucose =
-  Array.isArray(dashboardData?.glucose)
-    ? dashboardData.glucose.map((g) => g.reading)
-    : [];
-  const sideEffects = dashboardData?.sideEffects ?? [];
+  // //const adherenceValue = dashboardData?.adherence?.[0]?.adherence ?? 87;
+  // const adherenceValue = 87; 
+  // const glucose =
+  // Array.isArray(dashboardData?.glucose)
+  //   ? dashboardData.glucose.map((g) => g.reading)
+  //   : [];
+  // const sideEffects = dashboardData?.sideEffects ?? [];
+    if (
+    glucoseData.length === 0 &&
+    sideEffectsData.length === 0 &&
+    adherenceData === null
+  ) {
+    return <div>Loading...</div>;
+  }
+
+  const glucose = glucoseData.map(g => g.reading);
+  const sideEffects = sideEffectsData;
+  const adherenceValue = adherenceData ?? 87;
 
   // --- Medications component handlers ---
 
@@ -569,6 +614,7 @@ export default function Dashboard() {
       <LogGlucoseModal
         isOpen={isGlucoseModalOpen}
         onClose={() => setIsGlucoseModalOpen(false)}
+        onSuccess={fetchGlucose} // 🔥 THIS is what connects everything
       />
       <LogMedicationModal
         isOpen={isLogMedicationModalOpen}

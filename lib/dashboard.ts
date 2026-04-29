@@ -2,13 +2,13 @@ import { pool } from "./pool.ts";
 
 
 const log = (label: string, data?: any) => {
-  return;
+  //return;
   console.log(`🧠 [DASHBOARD DEBUG] ${label}`);
   if (data !== undefined) console.log(JSON.stringify(data, null, 2));
 };
 
 const logError = (label: string, err: any) => {
-  return;
+  //return;
   console.error(`❌ [DASHBOARD ERROR] ${label}`);
   console.error(err);
 };
@@ -25,26 +25,26 @@ export async function getGlucoseDashboard(uid: string) {
   log("Glucose Dashboard START", { uid });
 
   try {
-    const result = await pool.query(
-      `
-      SELECT reading, created_at
-      FROM glucose
-      WHERE patient_id = $1
-        AND created_at >= NOW() - INTERVAL '7 days'
-      ORDER BY created_at ASC
-      LIMIT 7
-      `,
-      [uid]
-    );
+    // const result = await pool.query(
+    //   `
+    //   SELECT reading, created_at
+    //   FROM glucose
+    //   WHERE patient_id = $1
+    //     AND created_at >= NOW() - INTERVAL '7 days'
+    //   ORDER BY created_at ASC
+    //   LIMIT 7
+    //   `,
+    //   [uid]
+    // );
 
-    log("Glucose primary query result", result.rows);
+    // log("Glucose primary query result", result.rows);
 
-    if (result.rows?.length > 0) {
-      log("Glucose returning PRIMARY data");
-      return result.rows;
-    }
+    // if (result.rows?.length > 0) {
+    //   log("Glucose returning PRIMARY data");
+    //   return result.rows;
+    // }
 
-    log("Glucose PRIMARY empty → trying fallback");
+    // log("Glucose PRIMARY empty → trying fallback");
 
     const fallback = await pool.query(
       `

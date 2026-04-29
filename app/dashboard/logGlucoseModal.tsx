@@ -1,20 +1,22 @@
 "use client";
-
 import { useState } from "react";
 
 type LogGlucoseModalProps = {
   isOpen: boolean;
   onClose: () => void;
+  onSuccess: () => void;
 };
 
 export default function LogGlucoseModal({
   isOpen,
   onClose,
+  onSuccess, 
 }: LogGlucoseModalProps) {
   const [glucose, setGlucose] = useState("");
   const [datetime, setDatetime] = useState("");
   const [mealContext, setMealContext] = useState("fasting");
   const [notes, setNotes] = useState("");
+  const [loading, setLoading] = useState(false);
 
   if (!isOpen) return null;
 
@@ -27,29 +29,39 @@ export default function LogGlucoseModal({
     }
 
     try {
-      await fetch("/api/quick-actions", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        type: "log_glucose",
-        patientId: "demo-patient-id", 
-        glucose: Number(glucose),
-        recordedAt: datetime,
-        mealContext,
-        notes,
-      }),
-    });
+      setLoading(true);
 
-      // reset + close
+      const res = await fetch("/api/quick-actions", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          type: "log_glucose",
+          patientId: "demo-patient-id",
+          glucose: Number(glucose),
+          recordedAt: datetime,
+          mealContext,
+          notes,
+        }),
+      });
+
+      if (!res.ok) {
+        throw new Error("Failed to save glucose");
+      }
+      onSuccess();
+
       setGlucose("");
       setDatetime("");
       setMealContext("fasting");
       setNotes("");
+      
       onClose();
     } catch (err) {
       console.error("Failed to save glucose:", err);
+      alert("Something went wrong while saving. Please try again.");
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -125,16 +137,18 @@ export default function LogGlucoseModal({
             <button
               type="button"
               onClick={onClose}
-              className="px-4 py-2 rounded-lg border border-gray-300 hover:bg-gray-100"
+              disabled={loading}
+              className="px-4 py-2 rounded-lg border border-gray-300 hover:bg-gray-100 disabled:opacity-50"
             >
               Cancel
             </button>
 
             <button
               type="submit"
-              className="px-4 py-2 rounded-lg bg-[#1AA1E3] text-white hover:bg-blue-600"
+              disabled={loading}
+              className="px-4 py-2 rounded-lg bg-[#1AA1E3] text-white hover:bg-blue-600 disabled:opacity-50"
             >
-              Save
+              {loading ? "Saving..." : "Save"}
             </button>
           </div>
         </form>
