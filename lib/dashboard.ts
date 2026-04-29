@@ -1,14 +1,14 @@
 import { pool } from "./pool.ts";
-
+import { sideEffectsTimeseries } from "../app/analytics/analytics-backup.ts";
 
 const log = (label: string, data?: any) => {
-  //return;
+  return;
   console.log(`🧠 [DASHBOARD DEBUG] ${label}`);
   if (data !== undefined) console.log(JSON.stringify(data, null, 2));
 };
 
 const logError = (label: string, err: any) => {
-  //return;
+  return;
   console.error(`❌ [DASHBOARD ERROR] ${label}`);
   console.error(err);
 };
@@ -21,31 +21,32 @@ function generateFakeGlucose() {
   }));
 }
 
+function normalizeSideEffectsFallback() {
+  const rows: {
+    date: string;
+    side_effect_category: string;
+    occurrences: number;
+  }[] = [];
+
+  for (const day of sideEffectsTimeseries) {
+    for (const [key, value] of Object.entries(day)) {
+      if (key === "date") continue;
+
+      rows.push({
+        date: day.date,
+        side_effect_category: key,
+        occurrences: value as number,
+      });
+    }
+  }
+
+  return rows;
+}
+
 export async function getGlucoseDashboard(uid: string) {
   log("Glucose Dashboard START", { uid });
 
   try {
-    // const result = await pool.query(
-    //   `
-    //   SELECT reading, created_at
-    //   FROM glucose
-    //   WHERE patient_id = $1
-    //     AND created_at >= NOW() - INTERVAL '7 days'
-    //   ORDER BY created_at ASC
-    //   LIMIT 7
-    //   `,
-    //   [uid]
-    // );
-
-    // log("Glucose primary query result", result.rows);
-
-    // if (result.rows?.length > 0) {
-    //   log("Glucose returning PRIMARY data");
-    //   return result.rows;
-    // }
-
-    // log("Glucose PRIMARY empty → trying fallback");
-
     const fallback = await pool.query(
       `
       SELECT reading, created_at
@@ -146,83 +147,34 @@ const SIDE_EFFECT_CATEGORIES = [
   "other",
 ];
 
-function generateFakeSideEffects() {
-  const today = new Date();
-  const data = [];
-
-  for (let i = 6; i >= 0; i--) {
-    const d = new Date();
-    d.setDate(today.getDate() - i);
-
-    data.push({
-      date: d.toISOString().split("T")[0],
-      occurrences: Math.random() > 0.7 ? Math.floor(Math.random() * 2) + 1 : 0,
-    });
-  }
-
-  return data;
-}
-
-export async function getSideEffectsDashboard(uid: string, category: string) {
-  log("SideEffects Dashboard START", { uid, category });
+export async function getSideEffectsDashboard(uid: string) {
+  log("SideEffects Dashboard START", { uid });
 
   try {
     const result = await pool.query(
       `
       SELECT
-        date,
-        COUNT(*) AS occurrences
+        DATE(created_at) AS date,
+        side_effect_category,
+        COUNT(*)::int AS occurrences
       FROM side_effects
       WHERE patient_id = $1
-        AND side_effect_category = $2
-        AND date >= CURRENT_DATE - INTERVAL '6 days'
-      GROUP BY date
+        AND created_at >= NOW() - INTERVAL '6 days'
+      GROUP BY DATE(created_at), side_effect_category
       ORDER BY date ASC
       `,
-      [uid, category]
+      [uid]
     );
 
-    log("SideEffects PRIMARY query", result.rows);
+    log("SideEffects RAW", result.rows);
 
     if (result.rows.length > 0) {
-      log("SideEffects returning PRIMARY category");
       return result.rows;
     }
 
-    log("SideEffects PRIMARY empty → trying fallback categories");
-
-    for (const altCategory of SIDE_EFFECT_CATEGORIES) {
-      if (altCategory === category) continue;
-
-      log("SideEffects trying category", altCategory);
-
-      const altResult = await pool.query(
-        `
-        SELECT
-          date,
-          COUNT(*) AS occurrences
-        FROM side_effects
-        WHERE patient_id = $1
-          AND side_effect_category = $2
-          AND date >= CURRENT_DATE - INTERVAL '6 days'
-        GROUP BY date
-        ORDER BY date ASC
-        `,
-        [uid, altCategory]
-      );
-
-      log(`SideEffects result for ${altCategory}`, altResult.rows);
-
-      if (altResult.rows.length > 0) {
-        log("SideEffects using fallback category", altCategory);
-        return altResult.rows;
-      }
-    }
-
-    log("SideEffects NO DATA → generating fake");
-    return generateFakeSideEffects();
+    return normalizeSideEffectsFallback();
   } catch (err) {
     logError("SideEffects dashboard failure", err);
-    return generateFakeSideEffects();
+    return normalizeSideEffectsFallback();
   }
 }

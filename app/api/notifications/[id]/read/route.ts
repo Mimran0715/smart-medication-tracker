@@ -7,7 +7,7 @@ export async function POST(
   context: { params: Promise<{ id: string }> }
 ) {
   try {
-    const { id } = await context.params; // ✅ extract once
+    const { id } = await context.params; 
     const patientId = await getOrCreatePatientId(req);
 
     await pool.query(
@@ -16,7 +16,7 @@ export async function POST(
       SET is_read = true
       WHERE id = $1 AND patient_id = $2
       `,
-      [id, patientId] // ✅ use id here
+      [id, patientId] 
     );
 
     return NextResponse.json({ success: true });

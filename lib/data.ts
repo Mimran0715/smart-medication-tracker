@@ -55,7 +55,6 @@ export async function getPatientName(patientId: string): Promise<string | null> 
     return `${clean_first_name} ${clean_last_name}`;
 }
 
-
 export async function getPatientById(patientId: string) {
   const result = await pool.query(
     `

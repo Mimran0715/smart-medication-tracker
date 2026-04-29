@@ -18,8 +18,7 @@ export async function GET(request: NextRequest) {
       return new Response(JSON.stringify({ error: "Patient not found" }), { status: 404 });
     }
 
-    const category = "Fatigue"; // you can later make this dynamic
-    const sideEffects = await getSideEffectsDashboard(patientId, category);
+    const sideEffects = await getSideEffectsDashboard(patientId);
 
     return new Response(JSON.stringify(sideEffects), {
       status: 200,

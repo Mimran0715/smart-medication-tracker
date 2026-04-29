@@ -15,9 +15,6 @@ export const SIDE_EFFECT_CATEGORIES = [
   "other",
 ];
 
-/* -------------------------------------------------
-   GLUCOSE TIMESERIES (expanded + more variance)
---------------------------------------------------*/
 export const glucoseTimeseries = [
   {
     date: "2026-04-19",
@@ -77,9 +74,6 @@ export const glucoseTimeseries = [
   },
 ];
 
-/* -------------------------------------------------
-   WEIGHT TIMESERIES (stronger trend + noise)
---------------------------------------------------*/
 export const weightTimeseries = [
   { date: "2026-04-19", weight: 78.8 },
   { date: "2026-04-20", weight: 78.5 },
@@ -90,9 +84,6 @@ export const weightTimeseries = [
   { date: "2026-04-25", weight: 77.0 },
 ];
 
-/* -------------------------------------------------
-   SIDE EFFECTS RAW (expanded density)
---------------------------------------------------*/
 export const sideEffectsRaw = [
   // 04-19 (cluster day)
   {
@@ -205,9 +196,6 @@ export const sideEffectsRaw = [
   },
 ];
 
-/* -------------------------------------------------
-   SIDE EFFECTS (PIVOTED FOR CHARTS - expanded)
---------------------------------------------------*/
 export const sideEffectsTimeseries = [
   {
     date: "2026-04-12",
@@ -279,9 +267,6 @@ export const sideEffectsTimeseries = [
   },
 ];
 
-/* -------------------------------------------------
-   MASTER ANALYTICS OBJECT
---------------------------------------------------*/
 export const analyticsBackup = {
   timeseries: glucoseTimeseries,
   weightTimeseries,

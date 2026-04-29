@@ -1,5 +1,5 @@
 "use client";
-import { Line } from "react-chartjs-2";
+import { Line, Bar} from "react-chartjs-2";
 import { useState, useEffect, useRef } from "react";
 import {
   Chart as ChartJS,
@@ -7,6 +7,7 @@ import {
   LinearScale,
   PointElement,
   LineElement,
+  BarElement,
   Title,
   Tooltip,
   Legend,
@@ -23,6 +24,7 @@ ChartJS.register(
   LinearScale,
   PointElement,
   LineElement,
+  BarElement,
   Title,
   Tooltip,
   Legend
@@ -135,20 +137,12 @@ export default function Dashboard() {
   const [isGlucoseModalOpen, setIsGlucoseModalOpen] = useState(false);
   const [isLogMedicationModalOpen, setIsLogMedicationModalOpen] = useState(false);
 
-  // const [dashboardData, setDashboardData] = useState<{
-  //   adherence: { adherence: number }[];
-  //   glucose: { reading: number }[];
-  //   sideEffects: { date: string; occurrences: number }[];
-  // } | null>(null);
   const [glucoseData, setGlucoseData] = useState<{ reading: number }[]>([]);
-  const [sideEffectsData, setSideEffectsData] = useState<{ date: string; occurrences: number }[]>([]);
+  const [sideEffectsData, setSideEffectsData] = useState<
+    { date: string; side_effect_category: string; occurrences: number }[]
+  >([]);
   const [adherenceData, setAdherenceData] = useState<number>(87);
 
-  // async function fetchDashboardData() {
-  //     const res = await fetch('/api/dashboard');
-  //     const data = await res.json();
-  //     setDashboardData(data);
-  //   }
   async function fetchGlucose() {
   const res = await fetch("/api/dashboard/glucose");
   const data = await res.json();
@@ -192,17 +186,6 @@ async function fetchAdherence() {
     setSchedules(loadedSchedules);
   }, []);
 
-  // useEffect(() => {
-  //   async function fetchData() {
-  //     const res = await fetch('/api/dashboard');
-  //     const data = await res.json();
-  //     setDashboardData(data);
-  //   }
-  //   fetchData();
-  // }, []);
-  // useEffect(() => {
-  //   fetchDashboardData();
-  // }, []);
   useEffect(() => {
   fetchGlucose();
   fetchSideEffects();
@@ -222,15 +205,6 @@ async function fetchAdherence() {
 
   // // --- Getting Dashboard data ---
  
-  // if (!dashboardData) return <div>Loading...</div>;
-
-  // //const adherenceValue = dashboardData?.adherence?.[0]?.adherence ?? 87;
-  // const adherenceValue = 87; 
-  // const glucose =
-  // Array.isArray(dashboardData?.glucose)
-  //   ? dashboardData.glucose.map((g) => g.reading)
-  //   : [];
-  // const sideEffects = dashboardData?.sideEffects ?? [];
     if (
     glucoseData.length === 0 &&
     sideEffectsData.length === 0 &&
@@ -345,16 +319,35 @@ async function fetchAdherence() {
     ],
   };
 
+  const sideEffectColors: Record<string, string> = {
+  fatigue: "#6366f1",
+  dizziness: "#f59e0b",
+  nausea: "#ef4444",
+  headache: "#10b981",
+  blurred_vision: "#8b5cf6",
+  other: "#6b7280",
+};
+
+  const categories = [...new Set(sideEffects.map(s => s.side_effect_category))];
+  const dates = [...new Set(sideEffects.map(s => s.date))].sort();
+
+  const datasets = categories.map((category) => ({
+    label: category,
+    data: dates.map((date) => {
+      const match = sideEffects.find(
+        (s) =>
+          s.date === date && s.side_effect_category === category
+      );
+      return match ? match.occurrences : 0;
+    }),
+    borderColor: sideEffectColors[category] || "#FF4D4F",
+    backgroundColor: (sideEffectColors[category] || "#FF4D4F") + "33", // transparency
+    tension: 0.3,
+  }));
+
   const sideEffectChartData = {
-  labels: sideEffects.map((s) => s.date),
-  datasets: [
-    {
-      label: "Occurrences",
-      data: sideEffects.map((s) => s.occurrences),
-      borderColor: "#FF4D4F",
-      backgroundColor: "rgba(255, 77, 79, 0.2)",
-    },
-  ],
+    labels: dates,
+    datasets,
   };
 
   return (
@@ -514,10 +507,10 @@ async function fetchAdherence() {
           <h3 className="font-bold mb-2">Side Effects</h3>
           <div className="flex gap-6">
             <ul className="list-disc list-inside">
-              <li>Nausea after Metformin</li>
             </ul>
             <div className="flex-1">
               <Line data={sideEffectChartData} />
+              {/* <Bar data={sideEffectChartData} /> */}
             </div>
           </div>
         </div>

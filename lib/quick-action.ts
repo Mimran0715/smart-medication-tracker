@@ -95,7 +95,7 @@ export async function markMedicationTaken(
     [
       patientId,
       medicationId,
-      medicationName, // ✅ FIXED (this was null)
+      medicationName, 
       today,
     ]
   );
