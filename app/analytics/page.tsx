@@ -32,7 +32,8 @@ import {
 
 export default function AnalyticsPage() {
   const [filters, setFilters] = useState({
-    medications: ["Metformin", "Insulin", "Glipizide"],
+    //medications: ["Metformin", "Insulin", "Glipizide"]
+    medications: ["Metformin", "Insulin"],
     metrics: ["glucose", "side_effects"],
     sideEffects: [],
   });
@@ -58,13 +59,13 @@ export default function AnalyticsPage() {
         weightChange: +1.4,
         topSideEffect: "hypoglycemia",
       },
-      {
-        med: "Glipizide",
-        avgGlucose: 141,
-        adherence: 0.9,
-        weightChange: -3.5,
-        topSideEffect: "loss of appetite",
-      },
+      // {
+      //   med: "Glipizide",
+      //   avgGlucose: 141,
+      //   adherence: 0.9,
+      //   weightChange: -3.5,
+      //   topSideEffect: "loss of appetite",
+      // },
     ],
   };
 
