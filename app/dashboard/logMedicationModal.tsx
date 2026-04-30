@@ -5,19 +5,21 @@ import { useState } from "react";
 type LogMedicationModalProps = {
   isOpen: boolean;
   onClose: () => void;
+  onSuccess: () => void;
 };
 
 const MEDICATIONS = {
   metformin: { label: "Metformin", dose: 500, unit: "mg" },
   insulin: { label: "Insulin Glargine", dose: 10, unit: "units" },
-  glipizide: { label: "Glipizide", dose: 5, unit: "mg" },
-  pioglitazone: { label: "Pioglitazone", dose: 15, unit: "mg" },
-  acarbose: { label: "Acarbose", dose: 50, unit: "mg" },
+  // glipizide: { label: "Glipizide", dose: 5, unit: "mg" },
+  // pioglitazone: { label: "Pioglitazone", dose: 15, unit: "mg" },
+  // acarbose: { label: "Acarbose", dose: 50, unit: "mg" },
 };
 
 export default function LogMedicationModal({
   isOpen,
   onClose,
+  onSuccess,
 }: LogMedicationModalProps) {
   const [selectedMed, setSelectedMed] = useState("");
   const [datetime, setDatetime] = useState("");
@@ -25,33 +27,36 @@ export default function LogMedicationModal({
   if (!isOpen) return null;
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
+  e.preventDefault();
 
-    if (!selectedMed || !datetime) {
-      alert("Please select a medication and time.");
-      return;
-    }
+  if (!selectedMed || !datetime) {
+    alert("Please select a medication and time.");
+    return;
+  }
 
-    try {
-      await fetch("/api/quick-actions", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        credentials: "include",
-        body: JSON.stringify({
-          type: "mark_med_taken",
-          medicationId: selectedMed,
-        }),
-      });
+  try {
+    await fetch("/api/quick-actions", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      credentials: "include",
+      body: JSON.stringify({
+        type: "mark_med_taken",
+        medicationId: selectedMed,
+        takenAt: datetime,
+      }),
+    });
 
-      setSelectedMed("");
-      setDatetime("");
-      onClose();
-    } catch (err) {
-      console.error("Failed to log medication:", err);
-    }
-  };
+    onSuccess(); 
+
+    setSelectedMed("");
+    setDatetime("");
+    onClose();
+  } catch (err) {
+    console.error("Failed to log medication:", err);
+  }
+};
 
   const selectedData = selectedMed
     ? MEDICATIONS[selectedMed as keyof typeof MEDICATIONS]

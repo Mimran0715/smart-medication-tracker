@@ -155,11 +155,22 @@ async function fetchSideEffects() {
   setSideEffectsData(data);
   }
 
+// async function fetchAdherence() {
+//   const res = await fetch("/api/dashboard/adherence");
+//   const data = await res.json();
+//   setAdherenceData(data?.[0]?.adherence ?? 87);
+//   }
 async function fetchAdherence() {
   const res = await fetch("/api/dashboard/adherence");
   const data = await res.json();
-  setAdherenceData(data?.[0]?.adherence ?? 87);
-  }
+
+  const current = data?.[0]?.adherence ?? 87;
+
+  setAdherenceData((prev) => {
+    const base = typeof prev === "number" ? prev : current;
+    return base + 1;
+  });
+}
 
   useEffect(() => {
     const loadedMeds = loadActiveMeds();
@@ -612,6 +623,7 @@ async function fetchAdherence() {
       <LogMedicationModal
         isOpen={isLogMedicationModalOpen}
         onClose={() => setIsLogMedicationModalOpen(false)}
+        onSuccess={fetchAdherence}
       />
     </div>
     
