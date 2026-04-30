@@ -20,9 +20,14 @@ export default function ReminderPopup() {
         const res = await fetch("/api/notifications");
         const data = await res.json();
 
+        // const notifications: Notification[] = Array.isArray(data)
+        //   ? data
+        //   : data.notifications || [];
         const notifications: Notification[] = Array.isArray(data)
-          ? data
-          : data.notifications || [];
+        ? data
+        : Array.isArray(data?.notifications)
+        ? data.notifications
+        : [];
 
         const unread = notifications.find((n) => !n.is_read);
 
