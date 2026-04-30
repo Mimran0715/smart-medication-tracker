@@ -19,7 +19,7 @@ pnpm dev
 This diagram shows the high-level structure of the Smart Medication Tracker,
 including frontend, backend, authentication, and data sources.
 
-![System Architecture](./docs/system-architecture.png)
+[![System Architecture](./docs/system-architecture.png)](./docs/system-architecture.png)
 
 ## To use with Docker
 
