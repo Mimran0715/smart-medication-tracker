@@ -226,6 +226,7 @@ async function fetchAdherence() {
 
   const glucose = glucoseData.map(g => g.reading);
   const sideEffects = sideEffectsData;
+  //console.log(sideEffects);
   const adherenceValue = adherenceData ?? 87;
 
   // --- Medications component handlers ---

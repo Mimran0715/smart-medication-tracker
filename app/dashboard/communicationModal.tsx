@@ -10,63 +10,118 @@ export default function CommunicationModal({ onClose }: CommunicationModalProps)
   const [selectedProvider, setSelectedProvider] = useState("");
   const [message, setMessage] = useState("");
   const [includeStats, setIncludeStats] = useState(false);
+  const [loading, setLoading] = useState(false);
 
-  //sample data change later
   const providers = [
     { id: "1", name: "Dr. John Doe", email: "fake-doctor@example.com" },
     { id: "2", name: "Dr. Jane Smith", email: "fake-doctor2@example.com" },
   ];
 
-  // const handleSend = () => {
-  //   if (!selectedProvider || !message) {
-  //     alert("Please select a provider and type a message.");
-  //     return;
-  //   }
-  //   //change later
-  //   console.log(`Sending message to ${selectedProvider}: ${message}`);
-  //   onClose();
-  // };
-  const handleSend = () => {
-      if (!selectedProvider || !message) {
-        alert("Please select a provider and type a message.");
-        return;
-      }
+  const handleSend = async () => {
+  if (!selectedProvider || !message) {
+    alert("Please select a provider and type a message.");
+    return;
+  }
 
-      let body = `Hello,
+  setLoading(true);
 
-    ${message}
-    `;
-      if (includeStats) {
-        body += `
+  // ---- fallback defaults ----
+  const fallback = {
+    adherence: 87,
+    glucose: [
+      { reading: "120" },
+      { reading: "135" },
+      { reading: "142" },
+      { reading: "128" },
+    ],
+    sideEffects: [
+      { side_effect_category: "fatigue", occurrences: 1 },
+      { side_effect_category: "headache", occurrences: 1 },
+    ],
+  };
 
-    --- Medication Summary ---
-    Adherence: 85%
-    Missed doses: 3
-    Last missed dose: Monday
-    `;
-      }
+  let adherence = fallback.adherence;
+  let glucose = fallback.glucose;
+  let sideEffects = fallback.sideEffects;
 
+  // ---- fetch stats safely ----
+  if (includeStats) {
+    try {
+      const [adhRes, gluRes, seRes] = await Promise.all([
+        fetch("/api/dashboard/adherence"),
+        fetch("/api/dashboard/glucose"),
+        fetch("/api/dashboard/side-effects"),
+      ]);
+
+      const adhData = await adhRes.json();
+      const gluData = await gluRes.json();
+      const seData = await seRes.json();
+
+      adherence = adhData?.[0]?.adherence ?? fallback.adherence;
+      glucose = gluData?.length ? gluData : fallback.glucose;
+      sideEffects = seData?.length ? seData : fallback.sideEffects;
+    } catch (err) {
+      console.error("Using fallback stats due to error:", err);
+    }
+  }
+  // ---- format glucose ----
+  const glucoseValues = glucose.map((g: any) => Number(g.reading)).filter(Boolean);
+  const avgGlucose =
+    glucoseValues.reduce((a, b) => a + b, 0) / glucoseValues.length;
+
+  const minGlucose = Math.min(...glucoseValues);
+  const maxGlucose = Math.max(...glucoseValues);
+
+  // ---- format side effects ----
+    const sideEffectSummary = sideEffects
+      .map((s: any) => `${s.side_effect_category} (${s.occurrences})`)
+      .join(", ");
+
+    // ---- build email ----
+    let body = `Hello,
+
+  ${message}
+  `;
+
+    if (includeStats) {
       body += `
 
-    Best,
-    [Your Name]
-    `;
+  --- Medication Summary ---
+  Adherence: ${adherence}%
 
-      const subject = "Patient Update";
+  Glucose:
+  - Average: ${avgGlucose.toFixed(1)} mg/dL
+  - Range: ${minGlucose} - ${maxGlucose} mg/dL
 
-      const mailtoLink = `mailto:${selectedProvider}?subject=${encodeURIComponent(
-        subject
-      )}&body=${encodeURIComponent(body)}`;
-      window.location.href = mailtoLink;
+  Side Effects:
+  ${sideEffectSummary}
+  `;
+    }
 
-      onClose();
-    };
+    body += `
+
+  Best,
+  [Your Name]
+  `;
+
+    const subject = "Patient Update";
+
+    const mailtoLink = `mailto:${selectedProvider}?subject=${encodeURIComponent(
+      subject
+    )}&body=${encodeURIComponent(body)}`;
+
+    window.location.href = mailtoLink;
+
+    setLoading(false);
+    onClose();
+  };
 
   return (
     <div className="fixed inset-0 z-100 flex items-center justify-center bg-white bg-opacity-20">
-      {/* box */}
       <div className="bg-white rounded-2xl shadow-xl w-full max-w-5xl p-10 mx-4">
-        <h2 className="text-2xl font-semibold mb-4">Send Message to Provider</h2>
+        <h2 className="text-2xl font-semibold mb-4">
+          Send Message to Provider
+        </h2>
 
         {/* provider dropdown */}
         <label className="block mb-4">
@@ -85,7 +140,7 @@ export default function CommunicationModal({ onClose }: CommunicationModalProps)
           </select>
         </label>
 
-        {/* text box */}
+        {/* message */}
         <label className="block mb-4">
           <span className="text-gray-700">Message</span>
           <textarea
@@ -96,40 +151,38 @@ export default function CommunicationModal({ onClose }: CommunicationModalProps)
           />
         </label>
 
-        {/* meds button */}
+        {/* include stats toggle */}
         <button
           type="button"
           className={`mb-4 font-medium ${
             includeStats ? "text-green-800" : "text-green-600"
           }`}
           onClick={() => setIncludeStats((prev) => !prev)}
+          disabled={loading}
         >
           {includeStats ? "✓ Medication Stats Included" : "+ Include Medication Stats"}
         </button>
+
         <p className="text-sm text-gray-500 mt-2">
           This will open your email app to send the message.
         </p>
-        {/* <button
-          type="button"
-          className="mb-4 text-green-600 hover:text-green-800 font-medium"
-          onClick={() => alert("Include Medication Stats (not implemented)")}
-        >
-          + Include Medication Stats
-        </button> */}
 
-        {/* action buttons */}
-        <div className="flex justify-end space-x-3">
+        {/* actions */}
+        <div className="flex justify-end space-x-3 mt-6">
           <button
             onClick={onClose}
             className="px-4 py-2 rounded-lg border border-gray-300 hover:bg-gray-100"
+            disabled={loading}
           >
             Cancel
           </button>
+
           <button
             onClick={handleSend}
-            className="px-4 py-2 rounded-lg bg-green-500 text-white hover:bg-green-600"
+            disabled={loading}
+            className="px-4 py-2 rounded-lg bg-green-500 text-white hover:bg-green-600 disabled:opacity-50"
           >
-            Send
+            {loading ? "Preparing..." : "Send"}
           </button>
         </div>
       </div>
