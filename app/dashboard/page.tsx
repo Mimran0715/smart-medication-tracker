@@ -208,10 +208,11 @@ async function fetchAdherence() {
   // Auto-sync schedules to DB for cron-based reminders
   useEffect(() => {
     if (!user?.email) return;
+    const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
     fetch("/api/cron/send-reminders", {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ email: user.email, schedules }),
+      body: JSON.stringify({ email: user.email, schedules, timezone }),
     }).catch(() => {});
   }, [schedules, user?.email]);
 

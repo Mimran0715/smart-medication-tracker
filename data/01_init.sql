@@ -1442,6 +1442,7 @@ CREATE TABLE IF NOT EXISTS reminder_config (
   id SERIAL PRIMARY KEY,
   email TEXT NOT NULL UNIQUE,
   schedules JSONB NOT NULL DEFAULT '{}',
+  timezone TEXT DEFAULT 'America/New_York',
   created_at TIMESTAMPTZ DEFAULT NOW(),
   updated_at TIMESTAMPTZ DEFAULT NOW()
 );
