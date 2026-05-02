@@ -364,11 +364,12 @@ async function fetchAdherence() {
         (s) =>
           s.date === date && s.side_effect_category === category
       );
-      return match ? match.occurrences : 0;
+      return match ? match.occurrences : null;
     }),
     borderColor: sideEffectColors[category] || "#FF4D4F",
     backgroundColor: (sideEffectColors[category] || "#FF4D4F") + "33", // transparency
     tension: 0.3,
+    spanGaps: true,
   }));
 
   const sideEffectChartData = {
