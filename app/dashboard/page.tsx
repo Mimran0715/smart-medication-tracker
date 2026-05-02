@@ -18,6 +18,7 @@ import ReminderPopup from "../../components/reminderPopup"
 import medicationData from "@/data/fhir_medication_example.json";
 import LogGlucoseModal from "./logGlucoseModal";
 import LogMedicationModal from "./logMedicationModal";
+import { useAuth } from "@/context/AuthContext";
 
 ChartJS.register(
   CategoryScale,
@@ -121,6 +122,7 @@ function getScheduleKey(medName: string): string {
 }
 
 export default function Dashboard() {
+  const { user } = useAuth();
   const [activeMeds, setActiveMeds] = useState<MedicationInfo[]>(DEFAULT_ACTIVE_MEDS);
   const [schedules, setSchedules] = useState<MedSchedule>(DEFAULT_SCHEDULES);
   const [editingMed, setEditingMed] = useState<string | null>(null);
@@ -203,6 +205,17 @@ async function fetchAdherence() {
   fetchAdherence();
 }, []);
 
+  // Auto-sync schedules to DB for cron-based reminders
+  useEffect(() => {
+    if (!user?.email) return;
+    const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+    fetch("/api/cron/send-reminders", {
+      method: "PUT",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ email: user.email, schedules, timezone }),
+    }).catch(() => {});
+  }, [schedules, user?.email]);
+
   // Close dropdowns on outside click
   useEffect(() => {
     function handleClickOutside(e: MouseEvent) {
@@ -284,9 +297,10 @@ async function fetchAdherence() {
     setReminderStatus("loading");
     setReminderResult("");
 
-    const email = prompt("Enter email address for reminders:");
+    const email = user?.email;
     if (!email) {
-      setReminderStatus("idle");
+      setReminderStatus("error");
+      setReminderResult("Not logged in");
       return;
     }
 
