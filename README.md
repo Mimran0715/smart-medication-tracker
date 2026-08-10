@@ -1,7 +1,6 @@
-# Smart Medication Tracker
+<h1> Smart Medication Tracker </h1>
 
-A diabetes-focused medication and health tracking application built for the
-Georgia Tech CS 6440 Health Informatics course. The application lets patients
+A diabetes-focused medication and health tracking application. that lets patients
 manage medications, record glucose readings and side effects, review adherence
 and health trends, and receive medication reminder emails.
 
