@@ -1,4 +1,4 @@
-<h1> Smart Medication Tracker </h1>
+<h1 align="center"> Smart Medication Tracker </h1>
 
 A diabetes-focused medication and health tracking application. that lets patients
 manage medications, record glucose readings and side effects, review adherence
