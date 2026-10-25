@@ -4,6 +4,10 @@ A diabetes-focused medication and health tracking application. that lets patient
 manage medications, record glucose readings and side effects, review adherence
 and health trends, and receive medication reminder emails.
 
+<div style="center">
+<img width="982" height="534" alt="Screenshot 2026-08-10 at 2 25 56 PM" src="https://github.com/user-attachments/assets/eeb96548-2444-418a-a373-4f23d66498c0" />
+</div>
+
 > This is an educational project and is not intended to provide medical advice
 > or replace care from a qualified healthcare professional.
 
