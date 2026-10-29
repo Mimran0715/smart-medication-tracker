@@ -1,15 +1,24 @@
 import { Page } from "@playwright/test";
 
-export async function openMockedDashboard(page: Page) {
+interface DashboardData {
+  glucose?: { reading: number }[];
+  sideEffects?: {
+    date: string;
+    side_effect_category: string;
+    occurrences: number;
+  }[];
+}
+
+export async function openMockedDashboard(page: Page, data: DashboardData = {}) {
   await page.context().addCookies([
     { name: "__session", value: "test-session", url: "http://127.0.0.1:3000" },
   ]);
 
   await page.route("**/api/dashboard/glucose", (route) =>
-    route.fulfill({ json: [{ reading: 110 }, { reading: 118 }] })
+    route.fulfill({ json: data.glucose ?? [{ reading: 110 }, { reading: 118 }] })
   );
   await page.route("**/api/dashboard/side-effects", (route) =>
-    route.fulfill({ json: [] })
+    route.fulfill({ json: data.sideEffects ?? [] })
   );
   await page.route("**/api/dashboard/adherence", (route) =>
     route.fulfill({ json: [{ adherence: 87 }] })
